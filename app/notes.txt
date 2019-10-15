@@ -1,0 +1,2 @@
+15/10/19 - Started the project on my laptop, Android Studio is being a bitch and everytime I try and use the visual editor it crashes Android Studio.
+I am just editing the XML directly to get around this crashing because it's pissing me off and I need to start the project.

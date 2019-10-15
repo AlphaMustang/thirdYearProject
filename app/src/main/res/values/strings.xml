@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">thirdYearProject</string>
+    <string name="app_name">Maths Help</string>
+    <string name="startPageModuleButton">Modules</string>
+    <string name="startPageInfoButton">App Information</string>
 </resources>
