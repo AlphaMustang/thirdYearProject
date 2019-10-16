@@ -2,7 +2,10 @@
     <string name="app_name">Maths Help</string>
     <string name="startPageModuleButton">Modules</string>
     <string name="startPageInfoButton">App Information</string>
+    <string name="infoBackButton">Back to Homepage</string>
+    <string name="infoTextBlob">This is the big blob of text to be used in the Information page</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_information_page">informationPage</string>
 </resources>
