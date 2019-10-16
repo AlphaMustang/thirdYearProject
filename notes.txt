@@ -4,4 +4,6 @@ Working on the start page at the moment. Working on the positioning of the butto
 16/10/19 (Morning) - Stuck on where to start now I have my environment set up. Created a small list of TODOs to complete.
 Real basic shit like "Create information page about yourself" with the hopes that if I just start doing something it's better than nothing.
 I created a modules class, basically copied the headfirst android cookbooks workout class and changed it a bit. 
-
+16/10/19 (Afternoon) - Started by creating an Information page for the project. Put the functionality to get to the 
+information page by clicking the information button on the home screen. I also ran the app on my phone and made sure USB 
+Debugging worked. I'm still getting used to Android Studio on Linux but I'm getting more confident.
