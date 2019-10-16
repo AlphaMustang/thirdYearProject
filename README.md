@@ -1,1 +1,1 @@
-# thirdYearProject
+# Third Year MEng Computer Science Project.
