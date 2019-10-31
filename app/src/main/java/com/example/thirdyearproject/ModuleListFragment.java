@@ -4,12 +4,13 @@ package com.example.thirdyearproject;
 import android.app.ListFragment;
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
-
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.app.Activity;
+import android.widget.ListView;
 
 import com.example.thirdyearproject.R;
 
@@ -18,6 +19,12 @@ import com.example.thirdyearproject.R;
  */
 public class ModuleListFragment extends ListFragment {
 
+
+    static interface ModuleListener {
+        void itemClicked(int moduleID);
+    };
+
+    private ModuleListener listener;
 
     public ModuleListFragment() {
         // Required empty public constructor
@@ -43,4 +50,18 @@ public class ModuleListFragment extends ListFragment {
         return super.onCreateView( inflater, container, savedInstanceState );
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.listener = (ModuleListener) activity;
+    }
+
+  /*  @Override
+    public void onListItemClick(ListView l, View v, int position, int id) {
+        super.onListItemClick( l, v, position, id );
+        if (listener != null) {
+            listener.itemClicked(id);
+        }
+    }
+*/
 }
