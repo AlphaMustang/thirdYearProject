@@ -3,7 +3,7 @@
     <string name="startPageModuleButton">Modules</string>
     <string name="startPageInfoButton">App Information</string>
     <string name="infoBackButton">Back to Homepage</string>
-    <string name="infoTextBlob">This is the big blob of text to be used in the Information page</string>
+    <string name="infoTextBlob">This app was created by Ryan for my third year project. I have chosen to create an app to help with Maths.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
