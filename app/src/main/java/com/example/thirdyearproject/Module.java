@@ -28,6 +28,13 @@ public class Module {
     };
 
     public String getName() { return name; }
-    public String[] getSubModules() { return subModules; }
+    public static String[] getSubModules( int id ) {
+        switch ( id ){
+            case 0: return numberModules;
+            case 1: return algebraModules;
+            case 3: return geometryModules;
+            default: return null;
+        }
+    }
 
 }

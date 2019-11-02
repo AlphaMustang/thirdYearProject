@@ -8,8 +8,6 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: .Complete informationPage method to link to said information page
-    // TODO: .Create a modulesPage fragment, and a listView which contains said fragment
     // TODO: .Complete modulesPage to link to that listView
 
     @Override
