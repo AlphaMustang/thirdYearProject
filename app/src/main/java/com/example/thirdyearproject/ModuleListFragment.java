@@ -56,9 +56,10 @@ public class ModuleListFragment extends ListFragment {
         this.listener = (ModuleListener) activity;
     }
 
-    public void onListItemClick(ListView l, View v, int position, int id) {
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
         if (listener != null) {
-            listener.itemClicked(id);
+            listener.itemClicked( (int) id );
         }
     }
 
