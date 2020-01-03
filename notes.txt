@@ -18,3 +18,9 @@ This however doesn't seem to be working and keeps on crashing the app.
 I need to go to work.) The method was onListItemClick and I was trying to override included a long of ID. I had tried to make that 
 an int, which obviously didn't work because it's calling a superclass method, so I was getting the error of no method in the
 superclass. I fixed that and now the app doesn't crash when I try to click on lists. 
+03/01/20 - Looking back through the code and understanding what is happening in it. Also fixed the problem where the submodule ID was 
+always identical causing the same submodules to be displayed no matter which module was selected. The cause of this issue was the 
+difference between the fragment and activity lifecycle. In submodulesPage the intent lines of code extracting the module ID and 
+storing it in a local variable were put after the setContentView(...) method. The setContentView(...) method gave control of the page
+to the fragment, which would then take over, causing the intent code to never be ran. As Integers default to 0 in Java it meant the 
+moduleID always appeared to be 0 and so the same submodules were displayed no matter what.
