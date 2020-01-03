@@ -10,21 +10,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.app.FragmentTransaction;
 
-public class modulesPage extends AppCompatActivity implements ModuleListFragment.ModuleListener {
+public class TestOrLesson extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_modules_page);
+        setContentView(R.layout.activity_test_or_lesson);
     }
 
-    @Override
-    public void itemClicked( int id ) {
-        Intent intent = new Intent( this, submodulesPage.class );
-        intent.putExtra( "moduleID", id );
-        startActivity( intent );
+    public void testButton( View view ) {
+        Intent oldIntent = getIntent();
+        // create a new intent redirecting
+    }
+
+    public void lessonButton( View view ) {
+
     }
 
 }

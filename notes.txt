@@ -7,3 +7,14 @@ I created a modules class, basically copied the headfirst android cookbooks work
 16/10/19 (Afternoon) - Started by creating an Information page for the project. Put the functionality to get to the 
 information page by clicking the information button on the home screen. I also ran the app on my phone and made sure USB 
 Debugging worked. I'm still getting used to Android Studio on Linux but I'm getting more confident.
+31/10/19 - Happy Halloween ME! Well spent working on the project. You created the listFragment for the modules activity and
+created an intent that then passed to that page. The listFragment worked really well and displayed everything it was supposed
+to. I am calling it quits here. I can make the buttons do things later. 
+01/11/19 - I spent four hours doing stuff and achieving fuck all. Added a listener to listen for button clicks and an interface
+to communicate between the modulesPage activity and the modulesList fragment so when a listItem is selected it feeds back
+the item ID to the activity which then launches the next activity, the submodulesPage, and passes the module ID to it.
+This however doesn't seem to be working and keeps on crashing the app.
+02/11/19 - Figured out the error from yesterday. I was trying to override a method from the superclass ... (finish later
+I need to go to work.) The method was onListItemClick and I was trying to override included a long of ID. I had tried to make that 
+an int, which obviously didn't work because it's calling a superclass method, so I was getting the error of no method in the
+superclass. I fixed that and now the app doesn't crash when I try to click on lists. 

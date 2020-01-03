@@ -2,6 +2,7 @@ package com.example.thirdyearproject;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,7 +23,12 @@ public class SubmoduleListFragment extends ListFragment {
         void itemClicked( int submoduleID );
     };
 
+    static interface deliveringModuleID{
+        int getModuleID();
+    };
+
     private submodulesListener listener;
+    private deliveringModuleID moduleIDFinder;
 
     int moduleID;
     String[] submodules;
@@ -35,14 +41,11 @@ public class SubmoduleListFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        this.submodules = Module.getSubModules(moduleID);
-        if ( this.submodules != null ) {
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>( inflater.getContext(), android.R.layout.simple_list_item_1, submodules );
-            setListAdapter(adapter);
-        } else {
-            // TODO:
-            //      move onto test or lesson page
-        }
+
+        this.moduleID = moduleIDFinder.getModuleID();
+        this.submodules = Module.getSubModules( moduleID );
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>( inflater.getContext(), android.R.layout.simple_list_item_1, submodules );
+        setListAdapter(adapter);
         return super.onCreateView( inflater, container, savedInstanceState );
     }
 
@@ -50,6 +53,7 @@ public class SubmoduleListFragment extends ListFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         this.listener = (submodulesListener) activity;
+        this.moduleIDFinder = (deliveringModuleID) activity;
     }
 
     public void setModuleID( int moduleID ) {
