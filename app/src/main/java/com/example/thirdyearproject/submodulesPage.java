@@ -34,6 +34,7 @@ public class submodulesPage extends AppCompatActivity implements SubmoduleListFr
     @Override
     public void itemClicked( int submoduleID ) {
      // fill in later
+        testQuestionGeneration.structuresAndCalculationEasyQuestionOne();
     }
     // TODO:
     //      Fill this all in.

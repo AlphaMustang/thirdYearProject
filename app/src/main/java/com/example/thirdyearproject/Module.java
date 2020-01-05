@@ -16,8 +16,8 @@ public class Module {
 
     private static final String[] numberModules = {"Structure and Calculation", "Fractions, Decimals and Percentages", "Measures and Accuracy"};
     private static final String[] algebraModules = {"Notation, Vocabulary and Manipulation", "Graphs", "Solving Equations and Inequalities", "Sequences"};
-    private static final String[] geometryModules = {"Properties and Constructions", "Mensuration and Calculation", "Vectors"};
     private static final String[] ratioModules = {"Ratio, Proportion and Rates of Change"};
+    private static final String[] geometryModules = {"Properties and Constructions", "Mensuration and Calculation", "Vectors"};
     private static final String[] probabilityModules = {"Probability"};
     private static final String[] statisticsModules = {"Statistics"};
 

@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".displayQuestion"
+            android:label="@string/title_activity_display_question"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".TestOrLesson"
             android:label="@string/title_activity_test_or_lesson"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".submodulesPage"
             android:label="@string/title_activity_submodules_page"

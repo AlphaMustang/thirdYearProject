@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.app.ListFragment;
 import android.widget.ArrayAdapter;
@@ -59,5 +60,13 @@ public class SubmoduleListFragment extends ListFragment {
     public void setModuleID( int moduleID ) {
         this.moduleID = moduleID;
     }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        if (listener != null) {
+          listener.itemClicked((int) id);
+        }
+    }
+
 
 }
