@@ -41,3 +41,4 @@ a factory class which will contain methods which will return the question class.
 required for the displayQuestion activity to display a question and check an answer. 
 This notes file was changed to display next steps at the top of the page, so I have an idea of what I want to complete in the next programming 
 session. 
+Also, added a text box to displayQuestion to test displaying a question. Then linked submodulesPage to it so that it can be tested.

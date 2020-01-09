@@ -1,5 +1,6 @@
 package com.example.thirdyearproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.TextView;
 
 public class displayQuestion extends AppCompatActivity {
 
@@ -16,17 +18,16 @@ public class displayQuestion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_question);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Intent intent = getIntent();
+        changeQuestion(intent);
+     }
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
 
+     private void changeQuestion(Intent intent) {
+         TextView questionTextBox = (TextView) findViewById(R.id.displayQuestionTextBox);
+         int moduleID = intent.getIntExtra("moduleID", 0);
+         int submoduleID = intent.getIntExtra("submoduleID", 0);
+         String moduleName = Module.getModuleName(moduleID);
+         questionTextBox.setText(moduleName + " is the module which has been selected");
+     }
 }
