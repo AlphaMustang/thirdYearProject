@@ -35,3 +35,9 @@ difference between the fragment and activity lifecycle. In submodulesPage the in
 storing it in a local variable were put after the setContentView(...) method. The setContentView(...) method gave control of the page
 to the fragment, which would then take over, causing the intent code to never be ran. As Integers default to 0 in Java it meant the 
 moduleID always appeared to be 0 and so the same submodules were displayed no matter what.
+09/01/20 - Created displayQuestion activity, testQuestionGeneration, and question class. The displayQuestion activity aims to do exactly what 
+it says on the tin, it is supposed to display questions, and will enable the user to input and check an answer. The testQuestionGeneration is 
+a factory class which will contain methods which will return the question class. The question class will contain all of the information 
+required for the displayQuestion activity to display a question and check an answer. 
+This notes file was changed to display next steps at the top of the page, so I have an idea of what I want to complete in the next programming 
+session. 
