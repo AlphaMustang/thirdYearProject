@@ -10,17 +10,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class displayQuestion extends AppCompatActivity {
+
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_question);
-        Intent intent = getIntent();
-        changeQuestion(intent);
+//        Intent intent = getIntent();
+//        this.intent = intent;
+//        changeQuestion(intent);
      }
+
+     // need to sort out what happens when the app gets closed
+    // I don't think this is useful ATM.
+//     @Override
+//     public void onSaveInstanceState(Bundle savedInstanceState) {
+//        super.onSaveInstanceState(savedInstanceState);
+//     }
 
 
      private void changeQuestion(Intent intent) {
@@ -28,6 +39,7 @@ public class displayQuestion extends AppCompatActivity {
          int moduleID = intent.getIntExtra("moduleID", 0);
          int submoduleID = intent.getIntExtra("submoduleID", 0);
          String moduleName = Module.getModuleName(moduleID);
-         questionTextBox.setText(moduleName + " is the module which has been selected");
+         String displayedText = moduleName + " is the module which has been selected.";
+         questionTextBox.setText(displayedText);
      }
 }

@@ -41,4 +41,10 @@ a factory class which will contain methods which will return the question class.
 required for the displayQuestion activity to display a question and check an answer. 
 This notes file was changed to display next steps at the top of the page, so I have an idea of what I want to complete in the next programming 
 session. 
-Also, added a text box to displayQuestion to test displaying a question. Then linked submodulesPage to it so that it can be tested.
+Also, added a text box to displayQuestion to test displaying a question. Then linked submodulesPage to it so that it can be tested. Messed around
+with private variables so that I could see when they were destroyed as well. 
+10/01/20 - Issue where trying to add an image into android studio would not work if the image contained an upper case letter. This means no 
+image files can contain the camel case naming convention. This took about 20 minutes to figure out and fix. Also, a test image was displayed in 
+the app to display what will occur when the test questions require a picture.
+Attempted to put an image in a folder drawable-anydpi thinking it would be displayed in any situation, but it wouldn't display on my phone,
+turns out I have to put it into a drawable-nodpi folder. Although, an image was displayed. 
