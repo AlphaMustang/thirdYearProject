@@ -21,9 +21,9 @@ public class displayQuestion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_question);
-//        Intent intent = getIntent();
-//        this.intent = intent;
-//        changeQuestion(intent);
+        Intent intent = getIntent();
+        this.intent = intent;
+        changeQuestion(intent);
      }
 
      // need to sort out what happens when the app gets closed
@@ -33,6 +33,10 @@ public class displayQuestion extends AppCompatActivity {
 //        super.onSaveInstanceState(savedInstanceState);
 //     }
 
+    public void imageChange(View view) {
+        ImageView image = (ImageView) findViewById(R.id.image);
+        image.setImageResource(R.drawable.background2);
+    }
 
      private void changeQuestion(Intent intent) {
          TextView questionTextBox = (TextView) findViewById(R.id.displayQuestionTextBox);

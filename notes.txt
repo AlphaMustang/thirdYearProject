@@ -48,3 +48,4 @@ image files can contain the camel case naming convention. This took about 20 min
 the app to display what will occur when the test questions require a picture.
 Attempted to put an image in a folder drawable-anydpi thinking it would be displayed in any situation, but it wouldn't display on my phone,
 turns out I have to put it into a drawable-nodpi folder. Although, an image was displayed. 
+Added a button which when clicked will display a different image, this can be used to submit a question and change to the next question. 

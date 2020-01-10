@@ -27,4 +27,14 @@
         android:src="@drawable/serveimage"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to change the picture"
+        android:id="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="imageChange"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
