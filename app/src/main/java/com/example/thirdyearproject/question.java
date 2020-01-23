@@ -9,28 +9,49 @@ package com.example.thirdyearproject;
 * It also stores values about the questions and elements of questions to be displayed.
 * */
 
+import java.util.ArrayList;
+
 public class question {
 
     private int moduleID;
     private int submoduleID;
-    private String questionText;
-    private String picturePath;
+    private ArrayList<String> questionText;
+    private String pictureName;
     private int difficulty;
+    private int answer;
 
     public question() {
         this.moduleID = 0;
         this.submoduleID = 0;
-        this.questionText = "";
-        this.picturePath = "";
+        this.questionText = new ArrayList<String>();
+        this.pictureName = "";
         this.difficulty = 0;
+        this.answer = 0;
     }
 
-    public question(int moduleID, int submoduleID, String questionText, String picturePath) {
+    public question(int moduleID, int submoduleID, ArrayList<String> questionText, String pictureName, int answer) {
         this.moduleID = moduleID;
         this.submoduleID = submoduleID;
         this.questionText = questionText;
-        this.picturePath = picturePath;
+        this.pictureName = pictureName;
         this.difficulty = 0;
+        this.answer = answer;
     }
+
+    /* Getters for each variable in this class */
+    public int getModuleID() { return this.moduleID; }
+    public int getSubmoduleID() { return this.submoduleID; }
+    public String getQuestionText() {
+        String stringQuestionText = "";
+        for (int i = 0; i < this.questionText.size(); i++) {
+            stringQuestionText = stringQuestionText + this.questionText.get(i);
+        }
+        return stringQuestionText;
+    }
+    public String getPictureName() { return this.pictureName; }
+    public int getDifficulty() { return this.difficulty; }
+    public int getAnswer() { return this.answer; }
+
+    /* No setters as you have no need to change these values once created */
 
 }
