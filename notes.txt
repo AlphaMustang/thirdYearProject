@@ -49,3 +49,16 @@ the app to display what will occur when the test questions require a picture.
 Attempted to put an image in a folder drawable-anydpi thinking it would be displayed in any situation, but it wouldn't display on my phone,
 turns out I have to put it into a drawable-nodpi folder. Although, an image was displayed. 
 Added a button which when clicked will display a different image, this can be used to submit a question and change to the next question. 
+22/01/20 - Converted what I had before, which was basically displaying a dummy question, into actually displaying a very basic question.
+Changed the text box to only accept integers and to display some shadow text when it has nothing in it. The question generates 5 random 
+numbers and the student is instructed to select the smallest number. The button actually checks the answer.
+Once the answer was checked I then worked on getting a new question generated, the same question just with 5 other randmom numbers. 
+The only issue is when the button is pressed the old answer stays in the text box and has to be deleted so I'm gonna look into getting 
+rid of the old answer in the text box. 
+Successfully removed the old answer using one line of answerBox.getText().clear(); answerBox is the EditText object which was selected 
+earlier and held the answer in. This is all in displayQuestion.java class. 
+Added a question for each module depending on which module has been selected in the listView before. 
+29/01/20 - Expanded the questions in the numbers module so that there are 5 of them which all appear randomly, so any could be selected.
+These are all questions marked foundation in testQuestionGeneration.java to help with adding question difficulties. The idea of question 
+difficulties changed though as instead of having three question difficulties, easy, medium, and hard, I will have foundation and higher. 
+These are built into the GCSE Maths syllabus so I might as well use them.
