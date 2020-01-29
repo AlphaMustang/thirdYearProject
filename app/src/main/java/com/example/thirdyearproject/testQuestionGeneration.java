@@ -113,8 +113,9 @@ public class testQuestionGeneration {
 
     public static question algebraFoundationQuestion() {
         float randomNumber = (float) Math.random();
-        if ( randomNumber > 0.5 ) { return algebraFoundationQuestionOne(); }
-        else { return algebraFoundationQuestionTwo(); }
+        if ( randomNumber > 0.7 ) { return algebraFoundationQuestionOne(); }
+        else if (randomNumber > 0.4) { return algebraFoundationQuestionTwo(); }
+        else { return algebraFoundationQuestionThree(); }
 
     }
 
@@ -128,6 +129,20 @@ public class testQuestionGeneration {
         questionText.add(Integer.toString(sum) + ". u = ");
         questionText.add(Integer.toString(u) + ". What is v?");
         return new question(1,0,questionText,"None",v);
+    }
+
+    private static question algebraFoundationQuestionThree() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int aValue = (int) Math.round(Math.random() * 5);
+        int bValue = (int) Math.round(Math.random() * 5);
+        int aMultiple = (int) Math.round(Math.random() * 3);
+        int bMultiple = (int) Math.round(Math.random() * 3);
+        questionText.add("a = ");
+        questionText.add(Integer.toString(aValue) + ", b = " + Integer.toString(bValue));
+        questionText.add(". Work out the value of ");
+        questionText.add(Integer.toString(aMultiple) + "a + " + Integer.toString(bMultiple) + "b");
+        int answer = (aValue * aMultiple) + (bValue * bMultiple);
+        return new question(1,0,questionText,"None",answer);
     }
 
     // Sequences (foundation)
@@ -147,6 +162,8 @@ public class testQuestionGeneration {
         currentValue = base * currentMultiple;
         return new question(1,0,questionText,"None",currentValue);
     }
+
+
 
 
     /*
@@ -215,7 +232,7 @@ public class testQuestionGeneration {
 
     public static question probabilityFoundationQuestion() {
         float randomNumber = (float) Math.random();
-        if (randomNumber > 0) { return probabilityFoundationQuestionOne(); }
+        if (randomNumber > 0.5) { return probabilityFoundationQuestionOne(); }
         else { return probabilityFoundationQuestionTwo(); }
     }
 
@@ -227,7 +244,29 @@ public class testQuestionGeneration {
 
     private static question probabilityFoundationQuestionTwo() {
         ArrayList<String> questionText = new ArrayList<String>();
-        return new question(4,0,questionText,"None",0);
+        int redPens = (int) Math.round(Math.random() * 4);
+        int bluePens = (int) Math.round(Math.random() * 4);
+        int blackPens = (int) Math.round(Math.random() * 4);
+        int penSelection = (int) Math.round(Math.random() * 2) + 1;
+        questionText.add("There are " + Integer.toString(redPens) + " red pens, ");
+        questionText.add(Integer.toString(bluePens) + " blue pens, and ");
+        questionText.add(Integer.toString(blackPens) + " black pens in a bag. A pen is picked at random from the bag.");
+        questionText.add("What are the odds, as a percentage, that the pen selected is a ");
+        int answer;
+        int totalPens = redPens + bluePens + blackPens;
+        if ( penSelection == 1 ) {
+            questionText.add("red pen?");
+            answer = (int) ((redPens * 100) / totalPens);
+        } else if ( penSelection == 2 ) {
+            questionText.add("blue pen?");
+            answer = (int) ((bluePens * 100) / totalPens);
+        } else if ( penSelection == 3 ) {
+            questionText.add("black pen?");
+            answer = (int) ((blackPens * 100) / totalPens);
+        } else {
+            answer = -1;
+        }
+        return new question(4,0,questionText,"None",answer);
     }
 
 
