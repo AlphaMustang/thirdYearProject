@@ -57,3 +57,6 @@ be organised around the submodules which they are a part of. This will hopefully
 question selection process.
 Added more questions for algebra and statistics. Had an issue with casting from a decimal to an int, with order of operations but 
 by changing the order I fixed it.
+Figured out how to display numbers to powers using this wikipedia article: https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts
+and this stackoverflow answer: https://stackoverflow.com/questions/12208275/output-a-number-raised-to-a-power-as-a-string showing how to 
+display powers using unicode.
