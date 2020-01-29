@@ -100,6 +100,7 @@ public class displayQuestion extends AppCompatActivity {
              String imageName = "R.drawable." + pictureName;
              int id = getResources().getIdentifier(pictureName,"drawable",getPackageName());
              image.setImageResource(id);
+
          }
      }
 

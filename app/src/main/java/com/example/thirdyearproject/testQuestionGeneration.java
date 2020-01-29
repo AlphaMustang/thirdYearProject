@@ -204,8 +204,9 @@ public class testQuestionGeneration {
 
     public static question ratioFoundationQuestion() {
         float randomNumber = (float) Math.random();
-        if (randomNumber > 0) { return ratioFoundationQuestionOne();}
-        else { return ratioFoundationQuestionTwo(); }
+        if (randomNumber > 0.7) { return ratioFoundationQuestionOne();}
+        else if (randomNumber > 0.3){ return ratioFoundationQuestionTwo(); }
+        else { return ratioFoundationQuestionThree(); }
 
     }
 
@@ -253,6 +254,22 @@ public class testQuestionGeneration {
         return new question(2,0,questionText,"None",amountOfLemonade);
     }
 
+    private static question ratioFoundationQuestionFour() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int difference = (int) Math.round(((Math.random() * 4) + 1) * 10);
+        int noOfInitialTaps = (int) Math.round((Math.random() * 3) + 3);
+        int noOfTapsAfter = (int) Math.round((Math.random() * 2) + 1);
+        int amountOfInitialTime = noOfInitialTaps * difference;
+        int amountOfTimeAfter = noOfTapsAfter * difference;
+        questionText.add("It takes ");
+        questionText.add(Integer.toString(amountOfInitialTime) + " minutes to fill a swimming pool using ");
+        questionText.add(Integer.toString(noOfInitialTaps) + " hoses. How long would it take to fill a swimming pool using ");
+        questionText.add(Integer.toString(noOfTapsAfter) + " hoses?");
+        return new question(2,0,questionText,"None",amountOfTimeAfter);
+    }
+
+
+
     /*
     * Geometry Question Generation
     *
@@ -270,7 +287,13 @@ public class testQuestionGeneration {
 
     private static question geometryFoundationQuestionOne() {
         ArrayList<String> questionText = new ArrayList<String>();
-        return new question(3,0,questionText,"None",0);
+        int xInitial = (int) Math.round(Math.random() * 2);
+        int addedValue = (int) Math.round((Math.random() * 1) + 1);
+        questionText.add("What would the x coordinate be if you moved ");
+        questionText.add(Integer.toString(addedValue) + " to the right from ");
+        questionText.add("x = " + Integer.toString(xInitial));
+        int answer = xInitial + addedValue;
+        return new question(3,0,questionText,"coordinates",answer);
     }
 
     private static question geometryFoundationQuestionTwo() {
