@@ -41,6 +41,41 @@ public class testQuestionGeneration {
         return new question(0,0,questionText,"None",smallestNumber);
     }
 
+    // Structure and Calculation (foundation)
+    private static question numberFoundationQuestionFour() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int randomNumberOne = (int) (Math.random() * 100);
+        int randomNumberTwo = (int) (Math.random() * 100);
+        questionText.add("What is ");
+        questionText.add(Integer.toString(randomNumberOne) + " + " + Integer.toString(randomNumberTwo) + "?");
+        int answer = randomNumberOne + randomNumberTwo;
+        return new question(0,0,questionText,"None",answer);
+    }
+
+    // Structure and Calculation (foundation)
+    private static question numberFoundationQuestionFive() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int pow = (int) Math.round(Math.random() * 5);
+        questionText.add("What is 2");
+        switch (pow) {
+            case 0: questionText.add("\u2070");
+                break;
+            case 1: questionText.add("\u2071");
+                break;
+            case 2: questionText.add("\u00B2");
+                break;
+            case 3: questionText.add("\u00B3");
+                break;
+            case 4: questionText.add("\u2074");
+                break;
+            case 5: questionText.add("\u2075");
+                break;
+            default: questionText.add("\u2070");
+        }
+        int answer = (int) Math.pow(2,pow);
+        return new question(0,0,questionText,"None",answer);
+    }
+
     // Fractions, Decimals, and Percentages (foundation)
     private static question numberFoundationQuestionTwo() {
         ArrayList<String> questionText = new ArrayList<String>();
@@ -64,42 +99,6 @@ public class testQuestionGeneration {
         int answer = Math.round(randomNumber);
         return new question(0,0,questionText, "None", answer);
     }
-
-    // Structure and Calculation (foundation)
-    private static question numberFoundationQuestionFour() {
-        ArrayList<String> questionText = new ArrayList<String>();
-        int randomNumberOne = (int) (Math.random() * 100);
-        int randomNumberTwo = (int) (Math.random() * 100);
-        questionText.add("What is ");
-        questionText.add(Integer.toString(randomNumberOne) + " + " + Integer.toString(randomNumberTwo) + "?");
-        int answer = randomNumberOne + randomNumberTwo;
-        return new question(0,0,questionText,"None",answer);
-    }
-
-    // Structure and Calculation (foundation)
-    private static question numberFoundationQuestionFive() {
-        ArrayList<String> questionText = new ArrayList<String>();
-        int pow = (int) Math.round(Math.random() * 5);
-        questionText.add("What is 2");
-        switch (pow) {
-            case 0: questionText.add("\u2070");
-                    break;
-            case 1: questionText.add("\u2071");
-                    break;
-            case 2: questionText.add("\u00B2");
-                    break;
-            case 3: questionText.add("\u00B3");
-                    break;
-            case 4: questionText.add("\u2074");
-                    break;
-            case 5: questionText.add("\u2075");
-                    break;
-            default: questionText.add("\u2070");
-        }
-        int answer = (int) Math.pow(2,pow);
-        return new question(0,0,questionText,"None",answer);
-    }
-
 
     /*
     * Algebra Question Generation
