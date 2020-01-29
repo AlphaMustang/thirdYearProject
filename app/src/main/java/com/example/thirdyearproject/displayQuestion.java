@@ -73,7 +73,7 @@ public class displayQuestion extends AppCompatActivity {
          int submoduleID = intent.getIntExtra("submoduleID", 0);
          question currentQ = new question();
          if (moduleID == 0) {
-             currentQ = testQuestionGeneration.numberEasyQuestionOne();
+             currentQ = testQuestionGeneration.numberQuestion();
          } else if (moduleID == 1) {
              currentQ = testQuestionGeneration.algebraEasyQuestionOne();
          } else if (moduleID == 2) {

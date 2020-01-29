@@ -17,7 +17,16 @@ public class testQuestionGeneration {
     *   Measures and Accuracy
     * */
 
-    public static question numberEasyQuestionOne() {
+    public static question numberQuestion() {
+        float randomNumber = (float) Math.random();
+        if (randomNumber > 0.75) { return numberFoundationQuestionOne(); }
+        else if (randomNumber > 0.5) { return numberFoundationQuestionTwo(); }
+        else if (randomNumber > 0.25) { return numberFoundationQuestionThree(); }
+        else { return numberFoundationQuestionFour(); }
+    }
+
+    // Structure and Calculation (foundation)
+    public static question numberFoundationQuestionOne() {
         ArrayList<String> questionText = new ArrayList<String>();
         questionText.add("Which one of these numbers is the smallest: ");
         int currentNumber;
@@ -31,9 +40,40 @@ public class testQuestionGeneration {
         return new question(0,0,questionText,"none",smallestNumber);
     }
 
-//    public static question numberEasyQuestionTwo() {
-//
-//    }
+    // Fractions, Decimals, and Percentages (foundation)
+    public static question numberFoundationQuestionTwo() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int numberOfMagnitude = (int) (Math.round(Math.random() * 8));
+        numberOfMagnitude = numberOfMagnitude + 1;
+        float randomNumber = (float) numberOfMagnitude / 10;
+        questionText.add("Write ");
+        questionText.add(Float.toString(randomNumber));
+        questionText.add(" as a percentage.");
+        int answer = numberOfMagnitude * 10;
+        return new question(0,0,questionText,"none", answer);
+    }
+
+    // Measures and Accuracy (foundation)
+    public static question numberFoundationQuestionThree() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        questionText.add("Round ");
+        float randomNumber = (float) (Math.random() * 9);
+        questionText.add(Float.toString(randomNumber));
+        questionText.add(" to the nearest whole number.");
+        int answer = Math.round(randomNumber);
+        return new question(0,0,questionText, "none", answer);
+    }
+
+    // Structure and Calculation (foundation)
+    public static question numberFoundationQuestionFour() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int randomNumberOne = (int) (Math.random() * 100);
+        int randomNumberTwo = (int) (Math.random() * 100);
+        questionText.add("What is ");
+        questionText.add(Integer.toString(randomNumberOne) + " + " + Integer.toString(randomNumberTwo) + "?");
+        int answer = randomNumberOne + randomNumberTwo;
+        return new question(0,0,questionText,"none",answer);
+    }
 
 
     /*
@@ -113,6 +153,7 @@ public class testQuestionGeneration {
     public static question statisticsEasyQuestionOne(){
         ArrayList<String> questionText = new ArrayList<String>();
         questionText.add("");
+        return new question();
     }
 
 
