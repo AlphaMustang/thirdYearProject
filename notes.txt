@@ -1,14 +1,3 @@
-NEXT STEPS:
-. Add in a listView which collects information on whether the user wishes to have easy, medium, or hard questions
-. Generate test questions for submodules, starting with moduleID = 0, submoduleID = 0.
-. Create a page which displays said test questions.
-. Create an answer box for the user to answer said questions.
-. Give feedback of a tick or a cross as to whether the user answered the question correctly
-. Display the correct answer if the user got the answer wrong in a text box below the answer
-. Provide model working out which becomes displayed below the correct answer if the question is answered incorrectly.
-
-
-
 15/10/19 - Started the project on my laptop, Android Studio is being a bitch and everytime I try and use the visual editor it crashes Android Studio.
 I am just editing the XML directly to get around this crashing because it's pissing me off and I need to start the project.
 Working on the start page at the moment. Working on the positioning of the buttons but may leave the positioning until the end.
@@ -62,3 +51,7 @@ Added a question for each module depending on which module has been selected in 
 These are all questions marked foundation in testQuestionGeneration.java to help with adding question difficulties. The idea of question 
 difficulties changed though as instead of having three question difficulties, easy, medium, and hard, I will have foundation and higher. 
 These are built into the GCSE Maths syllabus so I might as well use them.
+Added methods for each question to display a random question for the module which has been selected. Even those which don't have questions
+already, they have dummy questions in place. This works for all modules. Also, I organised the modules which already had questions to 
+be organised around the submodules which they are a part of. This will hopefully make it easier when I add the submodules into the 
+question selection process.

@@ -73,17 +73,17 @@ public class displayQuestion extends AppCompatActivity {
          int submoduleID = intent.getIntExtra("submoduleID", 0);
          question currentQ = new question();
          if (moduleID == 0) {
-             currentQ = testQuestionGeneration.numberQuestion();
+             currentQ = testQuestionGeneration.numberFoundationQuestion();
          } else if (moduleID == 1) {
-             currentQ = testQuestionGeneration.algebraEasyQuestionOne();
+             currentQ = testQuestionGeneration.algebraFoundationQuestion();
          } else if (moduleID == 2) {
-             currentQ = testQuestionGeneration.ratioEasyQuestionOne();
+             currentQ = testQuestionGeneration.ratioFoundationQuestion();
          } else if (moduleID == 3) {
-
+            currentQ = testQuestionGeneration.geometryFoundationQuestion();
          } else if (moduleID == 4) {
-         currentQ = testQuestionGeneration.probabilityEasyQuestionOne();
+         currentQ = testQuestionGeneration.probabilityFoundationQuestion();
          } else if (moduleID == 5) {
-             currentQ = testQuestionGeneration.algebraEasyQuestionOne();
+             currentQ = testQuestionGeneration.statisticsFoundationQuestion();
          }
          else {
              Intent newIntent = new Intent(this, MainActivity.class);
