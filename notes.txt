@@ -55,3 +55,5 @@ Added methods for each question to display a random question for the module whic
 already, they have dummy questions in place. This works for all modules. Also, I organised the modules which already had questions to 
 be organised around the submodules which they are a part of. This will hopefully make it easier when I add the submodules into the 
 question selection process.
+Added more questions for algebra and statistics. Had an issue with casting from a decimal to an int, with order of operations but 
+by changing the order I fixed it.
