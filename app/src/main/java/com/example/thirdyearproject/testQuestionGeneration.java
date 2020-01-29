@@ -209,6 +209,7 @@ public class testQuestionGeneration {
 
     }
 
+    // (foundation)
     private static question ratioFoundationQuestionOne() {
         ArrayList<String> questionText = new ArrayList<String>();
         questionText.add("Tom has a coin collection. He collects pennies and pounds, he has a ratio of pennies to pounds of ");
@@ -221,11 +222,36 @@ public class testQuestionGeneration {
         return new question(2,0,questionText,"None",finalAnswer);
     }
 
+    // (foundation)
     private static question ratioFoundationQuestionTwo() {
         ArrayList<String> questionText = new ArrayList<String>();
-        return new question(2,0,questionText,"None",0);
+        questionText.add("Adam has some apples and oranges. The ratio of apples to oranges is ");
+        int ratioOfApples = (int) Math.round((Math.random() * 3) + 1);
+        int ratioOfOranges = (int) Math.round((Math.random() * 3) + 1);
+        int difference = (int) Math.round((Math.random() * 9) + 1);
+        questionText.add(Integer.toString(ratioOfApples) + ":" + Integer.toString(ratioOfOranges));
+        int noOfApples = difference * ratioOfApples;
+        int noOfOranges = difference * ratioOfOranges;
+        questionText.add(". Adam has " + Integer.toString(noOfApples) + " apples");
+        questionText.add(" how many oranges does Adam have?");
+        return new question( 2,0,questionText,"None",noOfOranges);
     }
 
+    // (foundation)
+    private static question ratioFoundationQuestionThree() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int ratioOfOJ = (int) Math.round((Math.random() * 5) + 1);
+        int ratioOfLemonade = (int) Math.round((Math.random() * 2) + 1);
+        int difference = (int) (Math.round((Math.random() * 2) + 1) * 100);
+        int amountOfOJ = ratioOfOJ * difference;
+        int amountOfLemonade = ratioOfLemonade * difference;
+        questionText.add("Brandon is going to make a fizzy drink. The instructions say the drink should be ");
+        questionText.add(Integer.toString(ratioOfOJ) + " parts Orange Juice and ");
+        questionText.add(Integer.toString(ratioOfLemonade) + " parts lemonade.");
+        questionText.add(" Brandon has ");
+        questionText.add(Integer.toString(amountOfOJ) + " of Orange Juice, how much lemonade should he add?");
+        return new question(2,0,questionText,"None",amountOfLemonade);
+    }
 
     /*
     * Geometry Question Generation

@@ -60,3 +60,5 @@ by changing the order I fixed it.
 Figured out how to display numbers to powers using this wikipedia article: https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts
 and this stackoverflow answer: https://stackoverflow.com/questions/12208275/output-a-number-raised-to-a-power-as-a-string showing how to 
 display powers using unicode.
+Also finished all 5 questions for Algebra foundation, doing all foundation questions first so it'll be easier to separate later when I need 
+to add question difficulty. Also changed orderings again to keep similar submodules together. This is gonna be a long day. 3.5 hours in already.
