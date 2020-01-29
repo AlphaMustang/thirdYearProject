@@ -113,10 +113,11 @@ public class testQuestionGeneration {
 
     public static question algebraFoundationQuestion() {
         float randomNumber = (float) Math.random();
-        if ( randomNumber > 0.7 ) { return algebraFoundationQuestionOne(); }
-        else if (randomNumber > 0.4) { return algebraFoundationQuestionTwo(); }
-        else { return algebraFoundationQuestionThree(); }
-
+        if ( randomNumber > 0.8 ) { return algebraFoundationQuestionOne(); }
+        else if (randomNumber > 0.6) { return algebraFoundationQuestionTwo(); }
+        else if (randomNumber > 0.4) { return algebraFoundationQuestionThree(); }
+        else if (randomNumber > 0.2) { return algebraFoundationQuestionFour(); }
+        else { return algebraFoundationQuestionFive(); }
     }
 
     // Solving Equations and Inequalities (foundation)
@@ -131,6 +132,7 @@ public class testQuestionGeneration {
         return new question(1,0,questionText,"None",v);
     }
 
+    // Solving Equations and Inequalities (foundation)
     private static question algebraFoundationQuestionThree() {
         ArrayList<String> questionText = new ArrayList<String>();
         int aValue = (int) Math.round(Math.random() * 5);
@@ -142,6 +144,17 @@ public class testQuestionGeneration {
         questionText.add(". Work out the value of ");
         questionText.add(Integer.toString(aMultiple) + "a + " + Integer.toString(bMultiple) + "b");
         int answer = (aValue * aMultiple) + (bValue * bMultiple);
+        return new question(1,0,questionText,"None",answer);
+    }
+
+    // Solving Equations and Inequalities (foundation)
+    private static question algebraFoundationQuestionFive() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int y = (int) Math.round((Math.random() * 4) + 1);
+        int answer = (int) Math.round((Math.random() * 3) + 1);
+        int problem = y * answer;
+        questionText.add(Integer.toString(y) + "x = " + Integer.toString(problem));
+        questionText.add(". What is x?");
         return new question(1,0,questionText,"None",answer);
     }
 
@@ -164,6 +177,22 @@ public class testQuestionGeneration {
     }
 
 
+    // Sequences (foundation)
+    private static question algebraFoundationQuestionFour() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int multiple = (int) Math.round((Math.random() * 4) + 1);
+        int plusThis = (int) Math.round((Math.random() * 2) + 1);
+        int currentNumber;
+        for (int i = 1; i <= 4; i++) {
+            currentNumber = ((multiple * i) + plusThis);
+            questionText.add(Integer.toString(currentNumber) + ", ");
+        }
+        questionText.add(" This sequence follows the pattern add ");
+        questionText.add(Integer.toString(multiple));
+        questionText.add(" to the previous term, what is the next term?");
+        int answer = (5 * multiple) + plusThis;
+        return new question(1,0,questionText,"None",answer);
+    }
 
 
     /*
