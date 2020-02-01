@@ -62,3 +62,9 @@ and this stackoverflow answer: https://stackoverflow.com/questions/12208275/outp
 display powers using unicode.
 Also finished all 5 questions for Algebra foundation, doing all foundation questions first so it'll be easier to separate later when I need 
 to add question difficulty. Also changed orderings again to keep similar submodules together. This is gonna be a long day. 3.5 hours in already.
+Added a question to geometry, to do this I needed to display an image, and so I needed to use the code I wrote on the 22nd which is the 
+if-else statement in the changeQuestion method in displayQuestion.java. This takes the name of the file and finds the code of the id of the 
+image that it has been set by android studio and displays it. This code was found and copied from stackoverflow, I cannot currently find 
+the initial post but if I do I'll pop it in here. I also had to learn how to resize the image because it was being a bitch. This required 
+changing the XML of the ImageView to include android:adjustViewBounds="true" and android:scaleType="fitXY". Once I had done this I could 
+change the width and height of the image and it would change with it.
