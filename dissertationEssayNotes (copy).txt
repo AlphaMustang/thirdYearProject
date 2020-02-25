@@ -1,0 +1,80 @@
+Third Year Project Dissertation Notes:
+
+I’m going to start making notes on this now and starting to write this so I feel better when I finally come round to doing it and to make myself feel less stressed.
+
+Contents: 
+1. Abstract
+2. Keywords List
+3. Contents Page
+4. Introduction / Background information
+5. Main Body
+6. Conclusion and future work
+7. Legal, Social, Ethical, and Environmental Issues
+
+So, I can break that down even more to sections below:
+
+Abstract: 
+
+
+
+
+
+Keywords List:
+    
+
+
+
+
+Contents Page: 
+
+
+
+
+
+Introduction
+
+    Project Motivation
+    Problem Outline
+    Specification / Project Goal
+    Report Structure
+
+
+Main Body 
+
+    Initial Design 
+
+
+
+Project Management
+
+    Original Management Decisions made (what methodology used etc....)
+    Key management decisions made throughout the project
+
+Results
+
+    (I don't think I have much for this.)
+
+
+Decisions
+
+    Key decisions made
+    Justification
+
+
+Conclusion
+
+
+
+
+Future Work
+
+
+
+
+
+Legal, Social, Ethical, and Environmental Issues
+
+
+
+
+
