@@ -14,6 +14,7 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class displayQuestion extends AppCompatActivity {
@@ -49,7 +50,9 @@ public class displayQuestion extends AppCompatActivity {
             intAnswer = Integer.parseInt(stringAnswer);
         } catch (Exception e) {
             intAnswer = -1;
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, displayQuestion.class);
+            intent.putExtra("moduleID", intent.getIntExtra("moduleID", 0));
+            intent.putExtra("submoduleID", intent.getIntExtra("submoduleID", 0));
             startActivity(intent);
         }
         TextView correctOrNot = (TextView) findViewById(R.id.correctOrNot);
@@ -67,6 +70,13 @@ public class displayQuestion extends AppCompatActivity {
         changeQuestion(this.intent);
     }
 
+/*  Edit this later, there is no need to add this right now
+    public void onRadioButtonClicked(View view) {
+        boolean button1Checked =
+
+
+    }
+*/
      private void changeQuestion(Intent intent) {
          TextView questionTextBox = (TextView) findViewById(R.id.displayQuestionTextBox);
          int moduleID = intent.getIntExtra("moduleID", 0);

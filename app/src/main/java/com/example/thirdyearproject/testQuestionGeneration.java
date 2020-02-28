@@ -60,7 +60,7 @@ public class testQuestionGeneration {
         switch (pow) {
             case 0: questionText.add("\u2070");
                 break;
-            case 1: questionText.add("\u2071");
+            case 1: questionText.add("\u20B9");
                 break;
             case 2: questionText.add("\u00B2");
                 break;

@@ -30,7 +30,24 @@
         android:src="@drawable/serveimage"
         />
 
-
+<!--    <RadioGroup-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/image"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent">-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButton1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:onClick="onRadioButtonClicked"-->
+<!--            />-->
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/radioButton2"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+<!--    </RadioGroup>-->
 
     <Button
         android:layout_width="wrap_content"
