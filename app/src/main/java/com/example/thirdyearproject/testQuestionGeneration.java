@@ -60,7 +60,7 @@ public class testQuestionGeneration {
         switch (pow) {
             case 0: questionText.add("\u2070");
                 break;
-            case 1: questionText.add("\u20B9");
+            case 1: questionText.add("\u00B9");
                 break;
             case 2: questionText.add("\u00B2");
                 break;
@@ -122,7 +122,7 @@ public class testQuestionGeneration {
 
     // Solving Equations and Inequalities (foundation)
     private static question algebraFoundationQuestionOne() {
-        ArrayList<String> questionText = new ArrayList<String>();
+        ArrayList<String> questionText = new ArrayList<>();
         questionText.add("v + u = ");
         int v = (int) Math.round(Math.random() * 30);
         int u = (int) Math.round(Math.random() * 30);
@@ -363,7 +363,7 @@ public class testQuestionGeneration {
 
     private static question statisticsFoundationQuestionOne(){
         ArrayList<String> questionText = new ArrayList<String>();
-        questionText.add("");
+        questionText.add("2");
         return new question(5,0,questionText,"None",0);
     }
 

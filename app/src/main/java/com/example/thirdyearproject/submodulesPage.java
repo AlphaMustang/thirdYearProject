@@ -34,12 +34,10 @@ public class submodulesPage extends AppCompatActivity implements SubmoduleListFr
     @Override
     public void itemClicked( int submoduleID ) {
      // fill in later
-        Intent intent = new Intent(this, displayQuestion.class);
+        Intent intent = new Intent(this, difficultySelection.class);
         intent.putExtra("submoduleID", submoduleID);
         intent.putExtra("moduleID", moduleID);
         startActivity(intent);
     }
-    // TODO:
-    //      Fill this all in.
 
 }

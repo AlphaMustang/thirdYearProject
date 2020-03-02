@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".displayQuestion"
-            android:label="@string/title_activity_display_question"
+            android:name=".difficultySelection"
+            android:label="@string/title_activity_difficulty_selection"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".TestOrLesson"
-            android:label="@string/title_activity_test_or_lesson"
+            android:name=".displayQuestion"
+            android:label="@string/title_activity_display_question"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".submodulesPage"

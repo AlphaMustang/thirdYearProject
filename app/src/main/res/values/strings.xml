@@ -12,4 +12,5 @@
     <string name="title_activity_submodules_page">submodulesPage</string>
     <string name="title_activity_test_or_lesson">TestOrLesson</string>
     <string name="title_activity_display_question">displayQuestion</string>
+    <string name="title_activity_difficulty_selection">difficultySelection</string>
 </resources>
