@@ -411,8 +411,12 @@ public class testQuestionGeneration {
 
     private static question probabilityFoundationQuestionOne() {
         ArrayList<String> questionText = new ArrayList<String>();
-        questionText.add("What is the probablity of flipping a coin x 10?");
-        return new question(4,0,questionText,"None",5);
+        int heads = (int) (Math.round(Math.random() * 9)) + 1;
+        int coinsFlipped = heads * 2;
+        questionText.add("A coin is flipped ");
+        questionText.add(Integer.toString(coinsFlipped));
+        questionText.add(" times. How many times should it land on heads?");
+        return new question(4,0,questionText,"None",heads);
     }
 
     private static question probabilityFoundationQuestionTwo() {
@@ -458,8 +462,22 @@ public class testQuestionGeneration {
 
     private static question statisticsFoundationQuestionOne(){
         ArrayList<String> questionText = new ArrayList<String>();
-        questionText.add("2");
-        return new question(5,0,questionText,"None",0);
+        int[] results = new int[7];
+        for (int i = 0; i < 7; i++) {
+            int result = (int) ((Math.random() * 10) + 15);
+            results[i] = result;
+        }
+        questionText.add("Michael measures the temperature every day for a week. Here were his results: ");
+        for (int i = 0; i < 7; i++) {
+            questionText.add(Integer.toString(results[i]) + ", ");
+        }
+        questionText.add(" what is the mean of these results to the closest degree?");
+        int sum = 0;
+        for (int i = 0; i < 7; i++) {
+            sum += results[i];
+        }
+        sum = sum / 7;
+        return new question(5,0,questionText,"None",sum);
     }
 
     private static question statisticsFoundationQuestionTwo() {
