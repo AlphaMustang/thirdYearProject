@@ -81,9 +81,12 @@ public class displayQuestion extends AppCompatActivity {
          TextView questionTextBox = (TextView) findViewById(R.id.displayQuestionTextBox);
          int moduleID = intent.getIntExtra("moduleID", 0);
          int submoduleID = intent.getIntExtra("submoduleID", 0);
+         int difficultyID = intent.getIntExtra("difficulty", 0);
          question currentQ = new question();
-         if (moduleID == 0) {
+         if (moduleID == 0 && difficultyID == 0) {
              currentQ = testQuestionGeneration.numberFoundationQuestion();
+         } else if ( moduleID == 0 && difficultyID == 1 ) {
+             currentQ = testQuestionGeneration.numberHigherQuestion();
          } else if (moduleID == 1) {
              currentQ = testQuestionGeneration.algebraFoundationQuestion();
          } else if (moduleID == 2) {

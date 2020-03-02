@@ -26,6 +26,12 @@ public class testQuestionGeneration {
         else { return numberFoundationQuestionFive(); }
     }
 
+    public static question numberHigherQuestion() {
+        float randomNumber = (float) Math.random();
+        if (randomNumber > -1) { return numberFoundationQuestionOne(); }
+        else { return new question(); }
+    }
+
     // Structure and Calculation (foundation)
     private static question numberFoundationQuestionOne() {
         ArrayList<String> questionText = new ArrayList<String>();
