@@ -17,19 +17,11 @@ public class testQuestionGeneration {
     *   Measures and Accuracy
     * */
 
-    public static question numberFoundationQuestion() {
+    public static question calculationFoundationQuestion() {
         float randomNumber = (float) Math.random();
-        if (randomNumber > 0.8) { return numberFoundationQuestionOne(); }
-        else if (randomNumber > 0.6) { return numberFoundationQuestionTwo(); }
-        else if (randomNumber > 0.4) { return numberFoundationQuestionThree(); }
-        else if (randomNumber > 0.2) { return numberFoundationQuestionFour(); }
+        if (randomNumber < 0.3333) { return numberFoundationQuestionOne(); }
+        else if (randomNumber < 0.66667) { return numberFoundationQuestionFour(); }
         else { return numberFoundationQuestionFive(); }
-    }
-
-    public static question numberHigherQuestion() {
-        float randomNumber = (float) Math.random();
-        if (randomNumber > -1) { return numberFoundationQuestionOne(); }
-        else { return new question(); }
     }
 
     // Structure and Calculation (foundation)
@@ -82,6 +74,32 @@ public class testQuestionGeneration {
         return new question(0,0,questionText,"None",answer);
     }
 
+    public static question calculationHigherQuestion() {
+        return numberHigherQuestionOne();
+    }
+
+    // Structure and Calculation (higher)
+    private static question numberHigherQuestionOne() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int v, u, a;
+        float intermediary;
+        do{
+            v = (int) ((Math.random() * 6) + 3);
+            u = (int) (Math.random() * 5);
+            a = (int) (Math.random() * 5) + 2;
+            intermediary = (v * v) - (u * u);
+            intermediary = intermediary / (2 * a);
+        } while ((int) intermediary != intermediary);
+        questionText.add("v\u00B2 = u\u00B2 + 2as.");
+        questionText.add("Let u = " + Integer.toString(u) + ", a = " + Integer.toString(a) + ", and s = " + Float.toString(intermediary));
+        questionText.add(". What is the value of v to the nearest whole number?");
+        return new question(0,0,questionText,"None",v);
+    }
+
+    public static question fractionFoundationQuestion() {
+        return numberFoundationQuestionTwo();
+    }
+
     // Fractions, Decimals, and Percentages (foundation)
     private static question numberFoundationQuestionTwo() {
         ArrayList<String> questionText = new ArrayList<String>();
@@ -95,6 +113,14 @@ public class testQuestionGeneration {
         return new question(0,0,questionText,"None", answer);
     }
 
+    public static question fractionHigherQuestion() {
+        return numberFoundationQuestionTwo();
+    }
+
+    public static question accuracyFoundationQuestion() {
+        return numberFoundationQuestionThree();
+    }
+
     // Measures and Accuracy (foundation)
     private static question numberFoundationQuestionThree() {
         ArrayList<String> questionText = new ArrayList<String>();
@@ -105,6 +131,11 @@ public class testQuestionGeneration {
         int answer = Math.round(randomNumber);
         return new question(0,0,questionText, "None", answer);
     }
+
+    public static question accuracyHigherQuestion() {
+        return numberFoundationQuestionThree();
+    }
+
 
     /*
     * Algebra Question Generation

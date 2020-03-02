@@ -82,11 +82,20 @@ public class displayQuestion extends AppCompatActivity {
          int moduleID = intent.getIntExtra("moduleID", 0);
          int submoduleID = intent.getIntExtra("submoduleID", 0);
          int difficultyID = intent.getIntExtra("difficulty", 0);
+         System.out.println(Integer.toString(submoduleID));
          question currentQ = new question();
-         if (moduleID == 0 && difficultyID == 0) {
-             currentQ = testQuestionGeneration.numberFoundationQuestion();
-         } else if ( moduleID == 0 && difficultyID == 1 ) {
-             currentQ = testQuestionGeneration.numberHigherQuestion();
+         if (moduleID == 0 && difficultyID == 0 && submoduleID == 0) {
+             currentQ = testQuestionGeneration.calculationFoundationQuestion();
+         } else if ( moduleID == 0 && difficultyID == 1 && submoduleID == 0) {
+             currentQ = testQuestionGeneration.calculationHigherQuestion();
+         } else if ( moduleID == 0 && difficultyID == 0 && submoduleID == 1) {
+             currentQ = testQuestionGeneration.fractionFoundationQuestion();
+         } else if ( moduleID == 0 && difficultyID == 1 && submoduleID == 1) {
+             currentQ = testQuestionGeneration.fractionHigherQuestion();
+         } else if ( moduleID == 0 && difficultyID == 0 && submoduleID == 2) {
+             currentQ = testQuestionGeneration.accuracyFoundationQuestion();
+         } else if ( moduleID == 0 && difficultyID == 1 && submoduleID == 2 ) {
+             currentQ = testQuestionGeneration.accuracyHigherQuestion();
          } else if (moduleID == 1) {
              currentQ = testQuestionGeneration.algebraFoundationQuestion();
          } else if (moduleID == 2) {

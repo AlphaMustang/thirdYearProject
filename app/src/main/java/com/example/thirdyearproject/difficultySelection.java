@@ -32,7 +32,6 @@ public class difficultySelection extends AppCompatActivity implements difficulty
         intent.putExtra("moduleID", moduleID);
         intent.putExtra("submoduleID", submoduleID);
         intent.putExtra("difficulty", selectionID);
-        System.out.println(Integer.toString(selectionID));
         startActivity(intent);
     }
 
