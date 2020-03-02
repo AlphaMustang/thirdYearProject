@@ -231,6 +231,52 @@ public class testQuestionGeneration {
         return new question(1,0,questionText,"None",answer);
     }
 
+    public static question algebraHigherQuestion() {
+        float random = (float) Math.random();
+        if ( random < 0.15 ) { return algebraHigherQuestionOne(); }
+        else if ( random < 0.4 ) { return algebraHigherQuestionTwo(); }
+        else { return algebraHigherQuestionThree(); }
+    }
+
+    // Graphs | solving equations and inequalities
+    private static question algebraHigherQuestionOne() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        questionText.add("What is the value of cos(0)?");
+        return new question(1,0,questionText,"None",1);
+    }
+
+    // Graphs | solving equations and inequalities
+    private static question algebraHigherQuestionTwo() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        questionText.add("What is the value of sin(0)?");
+        return new question(1,0,questionText,"None",0);
+    }
+
+    // solving equations and inequalities
+    private static question algebraHigherQuestionThree() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int base = (int) Math.round(Math.random() * 5);
+        int pow = (int) Math.round(Math.random() * 4);
+        questionText.add("What is " + Integer.toString(base));
+        switch (pow) {
+            case 0: questionText.add("\u2070");
+                break;
+            case 1: questionText.add("\u00B9");
+                break;
+            case 2: questionText.add("\u00B2");
+                break;
+            case 3: questionText.add("\u00B3");
+                break;
+            case 4: questionText.add("\u2074");
+                break;
+            case 5: questionText.add("\u2075");
+                break;
+            default: questionText.add("\u2070");
+        }
+        int answer = (int) Math.pow(base,pow);
+        return new question(0,0,questionText,"None",answer);
+    }
+
 
     /*
     * Ratio Question Generation
@@ -305,7 +351,19 @@ public class testQuestionGeneration {
         return new question(2,0,questionText,"None",amountOfTimeAfter);
     }
 
-
+    private static question ratioHigherQuestionOne() {
+        ArrayList<String> questionText = new ArrayList<String>();
+        int difference = (int) Math.round(((Math.random() * 4) + 1) * 10);
+        int noOfInitialTaps = (int) Math.round((Math.random() * 3) + 3);
+        int noOfTapsAfter = (int) Math.round((Math.random() * 2) + 1);
+        int amountOfInitialTime = noOfInitialTaps * difference;
+        int amountOfTimeAfter = noOfTapsAfter * difference;
+        questionText.add("It takes ");
+        questionText.add(Integer.toString(amountOfInitialTime) + " minutes to fill a swimming pool using ");
+        questionText.add(Integer.toString(noOfInitialTaps) + " hoses. How long would it take to fill a swimming pool using ");
+        questionText.add(Integer.toString(noOfTapsAfter) + " hoses?");
+        return new question(2,0,questionText,"None",amountOfTimeAfter);
+    }
 
     /*
     * Geometry Question Generation

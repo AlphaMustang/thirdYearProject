@@ -96,8 +96,10 @@ public class displayQuestion extends AppCompatActivity {
              currentQ = testQuestionGeneration.accuracyFoundationQuestion();
          } else if ( moduleID == 0 && difficultyID == 1 && submoduleID == 2 ) {
              currentQ = testQuestionGeneration.accuracyHigherQuestion();
-         } else if (moduleID == 1) {
+         } else if (moduleID == 1 && difficultyID == 0) {
              currentQ = testQuestionGeneration.algebraFoundationQuestion();
+         } else if (moduleID == 1 && difficultyID == 1) {
+             currentQ = testQuestionGeneration.algebraHigherQuestion();
          } else if (moduleID == 2) {
              currentQ = testQuestionGeneration.ratioFoundationQuestion();
          } else if (moduleID == 3) {
