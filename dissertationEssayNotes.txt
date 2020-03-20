@@ -34,6 +34,7 @@ Contents Page:
 Introduction
 
     Project Motivation
+        
     Problem Outline
     Specification / Project Goal
     Report Structure
@@ -133,6 +134,8 @@ Official Report:
 
 
 
+
+Either have decisions as its own separate section or as a subsection at the end of all of the relevant sections.
 
 
 
