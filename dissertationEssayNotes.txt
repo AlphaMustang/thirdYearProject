@@ -137,6 +137,8 @@ Official Report:
 
 Either have decisions as its own separate section or as a subsection at the end of all of the relevant sections.
 
+Reference for motivation: https://content.ebscohost.com/ContentServer.asp?EbscoContent=dGJyMMvl7ESeqLE4y9fwOLCmsEiep7NSsaa4SK6WxWXS&ContentCustomer=dGJyMPGntk60p65Juerwgd%2FiuY%2Fx1%2B6B&T=P&P=AN&S=R&D=ehh&K=53450186 (Accessed 23rd March 2020)
+Second reference: https://0-onlinelibrary-wiley-com.pugwash.lib.warwick.ac.uk/doi/pdf/10.1111/jcal.12184 (Accessed 23rd March 2020)
 
 
 Reference all current references from everything else as well as the project repository from GitHub

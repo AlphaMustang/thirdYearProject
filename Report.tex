@@ -4,7 +4,18 @@
 \usepackage{subcaption}
 \usepackage{float}
 
+\title{CS310 Computer Science Project \\ Final Report \\ The Creation of an Android Application to Aid a Student's Revision of Edexcel GCSE Mathematics}
+\author{Ryan O'Hara \\ u1702761}
+
 \begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
 
 \section{Abstract}
 \label{section:abstract}
@@ -14,7 +25,10 @@
 
 \subsection{Project Motivation}
 
-This project was motivated by two key factors. 
+This project was motivated by two key factors.
+
+% Reference for studets thing: https://content.ebscohost.com/ContentServer.asp?EbscoContent=dGJyMMvl7ESeqLE4y9fwOLCmsEiep7NSsaa4SK6WxWXS&ContentCustomer=dGJyMPGntk60p65Juerwgd%2FiuY%2Fx1%2B6B&T=P&P=AN&S=R&D=ehh&K=53450186 (Accessed 23rd March 2020)
+% Second reference: https://0-onlinelibrary-wiley-com.pugwash.lib.warwick.ac.uk/doi/pdf/10.1111/jcal.12184 (Accessed 23rd March 2020)
 
 \subsection{Problem Outline}
 
@@ -53,13 +67,22 @@ Project success was also defined in the project specification. To be deemed succ
 	\item any value of could requirements defined above
 \end{itemize}
 
+The target audience for the final product of this project is students sitting Edexcel GCSE Mathematics examinations. The average age of students sitting this exam is 16 years old. Although, students as early as year 7 (age 11 - 12) begin learning content which is examinable in the GCSE Mathematics exam. The app will be primarily designed for 15-16 year olds, but needs to be accessible to students as young as 12. This means there are a group of non-functional requirements which were not outlined in the project specification but were followed during development which are shown below: 
+
+\begin{itemize}
+	\item The language used in the application should be understandable to 12 year old school children
+	\item The application should be simple and minimalistic as to not confuse new users
+	\item A 12 year old who has not previously used the application but is familiar with smartphones should be able to use the application effectively with minimal prompting
+\end{itemize}
+
+These functional requirements enable anyone learning the content for the Edexcel GCSE Mathematics exams to be able to use the application and benefit from it.
 
 
 \subsection{Report Structure}
 
 This report will start by running through the background to this project. The background section will outline the current landscape of the problem, what has currently been achieved by other people. It will be followed by an explanation of the software development methodology which was used throughout the development of this application. This methodology section will explain how the work was completed from a project management point of view, for example it will outline a typical development session. \\
 
-Section \ref{section:design} outlines the design of the application which will provide a high level overview of the application. This high level view will explain the control and data flows of the program, and any specific design choices which was made throughout the development of this project. Section \ref{section:implementation} discusses the specific implementation details of the project. For example, how the questions were created in the application. \\
+Section \ref{section:design} outlines the design of the application which will provide a high level overview of the application. This high level view will explain the control and data flows of the program, and any specific design choices which was made throughout the development of this project. Section \ref{section:implementation} discusses the specific implementation details of the project. For example, how the questions were created in the application. Testing will be discussed in section \ref{section:testing}. This will consist of outlining how testing was conducted, and the results of user testing. \\
 
 Then project management will be discussed in section \ref{section:projectManagement}. This section will be a discussion on several details of the project that cannot be seen from the source code, for example the development schedule, or weekly meetings with key stakeholders. These details do not appear in the source code but impact the project. The results section follows the project management section, where the requirements will be evaluated and the success of the project will be determined. \\
 
@@ -108,8 +131,6 @@ There are several other mathematics revision apps on both app stores, examples o
 	\label{figure:appStoreApps}
 \end{figure}
 
-
-
 \section{Methodology}
 \label{section:methodology}
 
@@ -134,6 +155,11 @@ Initially, the project was going to have a waterfall based approach to software 
 
 
 
+\section{Testing}
+\label{section:testing}
+
+In the project specification this project was going to use test driven development[x]. This was adapted in the progress report and changed to focus on user testing instead of unit testing. 
+
 \section{Project Management}
 \label{section:projectManagement}
 
@@ -149,14 +175,25 @@ At the beginning of this project a schedule was created. This schedule aimed to 
 
 This relative difficulty in requirements was used to create a rough schedule for the project, assuming all requirements would be completed. This schedule was the one included in the original project specification. This schedule can be seen as a Gantt chart in figure[x].
 
+%
+%
+%
+
 \subsubsection{Progress Report Schedule}
 
 The progress report submitted on 24\textsuperscript{th} November 2019 updated this schedule, once it was realised that development was slower than initially intended through term one of this academic year (October 2019 - December 2019) due to personal reasons. The new schedule, referred to from now on as the Christmas schedule, again made the assumption that every requirement would be completed before the deadline. To mitigate against the slow development conducted through term one, the Christmas schedule increased the workload of the project throughout the Christmas period (8\textsuperscript{th} December 2019 - 8\textsuperscript{th} January 2020) and throughout term two of the project. 
+
+%
+%
+%
 
 \subsubsection{Schedule Evaluation}
 
 The image displayed below as figure [x] is an assessment of the completion of the final requirements in respect to the project specification schedule. 
 
+%
+%
+%
 
 \subsection{Tools}
 
@@ -175,7 +212,7 @@ The rendering engine enables both the ability to edit the XML tags and see the e
 
 Use of the android phone emulator enabled quick and efficient testing cycles. When a feature was initially developed, it could be tested on a wide range of devices through the phone emulator. This add on enabled the emulation of any modern phone through the ability to download files specific to that device. The app could then be tested on an accurate test bed, seeing how the app would look and work on a mobile device. Tablets could also be emulated, which helped with ensuring the application worked on a wide variety of devices.\\
 
-The Android Studio IDE greatly increased the efficiency of development. This was encouraged through the notion that it was only designed specifically for android development, and so could focus entirely on that. Being built upon the IntelliJ platform meant that code editing was incredibly smooth and intuitive. \\
+The Android Studio IDE greatly increased the efficiency of development. This was encouraged through the notion that it was only designed specifically for android development, and so could focus entirely on that. Being built upon the IntelliJ platform meant that code editing was smooth and intuitive. \\
 
 \subsubsection{Git}
 
