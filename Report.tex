@@ -206,7 +206,7 @@ Two types of user testing were conducted throughout this project, white box test
 
 Black box testing was conducted using users outside of the development team. These users were not shown the source code for the application, and this testing was conducted primarily on the physical Pixel 2 testing device. The user would be provided with the application and their use of it would be observed. Before any testing was conducted verbal consent was gained from the user for testing the application through observing their use case. If it was the first time the user had used the application then they were asked to try to use the application as if they had just downloaded it from their normal app store. Whereas, if a user was familiar with the application then they were asked to complete a task which utilised a new feature, or asked to compare visual styles with an image of both the current and previous styles, although the user was not made aware of which style was the current application style, and which was the previous application style. Where there was a change in a feature that the user had used before, they were not notified of the change, and how they dealt with the change was noted. \\
 
-Black box testing was conducted after every major feature was added, with the results being used to improve the feature. Users of different mathematical ability were asked to test the application, from colleagues who use mathematics every day in their fields of study, to those who last encountered it when they took their GCSEs. \\
+Black box testing was conducted after every major feature was added, with the results being used to improve the feature. Users of different mathematical ability were asked to test the application, from colleagues who use mathematics every day in their fields of study, to those who last encountered it when they took their GCSEs. White box testing was conducted throughout development. This was because compilation tests were quick and easy to conduct, taking around one minute per test and requiring access to the physical testing device. \\
 
 %
 %
@@ -223,9 +223,18 @@ A schedule was created early, and updated throughout the project to represent an
 
 \subsubsection{Project Specification Schedule}
 
-At the beginning of this project a schedule was created. This schedule aimed to complete all of the requirements created in the project specification[x]. The schedule was created using a technique common in industry which involved some numbered cards. Each requirement was reviewed. Each review consisted of analysing the relative difficulty of the requirement with respect to all of the other requirements. The difficulty was quantified using the numbered cards, the cards would follow a logarithmic pattern, doubling with difficulty each time. The lowest card was 1/4 and the largest was 16. Any requirement larger than 16 was then broken down into sub-requirements, these sub-requirements would then in turn be broken down if they were above 16 difficulty. \\
+At the beginning of this project a schedule was created. This schedule aimed to complete all of the requirements stated in the project specification[x] by the end of the project. The schedule was created using a technique common in industry which involved some numbered cards. Each requirement was reviewed with each review consisting of analysing the relative difficulty of the requirement with respect to all the other requirements. The difficulty was quantified using the numbered cards, the cards would follow a logarithmic pattern, doubling with difficulty each time. The lowest valued card was \textsuperscript{1}/\textsubscript{4} and the largest value was 16. Any requirement with a relative difficulty value greater than 16 was then broken down into sub-requirements and these sub-requirements would then be reviewed, and broken down further if their relative value was also above 16. \\
 
-This relative difficulty in requirements was used to create a rough schedule for the project, assuming all requirements would be completed. This schedule was the one included in the original project specification. This schedule can be seen as a Gantt chart in figure[x].
+This relative difficulty in requirements was used to create a rough schedule for the project. The schedule created for the project specification can be seen as a Gantt chart in figure \ref{figure:projectSpecGanttChart}. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./data/projectSpecGanttChart.png}
+	\caption{Gantt chart of the schedule produced for the project specification.}
+	\label{figure:projectSpecGanttChart}
+\end{figure}
+
+This schedule was an optimistic schedule. It assumed all of the requirements would be completed by the end of the project, whereas the project specification's definition of success did not need all requirements to be completed. 
 
 %
 %
@@ -233,7 +242,16 @@ This relative difficulty in requirements was used to create a rough schedule for
 
 \subsubsection{Progress Report Schedule}
 
-The progress report submitted on 24\textsuperscript{th} November 2019 updated this schedule, once it was realised that development was slower than initially intended through term one of this academic year (October 2019 - December 2019) due to personal reasons. The new schedule, referred to from now on as the Christmas schedule, again made the assumption that every requirement would be completed before the deadline. To mitigate against the slow development conducted through term one, the Christmas schedule increased the workload of the project throughout the Christmas period (8\textsuperscript{th} December 2019 - 8\textsuperscript{th} January 2020) and throughout term two of the project. 
+The progress report submitted on 24\textsuperscript{th} November 2019 updated this schedule, once it was realised that development was slower than initially intended through term one of this academic year (October 2019 - December 2019) due to personal reasons. The new schedule, referred to from now on as the Christmas schedule, again made the assumption that every requirement would be completed before the deadline. To mitigate against the slow development conducted through term one, the Christmas schedule increased the workload of the project throughout the Christmas period (8\textsuperscript{th} December 2019 - 8\textsuperscript{th} January 2020) and throughout term two of the project. \\
+
+A Gantt chart created for this updated schedule can be viewed below as figure \ref{figure:progressReportGanttChart}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{./data/progressReportGanttChart.png}
+	\caption{Gantt chart of the updated schedule produced for the project specification.}
+	\label{figure:progressReportGanttChart}
+\end{figure}
 
 %
 %
@@ -270,7 +288,7 @@ The Android Studio IDE greatly increased the efficiency of development. This was
 
 Git was used as version control for this project. This enabled access to the project from any device, anywhere, anytime. It also enabled the ability to revert back to an earlier version of the project if something went wrong. This meant that development could take place without fear of failure, as if anything went wrong the project could just be reverted to the last working state.\\
 
-The repository for this project can be found at[x]. This repository is public and can be accessed by anyone. This enables anyone to see the code that would be running on their machines.\\
+The repository for this project can be found at the link in reference [14]. This repository is public and can be accessed by anyone. This enables anyone to see the code that would be running on their machines.\\
 
 Git also logs the time when a change is made to the code. This enabled precise tracking of requirement completion and aided project management. Git commit messages for this project were all deliberately helpful. Git commit messages were written so that they would explain the changes made to the codebase, so they could be logs of when project requirements were completed. The git commit messages for this project can be viewed and give a detailed timeline of when requirements were completed and features were added. This was incredibly useful as it gave updates of any changes made to the codebase as soon as it was available to anyone who follows the repository, and also was used to create a timeline of when requirements were completed for this final report. \\
 
@@ -279,7 +297,7 @@ Git also logs the time when a change is made to the code. This enabled precise t
 
 Weekly meetings were held with the project supervisor to keep key stakeholders in the project up to date with development. Alongside weekly meetings, access was given to the project supervisor to the  github repository early in development. This enabled the project supervisor to directly monitor completed work. \\
 
-A document in the github repository called notes.txt is a file which was edited after every development session was completed. This file contained notes on what was intended to be completed during each development session, as well as what was actually completed. A substantial amount of time was spent at the beginning of early development sessions on remembering what had been completed throughout the previous development session, what state the code was in, and what needed to be completed in this development session. This file cut down the time spent at the beginning of development sessions looking through git previous git commits, and so overall this file caused development to be more efficient. \\
+A document in the github repository called notes.txt is a file which was edited after every development session was completed. This file contained notes on what was intended to be completed during each development session, as well as what was actually completed. A substantial amount of time was spent at the beginning of early development sessions on remembering what had been completed throughout the previous development session, what state the code was in, and what needed to be completed in this development session. This file cut down the time spent at the beginning of development sessions looking through previous git commits, and so overall this file caused development to be more efficient. \\
 
 % \subsection{Project Management Evaluation} [Maybe don't include this]
 
@@ -338,7 +356,7 @@ The majority of git is released under the GNU public license [2] which enables c
 
 Small sections of git are not licensed under the GNU public license, but under the GPL (GNU Lesser Public License) [3]. Relevant sections from the GPL preamble: "By contrast, the GNU General Public Licenses are intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users.". This enables the free use of git for this project. \\
 
-As these are the only two external tools used throughout this project, and the only tools which could have impact on the source code of this project, then there are no legal issues with this project.
+As these are the only two external tools used throughout this project, and the only tools which could have impact on the source code of this project, then there are no legal issues with this project. Any other materials were produced by the author specifically for this project, and so there are no legal problems with using these materials. \\
 
 \subsection{Ethical Issues}
 
@@ -371,6 +389,8 @@ This project only contains one key ethical issue, which is to do with the testin
 
 [12] - http://www.mathswatch.co.uk/subscription/4594745491 (Accessed 25\textsuperscript{th} March 2020) \\
 
-[13] - https://developer.android.com/studio/run/emulator (Accessed 26\textsuperscript{th} March 2020) 
+[13] - https://developer.android.com/studio/run/emulator (Accessed 26\textsuperscript{th} March 2020) \\
+
+[14] - https://github.com/AlphaMustang/thirdYearProject (Accessed 28\textsuperscript{th} March 2020)
 
 \end{document}
