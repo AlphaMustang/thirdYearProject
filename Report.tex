@@ -162,14 +162,66 @@ This application will have to provide users with the ability to practice skills 
 \section{Methodology}
 \label{section:methodology}
 
-Initially, the project was going to have a waterfall based approach to software development. This, however, was decided not to be the best way to work on this project. 
+This project was conducted using an agile methodology. The project focussed on building a base product and then adding new features incrementally with each development cycle until the final product was produced. 
 
 %Go into detail about the scrum methodology.
 
 \section{Design}
 \label{section:design}
 
+This application had a target audience of school children between the ages of 12-16 years old. This meant that any design would have to be simple and intuitive to prevent users from getting 'lost' within the application. The graphs for both the control flow and the data flow for this application are acyclic as is shown by the two figures below, figure [y] and figure [z] respectively. Users can only follow certain paths, and will only end up in the same place by going backwards using the inbuilt backwards button in Android, so they cannot get confused about the layout of the application. Also, the number of pages was kept to a minimum for the application to function for the same reason. This minimalst design aims to prevent confusion by keeping the application simple to understand and use. \\
 
+\subsection{Control Flow}
+
+Figure \ref{figure:applicationControlFlow} is a graph for the control flow of the application. Each edge is bidirectional, the user can move forward by pressing a button in the application, and backwards by hitting the back button built into the Android operating system. \\
+
+\begin{figure}[H]
+	\centering
+	\frame{\includegraphics[width=0.9\linewidth]{./data/applicationControlFlow.png}}
+	\caption{The control flow of the application.}
+	\label{figure:applicationControlFlow}
+\end{figure}
+
+The only user choice in direction is at the start page where a user could select between the information page for the application and the modules list. The information page of the application just displays some basic information for the application. Each node in this graph represents an Android activity. An Android activity is the application equivalent to a webpage on a website. Activities are viewed as one screen in an application[15] and are intended to complete one specific task. If another task needs completing then the application should call another activity. Activities can contain fragments which can be thought of as "a modular section of an activity ... (sort of like a 'sub activity' that you can reuse in different activities)"[16]. The modules, submodules, and difficulty nodes in the control flow graph displayed above are activities which contain only list fragments. The list fragment class is a submodule of the fragment class which displays a list of items, and implements a listener which will act when the user clicks on a specific item. In the case of the modules node, the list displays all six modules which are examined in Edexcel GCSE mathematics. When the user clicks a specific module, the modules activity collects the information of the module selected, and starts the submodules activity and passes the information of the module selected onto the new activity. The submodules activity then displays the submodules for the module selected by the user. \\
+
+
+
+% A control flow section is required in implementation to discuss how the modules node could be split into each of the six specific modules, and the submodules class could be split into each of the submodules depending on the module chosen. But it was decided to just have a modules class to make adding extra modules much more simple. 
+
+\subsection{Data Flow}
+
+Figure [x] is a graph of the flow of data throughout the application. When an activity starts another activity, it can pass information to it. This enables a single directional information flow throughout the application. That is why the diagram displayed as figure [x] is a directed graph. The direction of the data is denoted by an arrow, the side of the edge without the arrow is the sender of the data, and the side of the edge with an arrow is the data receiver. 
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.9\linewidth]{./data/}
+%\caption{}
+%\label{figure:}
+%\end{figure}
+
+The data flow in this graph follows the minimalist design of this application. Data moves along a path in one direction so there is no confusion. A user can go back to a previous activity by using the inbuilt back button in Android. By doing this, the information selected further up the graph (closer to the root node) is preserved. This allows a user to utilise the back button to change the difficulty of the questions that they are answering while keeping the module and submodule information preserved. This enables simple use, where a user does not need to reselect all information to change one specific piece of data. \\
+
+\subsection{Visual Design}
+
+The visual design of this application is minimalist, in keeping with the rest of the app. Every page only has the necessary things displayed on it, and where applicable, only one thing displayed. Below are a few examples of this minimalist design. Figure \ref{figure:applicationStartPage} is a screenshot of the application's start page taken from the physical Google Pixel 2 device.
+
+\begin{figure}[H]
+	\centering
+	\frame{\includegraphics[width=0.9\linewidth]{./data/applicationStartPage.png}}
+	\caption{}
+	\label{figure:applicationStartPage}
+\end{figure}
+
+This screen is made up of the least amount of distinct elements that is possible. As it is the start page of the application it has to have the application name displayed, which is the Maths Help text at the top of the screen. The bottom of the screen is dominated by two buttons, one which starts the modules activity (the modules button), and one which starts the information activity (the app information button). There is nothing else on the webpage, and this is the least amount of elements with which to follow the control and data flow graphs displayed above. \\
+
+An example of list fragment pages is the modules activity page. This is displayed below as figure \ref{figure:applicationModulesPage}, also taken from the physical Pixel 2 testing device. 
+
+\begin{figure}[H]
+	\centering
+	\frame{\includegraphics[width=0.9\linewidth]{./data/applicationModulesPage.png}}
+	\caption{The modules activity page.}
+	\label{figure:applicationModulesPage}
+\end{figure}
 
 % Discuss the control flow of the program, why it works the way it does etc...
 % Get the control flow diagram from the presentation and discuss how pages are connected
@@ -202,11 +254,17 @@ All application testing was conducted on a physical Google Pixel 2 device, as we
 
 These devices give a good variety in Android devices, between both tablet and smartphone, and old and new. These devices were chosen because if the application works well on all four devices, the physical Google Pixel 2 as well as the three virtual devices, then the application was likely to work on most Android devices. \\
 
-Two types of user testing were conducted throughout this project, white box testing and black box testing. White box testing was conducted after each sprint cycle, where the developer would download the application onto their physical pixel 2 testing device as well as the range of virtual devices mentioned above, and then test that the application compiled and ran without errors. Other small tests were also conducted when testing new features. An example of this feature test would consist of the developer creating expected states of the application given specific inputs, and then the developer would follow the input sequence on all four testing devices, and ensure that the application ended up in the expected state for each device. Visual tests were also conducted, where an activity (which can be imagined as the application equivalent of a webpage in a website) in the application was drawn on paper, and then loaded up in the application for each of the testing devices, and the layout on the testing devices was compared with the layout drawn on paper. This testing method was used to find visual errors in the application. \\
+Two types of user testing were conducted throughout this project, white box testing and black box testing. \\ 
+
+\subsubsection{White Box Testing}
+
+White box testing was conducted after each sprint cycle, where the developer would download the application onto their physical pixel 2 testing device as well as the range of virtual devices mentioned above, and then test that the application compiled and ran without errors. Other small tests were also conducted when testing new features. An example of this feature test would consist of the developer creating expected states of the application given specific inputs, and then the developer would follow the input sequence on all four testing devices, and ensure that the application ended up in the expected state for each device. Visual tests were also conducted, where an activity (which can be imagined as the application equivalent of a webpage in a website) in the application was drawn on paper, and then loaded up in the application for each of the testing devices, and the layout on the testing devices was compared with the layout drawn on paper. This testing method was used to find visual errors in the application. \\
+
+\subsubsection{Black Box Testing}
 
 Black box testing was conducted using users outside of the development team. These users were not shown the source code for the application, and this testing was conducted primarily on the physical Pixel 2 testing device. The user would be provided with the application and their use of it would be observed. Before any testing was conducted verbal consent was gained from the user for testing the application through observing their use case. If it was the first time the user had used the application then they were asked to try to use the application as if they had just downloaded it from their normal app store. Whereas, if a user was familiar with the application then they were asked to complete a task which utilised a new feature, or asked to compare visual styles with an image of both the current and previous styles, although the user was not made aware of which style was the current application style, and which was the previous application style. Where there was a change in a feature that the user had used before, they were not notified of the change, and how they dealt with the change was noted. \\
 
-Black box testing was conducted after every major feature was added, with the results being used to improve the feature. Users of different mathematical ability were asked to test the application, from colleagues who use mathematics every day in their fields of study, to those who last encountered it when they took their GCSEs. White box testing was conducted throughout development. This was because compilation tests were quick and easy to conduct, taking around one minute per test and requiring access to the physical testing device. \\
+Black box testing was conducted after every major feature was added, with the results being used to improve the feature. Users of different mathematical ability were asked to test the application, from colleagues who use mathematics every day in their fields of study, to those who last encountered it when they took their GCSEs. White box testing was conducted throughout development. This was because compilation tests were quick and easy to conduct, taking around one minute per test and requiring access to the physical testing device, and would display errors in the code which would then be fixed before attempting the compilation test again. \\
 
 %
 %
@@ -391,6 +449,10 @@ This project only contains one key ethical issue, which is to do with the testin
 
 [13] - https://developer.android.com/studio/run/emulator (Accessed 26\textsuperscript{th} March 2020) \\
 
-[14] - https://github.com/AlphaMustang/thirdYearProject (Accessed 28\textsuperscript{th} March 2020)
+[14] - https://github.com/AlphaMustang/thirdYearProject (Accessed 28\textsuperscript{th} March 2020) \\
+
+[15] - https://developer.android.com/guide/components/activities/intro-activities (Accessed 28\textsuperscript{th} March 2020) \\
+
+[16] - https://developer.android.com/guide/components/fragments (Accessed 28\textsuperscript{th} March 2020)
 
 \end{document}
