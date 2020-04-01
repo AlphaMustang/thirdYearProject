@@ -407,16 +407,57 @@ Advanced software engineering techniques have been included in this project, for
 
 This project was worthwhile as it highlights that more work can be completed on mobile GCSE revision applications, whilst also displaying the amount of work required to build an app of this kind. Students would benefit from an application, endorsed by teachers, which aided in a student's education in GCSE mathematics, whether that application is similar to one built by this project, or another application with slightly different goals like Khan Academy. Reducing the barrier of entry for students to be able to improve their education only requiring access to a smartphone could increase GCSE grades, as most students have regular access to a smartphone, as referenced in the introduction of this report. \\
 
-
 \section{Conclusion}
 \label{section:conclusion}
 
 \section{Future Work}
 \label{section:futureWork}
 
+This project was intended as a proof of concept, trying to create an android application which mimics the homework feature from MyMaths. The final product from this project is not perfect, and could be extended and released to the Google play store. This section of the report will outline key changes which would be made to the project if restarted. After, it will explain extensions which would be made to this project if it were to be continued. \\
+
 \subsection{Project Improvements}
 
+These improvements are the changes that would be made to the application if the project was started again from scratch. 
+
+\subsubsection{Question Storage}
+
+In the current implementation of the application questions are hard coded into the application. This has several disadvantages. One of the disadvantages of hard coding the questions into the application is that any changes made to questions would only be available to users through updates to the application. This delays question changes getting to users and would cause lots of small app updates to fix small problems in questions. Another disadvantage to this hard coding question storage is that users cannot add their own questions to the pool of questions in the application. This is because users do not have access to, and cannot change, the source code of the application. \\
+
+There are two methods which could be implemented to store questions in the application, both with benefits and drawbacks. Both methods would require a slight change in the logic of how questions are read and displayed. \\
+
+The first method of question storage would be to write the questions to a JSON file which is stored locally on the system. This would allow the manipulation of questions (adding questions, changing current questions, etc) locally. This would enable users to add questions just by appending an element to the JSON file, which could then be implemented easily. It would only require a small change of the current question displaying logic. This is because the current question display logic is written to take an Array list storing string types and iterate through it until all elements are displayed, this could be converted to iterating through the data in a JSON object until there is no more data. Also, the data would not be rewritten each update. A second JSON file can be added which contains just the user added questions, and these questions can be appended to the questions JSON file with each update. \\
+
+The second method of question storage would be to insert elements into a database. This has the same benefit of being local storage and so adding user questions is as easy as inserting the question information into the database. SQLite is built into Android and so it would be easy to implement. It would, however, require a complete rewriting of the question displaying logic. This is due to the question logic iterating through the Array lists. Instead, the question displaying logic would query the database, fetch some relevant data, and find a way of displaying that data and generate the random numbers necessary as per the requirements of this project. \\
+
+If this project was restarted then the method which would be implemented would depend on the amount of question data. For smaller question amounts the JSON file would be used. This is because iterating through a JSON file until the right question is found would not add too much time onto question generation. The convenience of creating a working implementation of the JSON storage method would be too great to use the database method. Although, when the JSON file gets large, and lots of questions are contained in it, iterating through questions until the correct question is found would be time consuming. In this situation the database method would be used. SQLite would be much faster at locating a specific row in the database than iterating through the JSON file. \\
+
+\subsubsection{Accessibility Improvements}
+
+If this project were to be restarted then accessibility issues would be much higher on the priorities list than it was. Questions could be played in audio form for those users who are blind. Audio files could be saved to the users device and concatenated to display any questions that could be generated from the application. Also, when an answer is inputted that number could be spoken aloud, or in the case of a multiple choice question the selected answer could be read aloud. This would enable a user which has visual impairment to be able to use the application. \\
+
+There could also be a setting which increases the font size of all text in the application, and would also increase image size. This would also aid users with visual impairments, and would be built into the application from the first version. \\
+
+\subsubsection{Content Grouping}
+
+Content could be grouped into appropriate ages as well as modules. This would aid younger students, those ranging from academic years 7 to 9, to utilise the application to revise. This would increase the target audience of the application, and aid more students in their understanding of GCSE Mathematics. \\
+
+Currently, any students in that age range who wish to use the application could get questions above their skill level. This is counterproductive to the aims of this application, as students would be frustrated that they cannot answer a given question as they have not covered the content, and they are less likely to continue to use the application. Instead, with content grouped into appropriate academic years, as well as modules, students can be certain that questions that they are tackling in the application are appropriate to their skill level. \\
+
+% Split content into years instead of by module etc....
+
 \subsection{Project Extensions}
+
+Project extensions are features which would be added to the application if this project continues. 
+
+\subsubsection{Currently Uncompleted Requirements}
+
+If this project continues the first thing that will be completed are the three uncompleted requirements. These are requirement 8, 9, and 10. 
+
+\subsubsection{User Validation}
+
+\subsubsection{User Added Questions}
+
+\subsubsection{MyMaths Homework Feature}
 
 \section{Legal, Social, Ethical, and Environmental Issues}
 \label{section:issues}
