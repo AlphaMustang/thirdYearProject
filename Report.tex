@@ -455,11 +455,27 @@ These requirements were in the original scope of the project but due to the proj
 
 \subsubsection{User Validation}
 
-User validation would be a key feature which would be added to the application. Two types of user accounts would be created, those available for students and those available for teachers. Student accounts will be able to attempt any questions from any modules in any year group. They will have full access to all testing and learning content at any time. Teachers will have the ability to set classes which will be groups of students 
+User validation would be a key feature which would be added to the application. Two types of user accounts would be created, those available for students and those available for teachers. Student accounts will be able to attempt any questions from any module in any year group. They would have full access to all testing and learning content at any time. Teachers will have the ability to create classes which will contain a group of students from the same academic year. \\
+
+User validation was outside of the scope of the current project as there are many legal issues with storing user data. This application would have had to register under the data protection act and ensure that all data collection is compliant under the new GDPR laws as this application would be aimed at being used primarily in the United Kingdom. It was deemed that the potential legal issues which come with storing user data was not worth the risk for a project of this size and scope. This is why if the scope was increased and time was added on then these legal issues will be tackled. \\
+
+A user would need to be able to register an account with an email, whether that is a school specific email or not, and use the application. A single sign on (SSO) feature can also be added to allow users to sign in with other popular accounts such as facebook and google accounts. This would shift the burden of sign on security to the validating third party, although would not be practical for all cases. A user may not have a third party account and so there would need to be the ability for a user to register an account with their email as well. \\
 
 \subsubsection{User Added Questions}
 
+A feature which would be useful for users of this application is users being able to add their own questions to the question set in this application. This was deemed outside of the scope for the current project as this is not a feature available by any of the major GCSE Mathematics revision applications. This would be added after the question storage technique would be changed, as currently there is no way to automate the question adding process for a student due to how questions are stored. There is also no way to have user specific questions as the questions are built into the source code for the application. \\
+
+Once the question storage method is changed from the current method used to one of the two other methods discussed above, giving users the ability to add questions would be implemented. This feature would be added only for user initiated testing and would be analysed by the statical tools separately to the questions added into the application by the author, or a student's teacher. This is to prevent students from abusing the question adding process to add questions which have a single, simple answer, or are much simpler than other questions in the same skill level. If the questions were not analysed separately then a student could abuse the question adding mechanism so that they get 100\% in a homework or revision set. \\
+
+This would be implemented by adding an activity which would allow the user to input details for a new question. Users would utilise radio buttons to select the module and submodule for the specific question, as well as the year if that had been implemented when user added questions is. There would be a text box where users could type out the question text, and a specific set of characters would be used to represent variables which the application has to generate. This set of characters would then be searched for using regular expressions. \\
+
 \subsubsection{MyMaths Homework Feature}
+
+Given more time with this project a homework feature, similar to that of MyMaths, could be implemented. This would allow teachers to set classes revision tests to be completed by a given date, and with over a specific percentage score. The students would then be notified of the homework with a push notification, as well as something visual within the application, preferably on the homepage of the application so students do not miss it. \\
+
+Students could then attempt the specific homework with their percentage score being sent back to the teacher to analyse. If a student achieves a score below the passing grade for that homework, then they could reattempt the homework, or look at some revision materials for that specific topic. These homework questions would be separate from the user added questions, for reasons of dishonesty mentioned above. \\
+
+Teachers could also be provided with the ability to select specific questions for a topic, and change the appearance probability. This would grant teachers the flexibility to customise a homework specifically for their class. \\
 
 \section{Legal, Social, Ethical, and Environmental Issues}
 \label{section:issues}
