@@ -171,27 +171,49 @@ These tools were utilised in learning the basics of Android application developm
 
 This project was conducted using an agile methodology. The project focussed on building a base product and then adding new features incrementally with each development cycle until the final product was produced. 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 %Go into detail about the scrum methodology.
 
 \section{Design}
 \label{section:design}
 
-This application had a target audience of school children between the ages of 12-16 years old. This meant that any design would have to be simple and intuitive to prevent users from getting 'lost' within the application. The graphs for both the control flow and the data flow for this application are acyclic as is shown by the two figures below, figure [y] and figure [z] respectively. Users can only follow certain paths, and will only end up in the same place by going backwards using the inbuilt backwards button in Android, so they cannot get confused about the layout of the application. Also, the number of pages was kept to a minimum for the application to function for the same reason. This minimalst design aims to prevent confusion by keeping the application simple to understand and use. \\
+This application had a target audience of school children between the ages of 12-16 years old. This meant that any design would have to be simple and intuitive to prevent users from getting 'lost' within the application. The graphs for both the control flow and the data flow for this application are acyclic as is shown by the two figures below, figure \ref{figure:applicationControlFlow} and figure [z] respectively. Users can only follow certain paths, and will only end up in the same place by going backwards using the inbuilt backwards button in Android, so they cannot get confused about the layout of the application. Also, the number of pages was kept to a minimum for the application to function for the same reason. This minimalst design aims to prevent confusion by keeping the application simple to understand and use. \\
 
 \subsection{Control Flow}
 
-Figure \ref{figure:applicationControlFlow} is a graph for the control flow of the application. Each edge is bidirectional, the user can move forward by pressing a button in the application, and backwards by hitting the back button built into the Android operating system. \\
+Figure \ref{figure:applicationControlFlow} is a graph for the control flow of the application. Each edge is bidirectional, the user can move forward by interacting with the application, and backwards by hitting the back button built into the Android operating system. The user interacts with the application in one of three ways, either by pressing a button on their screen, selecting an element from a list in front of them, or entering text into a text field. \\
 
 \begin{figure}[H]
 	\centering
-	\frame{\includegraphics[width=0.9\linewidth]{./data/applicationControlFlow.png}}
+	\frame{\includegraphics[width=0.6\linewidth]{./data/applicationControlFlow.png}}
 	\caption{The control flow of the application.}
 	\label{figure:applicationControlFlow}
 \end{figure}
 
-The only user choice in direction is at the start page where a user could select between the information page for the application and the modules list. The information page of the application just displays some basic information for the application. Each node in this graph represents an Android activity. An Android activity is the application equivalent to a webpage on a website. Activities are viewed as one screen in an application[15] and are intended to complete one specific task. If another task needs completing then the application should call another activity. Activities can contain fragments which can be thought of as "a modular section of an activity ... (sort of like a 'sub activity' that you can reuse in different activities)"[16]. The modules, submodules, and difficulty nodes in the control flow graph displayed above are activities which contain only list fragments. The list fragment class is a submodule of the fragment class which displays a list of items, and implements a listener which will act when the user clicks on a specific item. In the case of the modules node, the list displays all six modules which are examined in Edexcel GCSE mathematics. When the user clicks a specific module, the modules activity collects the information of the module selected, and starts the submodules activity and passes the information of the module selected onto the new activity. The submodules activity then displays the submodules for the module selected by the user. \\
+The only user choice in direction is at the start page where a user could select between the information page for the application and the modules list. Each node in this graph represents an Android activity. An Android activity is the application equivalent to a webpage on a website. Activities are viewed as one screen in an application[15] and are intended to complete one specific task. If another task needs completing then the application should call another activity. Activities can contain fragments which can be thought of as "a modular section of an activity ... (sort of like a 'sub activity' that you can reuse in different activities)"[16]. The modules, submodules, and difficulty nodes in the control flow graph displayed above are activities which contain only list fragments. The list fragment class is a subclass of the fragment class but is adapted to display a list of items, and implement a listener which will act when the user clicks on an item from the list. In the case of the modules node, the list displays all six modules which are examined in Edexcel GCSE mathematics. When the user clicks a specific module, the modules activity collects the information of the module selected, and starts the submodules activity and passes the information of the module selected onto the new activity. The submodules activity then displays the submodules for the module selected by the user. \\
 
-
+The control flow for this application is minimalist. It only includes pages which are absolutely necessary. The graph for the control flow of the application is intentionally acyclic. Without any loops there is only two ways in which a user can end up at a certain page, they can go forward from the root node, or they can go backwards from a further node. This is simple, and should not confuse users, as they can only follow linear paths within the application. If a user ends up at a page that they have encountered before they must have gone backwards somewhere. \\
 
 % A control flow section is required in implementation to discuss how the modules node could be split into each of the six specific modules, and the submodules class could be split into each of the submodules depending on the module chosen. But it was decided to just have a modules class to make adding extra modules much more simple. 
 
@@ -208,41 +230,94 @@ Figure [x] is a graph of the flow of data throughout the application. When an ac
 
 The data flow in this graph follows the minimalist design of this application. Data moves along a path in one direction so there is no confusion. A user can go back to a previous activity by using the inbuilt back button in Android. By doing this, the information selected further up the graph (closer to the root node) is preserved. This allows a user to utilise the back button to change the difficulty of the questions that they are answering while keeping the module and submodule information preserved. This enables simple use, where a user does not need to reselect all information to change one specific piece of data. \\
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Visual Design}
 
 The visual design of this application is minimalist, in keeping with the rest of the app. Every page only has the necessary things displayed on it, and where applicable, only one thing displayed. Below are a few examples of this minimalist design. Figure \ref{figure:applicationStartPage} is a screenshot of the application's start page taken from the physical Google Pixel 2 device.
 
 \begin{figure}[H]
 	\centering
-	\frame{\includegraphics[width=0.9\linewidth]{./data/applicationStartPage.png}}
+	\frame{\includegraphics[width=0.5\linewidth]{./data/applicationStartPage.png}}
 	\caption{}
 	\label{figure:applicationStartPage}
 \end{figure}
 
-This screen is made up of the least amount of distinct elements that is possible. As it is the start page of the application it has to have the application name displayed, which is the Maths Help text at the top of the screen. The bottom of the screen is dominated by two buttons, one which starts the modules activity (the modules button), and one which starts the information activity (the app information button). There is nothing else on the webpage, and this is the least amount of elements with which to follow the control and data flow graphs displayed above. \\
+This screen is made up of the least amount of distinct elements that is possible. As it is the start page of the application it has to have the application name displayed, which is the Maths Help text at the top of the screen. The bottom of the screen is dominated by two buttons, one which starts the modules activity (the modules button), and one which starts the information activity (the app information button). There is nothing else visible on the page, and this is the least amount of elements with which to follow the control and data flow graphs displayed above. \\
 
-An example of list fragment pages is the modules activity page. This is displayed below as figure \ref{figure:applicationModulesPage}, also taken from the physical Pixel 2 testing device. 
+An example of the list fragment pages is the modules activity page. This is displayed below as figure \ref{figure:applicationModulesPage}, also taken from the physical Pixel 2 testing device. 
 
 \begin{figure}[H]
 	\centering
-	\frame{\includegraphics[width=0.9\linewidth]{./data/applicationModulesPage.png}}
+	\frame{\includegraphics[width=0.5\linewidth]{./data/applicationModulesPage.png}}
 	\caption{The modules activity page.}
 	\label{figure:applicationModulesPage}
 \end{figure}
 
-% Discuss the control flow of the program, why it works the way it does etc...
-% Get the control flow diagram from the presentation and discuss how pages are connected
-% Make a new diagram, a more impressive one, which also shows the information transfer between the 
-% separate activities.
+There is nothing on the page but the selections that the user can choose. This basic design ensures that only what is essential is included on the page. Each of the screens which contains a list could include an explanation at the top informing the user to select one of the options, but this was not included as each user involved in black box testing intuitively understood how the lists worked. It was deemed that an explanation would clutter the page, and could be confusing to users who could see it as condescending. \\
+
+The question display activity also obeys the minimalist design of this application, only containing what is essential for the question to be answered. It can be seen as figure \ref{figure:applicationQuestionPage}, which is a screenshot of the page on the physical Pixel 2 testing device.
+
+\begin{figure}[H]
+	\centering
+	\frame{\includegraphics[width=0.5\linewidth]{./data/applicationQuestionPage.png}}
+	\caption{The question display page.}
+	\label{figure:applicationQuestionPage}
+\end{figure}
+
+This page consists of the question, an answer box for the user to input text, and a submit button. In the case in which an image is displayed it appears between the question text and the answer box. There is nothing on the page which could confuse a new user. The minimalist design is followed throughout the application, include only what is necessary as to not over complicate the application. \\
 
 \section{Implementation}
 \label{section:implementation}
 
 %
 %
+%
+%
+%
 
 \subsection{Questions}
 
+%
+%
+%
+%
+%
+
+\subsection{Control and Data Flow}
+
+%
+%
+%
 %
 %
 
@@ -351,6 +426,8 @@ This schedule was an optimistic schedule. It assumed all of the requirements wou
 %
 %
 %
+%
+%
 
 \subsubsection{Progress Report Schedule}
 
@@ -360,11 +437,13 @@ A Gantt chart created for this updated schedule can be viewed below as figure \r
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{./data/progressReportGanttChart.png}
+	\includegraphics[width=\linewidth]{./data/progressReportGanttChart.png}
 	\caption{Gantt chart of the updated schedule produced for the project specification.}
 	\label{figure:progressReportGanttChart}
 \end{figure}
 
+%
+%
 %
 %
 %
@@ -373,6 +452,8 @@ A Gantt chart created for this updated schedule can be viewed below as figure \r
 
 The image displayed below as figure [x] is an assessment of the completion of the final requirements in respect to the project specification schedule. 
 
+%
+%
 %
 %
 %
@@ -529,9 +610,6 @@ This is why the licensing for all the tools used is linked below as a reference,
 \subsubsection{Android Studio}
 
 Android Studio is built on top of the IntelliJ platform. It shares the same license as IntelliJ, as is shown in this comment on a blog post by the creator of IntelliJ Dmitry Jemerov (Yole in the blog post) [17]. The IntelliJ IDEA (the IntelliJ IDE) is licensed under two licenses, but as is explained in the blog post, the licensed version of IntelliJ IDEA that is used as the basis of Android Studio has the Apache 2 license. The relevant sections of the Apache 2 license are as follows: "You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form"[19]. This allows for the use of the IntelliJ and Android Studio IDEs for commercial and independent development which this project falls under, and so there are no legal issues with using Android Studio as the IDE for this project. \\
-
-% Find the licensing for Android Studio, the link which proves that it copies the IntelliJ license, and then the 
-% relevant parts of that license. 
 
 \subsubsection{Git}
 
