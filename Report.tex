@@ -215,51 +215,20 @@ The only user choice in direction is at the start page where a user could select
 
 The control flow for this application is minimalist. It only includes pages which are absolutely necessary. The graph for the control flow of the application is intentionally acyclic. Without any loops there is only two ways in which a user can end up at a certain page, they can go forward from the root node, or they can go backwards from a further node. This is simple, and should not confuse users, as they can only follow linear paths within the application. If a user ends up at a page that they have encountered before they must have gone backwards somewhere. \\
 
-% A control flow section is required in implementation to discuss how the modules node could be split into each of the six specific modules, and the submodules class could be split into each of the submodules depending on the module chosen. But it was decided to just have a modules class to make adding extra modules much more simple. 
-
 \subsection{Data Flow}
 
-Figure [x] is a graph of the flow of data throughout the application. When an activity starts another activity, it can pass information to it. This enables a single directional information flow throughout the application. That is why the diagram displayed as figure [x] is a directed graph. The direction of the data is denoted by an arrow, the side of the edge without the arrow is the sender of the data, and the side of the edge with an arrow is the data receiver. 
+Figure \ref{figure:applicationDataFlow} is a graph of the flow of data throughout the application. When an activity starts another activity, it can pass information to it. This enables a single directional information flow throughout the application. That is why the diagram displayed as figure \ref{figure:applicationDataFlow} is a directed graph. The direction of the data is denoted by an arrow, the side of the edge without the arrow is the sender of the data, and the side of the edge with an arrow is the data receiver. 
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.9\linewidth]{./data/}
-%\caption{}
-%\label{figure:}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\frame{\includegraphics[width=0.9\linewidth]{./data/applicationDataFlow.pdf}}
+\caption{Diagram representing how data flows through the application.}
+\label{figure:applicationDataFlow}
+\end{figure}
 
-The data flow in this graph follows the minimalist design of this application. Data moves along a path in one direction so there is no confusion. A user can go back to a previous activity by using the inbuilt back button in Android. By doing this, the information selected further up the graph (closer to the root node) is preserved. This allows a user to utilise the back button to change the difficulty of the questions that they are answering while keeping the module and submodule information preserved. This enables simple use, where a user does not need to reselect all information to change one specific piece of data. \\
+The data flow in this graph follows the minimalist design of this application. Data moves along a path in one direction so there is no confusion. A user can go back to a previous activity by using the inbuilt back button in Android. By doing this, the information selected further up the graph (closer to the root node) is preserved, but the information gathered along the edge which the application is now travelling back from is lost. This allows a user to utilise the back button to change the difficulty of the questions that they are answering while keeping the module and submodule information preserved. This enables simple use, where a user does not need to reselect all information to change one specific piece of data. \\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Information is passed along the modules path until it gets to the questions activity. The questions activity then uses all of the information to select the questions that it would display. \\
 
 \subsection{Visual Design}
 
@@ -299,6 +268,8 @@ This page consists of the question, an answer box for the user to input text, an
 \section{Implementation}
 \label{section:implementation}
 
+
+
 %
 %
 %
@@ -315,6 +286,7 @@ This page consists of the question, an answer box for the user to input text, an
 
 \subsection{Control and Data Flow}
 
+% A control flow section is required in implementation to discuss how the modules node could be split into each of the six specific modules, and the submodules class could be split into each of the submodules depending on the module chosen. But it was decided to just have a modules class to make adding extra modules much more simple. 
 %
 %
 %
