@@ -33,13 +33,6 @@ public class displayQuestion extends AppCompatActivity {
         changeQuestion(intent);
      }
 
-     // need to sort out what happens when the app gets closed
-    // I don't think this is useful ATM.
-//     @Override
-//     public void onSaveInstanceState(Bundle savedInstanceState) {
-//        super.onSaveInstanceState(savedInstanceState);
-//     }
-
 
     public void answerCheck(View view) {
         EditText answerBox = (EditText) findViewById(R.id.answerInput);
@@ -70,13 +63,6 @@ public class displayQuestion extends AppCompatActivity {
         changeQuestion(this.intent);
     }
 
-/*  Edit this later, there is no need to add this right now
-    public void onRadioButtonClicked(View view) {
-        boolean button1Checked =
-
-
-    }
-*/
      private void changeQuestion(Intent intent) {
          TextView questionTextBox = (TextView) findViewById(R.id.displayQuestionTextBox);
          int moduleID = intent.getIntExtra("moduleID", 0);

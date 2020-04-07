@@ -268,23 +268,36 @@ This page consists of the question, an answer box for the user to input text, an
 \section{Implementation}
 \label{section:implementation}
 
+This section will discuss how the project was actually created, providing examples from code where appropriate. It will go into depth with some key features of Android development and how they have been applied to this project, and will also explain and justify key decisions made throughout the development process. 
 
+\subsection{Fragments}
+
+Android activities were explained earlier in the design section of this report. A fragment is very similar to an activity, and has a very similar life cycle. Fragments can be viewed as a modular section of an activity. One activity can contain multiple fragments, and the same fragment can be used in many activities. A fragment is primarily used when a developer wishes to run the same code in multiple activities. As fragments can be added to activities in the same way a text box is, it is simple and quick to reuse code through fragments instead of writing the same code twice. \\
+
+Visual elements of the application are stored as XML data and then rendered on the device. Each activity has its own XML data to tell the device how it should be rendered. This allows each activity to have its own unique layout which is created to achieve the goal for that activity. Fragments also have their own XML data which enables a unique layout to suit their specific goals, and they can have their own code. Fragments, however, have to be attached to a parent activity.  \\
+
+In this project fragments have been used in place of activities for lists. This allows for different layouts for different sizes of devices. Although changing the look of the application depending on the size of the device it is running on is currently unused as the application is simple, it could allow for different layouts between tablets and smartphones when the application gets more complicated. \\
+
+An example of where fragments have been used in place of activities are: using listFragment instead of listActivity to control the modules submodules, and difficulties lists. However, the questions page of the application is an activity where it could have been an activity composed of fragments. This was due to ease of creation as opposed to design choice. However, the displayQuestion activity could be modified to utilise several fragments instead of as an activity. For example, displaying an image could be implemented as a fragment which displays the image, and then the fragment could be included in the displayQuestion activity. \\
 
 %
-%
-%
-%
+% In this project list fragments have been utilised, although fragments could have been used throughout the application. 
 %
 
 \subsection{Questions}
 
 %
-%
-%
-%
+% Write about two separate question issues, the first being how they were created 
+% (so through past papers to ensure the questions were of test standard)
+% and second how they were physically hard coded into the application
+% Third discuss that a factory class was used to produce random questions
 %
 
 \subsection{Control and Data Flow}
+
+A decision was made when it came to the control flow of the application. As is stated above, currently a list fragment is used to display both the modules and submodules lists, as well as the difficulty list. It was decided that the outcome of the modules list fragment was to feed into one submodules list fragment that would collect its list to display based on what module was selected, instead of creating six list fragments, one for each set of submodules, or six list activities, which would greatly increase the complexity of the application from a development perspective. \\
+
+ 
 
 % A control flow section is required in implementation to discuss how the modules node could be split into each of the six specific modules, and the submodules class could be split into each of the submodules depending on the module chosen. But it was decided to just have a modules class to make adding extra modules much more simple. 
 %
@@ -534,6 +547,12 @@ Content could be grouped into appropriate ages as well as modules. This would ai
 
 Currently, any students in that age range who wish to use the application could get questions above their skill level. This is counterproductive to the aims of this application, as students would be frustrated that they cannot answer a given question as they have not covered the content, and they are less likely to continue to use the application. Instead, with content grouped into appropriate academic years, as well as modules, students can be certain that questions that they are tackling in the application are appropriate to their skill level. \\
 
+\subsubsection{Trello}
+
+Project management was an issue early on in the project. Even throughout the second term of this academic year the project management was better but still limiting the achievement in the project. If the project management had been better then more work would have been completed on the project. \\
+
+If the project was restarted then a few project management techniques would be used to improve the efficiency of the project. 
+
 \subsection{Project Extensions}
 
 Project extensions are features which would be added to the application if this project continues. 
@@ -650,6 +669,8 @@ This project only contains one key ethical issue, which is to do with the testin
 
 [26] - https://developer.android.com/docs (Accessed 31\textsuperscript{th} March 2020) \\
 
-[27] - https://github.com/AlphaMustang (Accessed 31\textsuperscript{th} March 2020)
+[27] - https://github.com/AlphaMustang (Accessed 31\textsuperscript{th} March 2020) \\
+
+[28] - Head first android development pg 312.
 
 \end{document}
