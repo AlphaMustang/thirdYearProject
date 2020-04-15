@@ -178,32 +178,26 @@ These tools were utilised in learning the basics of Android application developm
 \section{Methodology}
 \label{section:methodology}
 
-This project was conducted using an agile methodology. The project focussed on building a base product and then adding new features incrementally with each development cycle until the final product was produced. 
+This section will describe how the work necessary for this project was completed. It will describe the process with which the final application was developed at a high level, and section \ref{section:implementation} will explain the lower level ideas with examples from the final application's source code. \par
 
+The process with which work was completed within this project, often referred to as the methodology, changed throughout this project. The project specification stated that "This project will make use of the scrum software engineering methodology.". The scrum methodology was not followed throughout the early stages of this project. Instead, a non-specific agile methodology was utilised, as each development cycle planned only the next requirement to be added as a feature. Each development cycle did not create user stories, or have a pre-defined length of between one and four weeks, which are both key features of the scrum methodology. \par
 
+The non-specific agile methodology utilised for the early stages of this project consisted of selecting the next requirement to implement into the program. Any decisions that needed to be made about the implementation would be made at this stage and a small plan would also be created detailing how to implement the requirement. Finally, the code would be written for the requirement to the plan. Once the requirement was completed, there would be no review, development would move onto the next requirement. \par
 
+Monitoring and controlling was continuously conducted throughout this project. Midway through the project it was noticed that the methodology was not being followed as was set out in the project specification. This problem is discussed later in the risks section of this report which is section number \ref{section:risks}. This deviation from the initial project plan was disruptive to the progress of the project, and so the methodology used for this project was changed midway through the project. It was still a non-agile methodology as no user stories were written, but each development (sprint) cycle consisted of one week, with specific time being dedicated each week to development. The other major change to the methodology was including sprint reviews. These two changes meant that the methodology could be viewed as a variation on scrum which used requirements instead of user stories.\par
 
+The final methodology change for this project was implemented during the last month of the project to aid with writing this report and continuing development in parallel. For this section of development focussing on both the report and continuing to implement requirements was difficult. Initially, each section of the report were aimed to be written in parallel to decrease the amount of idle time in the writing process due to bottlenecks. For example, sections such as design required figures to be created which could not be created in a writing environment. This meant that if multiple sections were not worked on in parallel then there would be idle time. To fix this multiple sections were worked on simultaneously when writing the report. This caused its own issues of an increase in time spent context switching, which can be viewed as wasted time. Once the context switching increased above a specific boundary it was decided to switch the report writing from following the scrum methodology to Kanban. \par
 
+This change in methodology manifested itself in two key ways. The first was using Trello[29] as a way of visualising workflow. A Kanban board was set up, and can be seen as figure \ref{figure:trelloBoardOG}. 
 
+\begin{figure}[H]
+	\centering
+	\frame{\includegraphics[width=0.9\linewidth]{./data/trelloCopy.jpg}}
+	\caption{Trello board used as a to-do list for this report.}
+	\label{figure:trelloBoardOG}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%Go into detail about agile work .
-% Discuss how stuff was built as quickly as possible to improve on an MVP 
+This Trello board was made to effectively visualise the work that had to be completed for this report to be deemed completed. Work is pulled from the 'Things To Do' section into the 'Doing' section. Once the work is completed, it is moved into the 'Done' section. The second change to implement Kanban was the introduction of work in progress limits. Work in progress limits reduce the amount of time spent context switching by limiting the amount of tasks which can be worked on at any one point in time. There is one work in progress limit set in figure \ref{figure:trelloBoardOG} and is denoted by a black line under the 'References' card in the 'Doing' section. This work in progress limit decreased the amount of time spent context switching, and also narrowed the focus of each development session. Instead of having the choice between working on several sections of the report, the choice was between two sections of the report at any one time. This narrowed focus increased the productivity of the report writing, and also increased the quality of the text written. 
 
 
 \section{Design}
@@ -213,18 +207,7 @@ This application had a target audience of school children between the ages of 12
 
 \subsection{Control Flow}
 
-Figure \ref{figure:applicationControlFlow} is a graph for the control flow of the application. Each edge is bidirectional, the user can move forward by interacting with 
-
-85 commits
-1 branch
-0 packages
-0 releases
-
-1 contributor
-
-TeX 67.0% Java 33.0% 
-
-the application, and backwards by hitting the back button built into the Android operating system. The user interacts with the application in one of three ways, either by pressing a button on their screen, selecting an element from a list in front of them, or entering text into a text field. \par
+Figure \ref{figure:applicationControlFlow} is a graph for the control flow of the application. Each edge is bidirectional, the user can move forward by interacting with the application, and backwards by hitting the back button built into the Android operating system. The user interacts with the application in one of three ways, either by pressing a button on their screen, selecting an element from a list in front of them, or entering text into a text field. \par
 
 \begin{figure}[H]
 	\centering
@@ -325,19 +308,15 @@ The third key decision regarding questions was how to hard-code them into the ap
 	\label{figure:questionClass}
 \end{figure}
 
-This class includes both the moduleID and submoduleID of the question. It also stores an array list which stores string types. This array list contains all of the question text, which is then displayed by the displayQuestion activity. The displayQuestion activity iterates through the array list displaying each individual element in order to create the whole question text. This could have just been stored as one long string, but it is stored as an array list for convenience. 
-% Discuss how the array list enables the easy split for integers, and so if you had to get the integers 
-% out of a question to display in a different way then it is easy to do. 
+This class includes both the moduleID and submoduleID of the question. It also includes an array list which stores data in string formar. This array list contains the question text data, which is then displayed by the displayQuestion activity. The displayQuestion activity iterates through the array list displaying each individual element in order to create the whole question text. This could have just been stored as one long string, but it is stored as an array list for convenience. It is convenient because it enables the question text to be split on the numerical values which are used within the questions. The final array list will be in the form "text (number text)*" where this form is viewed as a regular expression. This enables the ability to put numerical values into the question text but also to access these values if needed. \par
+
+The string pictureName included in the question class in figure \ref{figure:questionClass} is the file name of the image which will be displayed along with the question text. Currently, only one image can be displayed, although this could be extended to multiple images by storing the images in an array list which would then be iterated through. If this variable is set to the string "None" then the image display view is hidden from the screen, and no image is displayed. The question difficulty is also stored as a numerical value being either zero or one. This field storing a zero indicates that the question is a foundation tier question, whereas a one value being stored indicates that the question is from a higher tier paper. \par
+
+The question's answer is also stored in the question class. All question answers have been rounded to integer precision and all questions include information stating that the user's answer should be rounded to the closest whole number value. On top of the text being included in each question users are prevented from entering non-integer values into the text box as it will only accept whole number values. Currently, no questions which require text based answers are included in the application, although they could be implemented. These kinds of questions would be included in multiple choice format, with radio buttons displaying prospective answers, and users would select the answer that they thought was correct. The application would send the answer as a value between zero and the number of prospective answers displayed to be marked. The background of the correct answer could then be displayed as green to indicate that it is the correct answer. \par
+
+Where a numerical value is used in a question it has been produced in one of two ways. It has either been produced using the java random method, or it is calculable from other numerical values which have been randomly produced for the specific question. This ensures that numerical values for questions are values which have not been seen before, or are not repeated often. This aims to prevent answer memorisation. Answer memorisation is where a user enters an incorrect answer for specific question values, and then remembers the correct answer to the question which gets displayed, and so next time a student is presented with the same question with the same values, they input the remembered answer and the question is marked correctly. This makes it look like the student has learned the method for answering the question, when in reality they have just learned the answer for those specific values. This is why when a value is used in a question it is generated using the java random method over a specific range of values. This allows the student to see new values often whilst attempting a specific question, but it also allows the answers to be 
 
 % Research into factory classes and if it was appropriate in this context
-
-%
-% Write about two separate question issues, the first being how they were created 
-% (so through past papers to ensure the questions were of test standard)
-% and second how they were physically hard coded into the application
-% Third discuss that a factory class was used to produce random questions
-%
-
 \subsection{Control and Data Flow}
 
 A decision was made when it came to the control flow of the application. As is stated above, currently a list fragment is used to display both the modules and submodules lists, as well as the difficulty list. It was decided that the outcome of the modules list fragment was to feed into one submodules list fragment that would collect its list to display based on what module was selected. Instead six list fragments could have been created, one for each set of submodules for each module, or six list activities. This would have greatly increased the complexity of the application from a development perspective, although would not have changed the user experience whilst using the application. Figure \ref{figure:controlFlowComparisons} below shows the control flow diagram for this application, as well as the complex control flow diagram which splits the submodules activity into six individual submodule activities, each representing a separate module.
@@ -432,7 +411,7 @@ The three main causes of poor project management are:
 
 Each of these issues alone can slow the development process and can cause issues affecting the final product. For effective project management at least the three main causes of poor project management have to be handled appropriately. \par
 
-Initially throughout the first term and the Christmas break, project management was not handled appropriately. This, alongside personal issues discussed earlier, caused the project to be delayed by four weeks at the beginning of the second academic term. Poor project management was initially accepted, although as risks are monitored on an ongoing basis throughout the project to ensure that the project will be successfully completed. This monitoring highlighted that if the current project management techniques were allowed to continue then the project would be a failure. Poor project management was then changed from being accepted to being mitigated. \par
+Initially throughout the first term and the Christmas break, project management was not handled appropriately. This, alongside personal issues discussed earlier, caused the project to be delayed by four weeks at the beginning of the second academic term. Poor project management was initially accepted, although as risks are both monitored and controlled on an ongoing basis throughout the project to ensure that the project will be successfully completed. This monitoring highlighted that if the current project management techniques were allowed to continue then the project would be a failure. Poor project management was then changed from being accepted to being mitigated. \par
 
 The plan that was implemented to fix the poor project management from the first half of the development cycle tackled two of the three main causes of project management which affected this project. Poor communication within a development team cannot be a problem if the development team only consists of one member, so that was not an issue with this project. An inexperienced project manager was fixed through the project leader taking CS352 Project Management for Computer Scientists. This taught the project manager how to handle time management through the use of calculating the critical path for this project. This highlighted the requirements which would delay the project's completion if it was delayed. This provided the knowledge of the order that the requirements should be completed in to minimise the amount of time spent waiting for another feature to be completed. This saved time throughout the development process which enabled the completion of more requirements and ultimately lead to the success of the project. \par 
 
@@ -527,15 +506,18 @@ The repository for this project can be found at the link in reference [14]. This
 Git also logs the time when a change is made to the code. This enabled precise tracking of requirement completion and aided project management. Git commit messages for this project were all deliberately helpful. Git commit messages were written so that they would explain the changes made to the codebase, so they could be logs of when project requirements were completed. The git commit messages for this project can be viewed and give a detailed timeline of when requirements were completed and features were added. This was incredibly useful as it gave updates of any changes made to the codebase as soon as it was available to anyone who follows the repository, and also was used to create a timeline of when requirements were completed for this final report. \par
 
 % Move into the methodology section. Certainly the information about the notes file.
-\subsection{Weekly Work????}
+\subsection{Weekly Time Management}
 
 Weekly meetings were held with the project supervisor to keep key stakeholders in the project up to date with development. Alongside weekly meetings, access was given to the project supervisor to the  github repository early in development. This enabled the project supervisor to directly monitor completed work. \par
 
 A document in the github repository called notes.txt is a file which was edited after every development session was completed. This file contained notes on what was intended to be completed during each development session, as well as what was actually completed. A substantial amount of time was spent at the beginning of early development sessions on remembering what had been completed throughout the previous development session, what state the code was in, and what needed to be completed in this development session. This file cut down the time spent at the beginning of development sessions looking through previous git commits, and so overall this file caused development to be more efficient. \par
 
-% \subsection{Project Management Evaluation} [Maybe don't include this]
+% discuss the time management, and how in the beginning of the project no time was dedicated specifically
+% to the project but it was changed throughout the second term
 
-% Use analysis from project management to assess the overall management of the project
+\subsection{Time Management and Methodology}
+
+The first term of this project took a very relaxed stance on project development which meant that any free time within a working week was dedicated to this project. For the first five weeks of the first academic term this was fine, but it meant that as the academic year progressed, less time was spent on the project per week. This inconsistency in development time made it progressively more difficult to follow scrum sprint cycles. This inconsistency was incredibly unproductive and if development continued at this pace then the project would have been deemed a failure, as is discussed in section \ref{section:risks} about risks. \par
 
 
 \section{Results}
