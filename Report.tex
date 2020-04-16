@@ -232,10 +232,10 @@ The control flow for this application is minimalist. It only includes pages whic
 Figure \ref{figure:applicationDataFlow} is a graph of the flow of data throughout the application. When an activity starts another activity, it can pass information to it. This enables a single directional information flow throughout the application. That is why the diagram displayed as figure \ref{figure:applicationDataFlow} is a directed graph. The direction of the data is denoted by an arrow, the side of the edge without the arrow is the sender of the data, and the side of the edge with an arrow is the data receiver. 
 
 \begin{figure}[H]
-\centering
-\frame{\includegraphics[width=0.9\linewidth]{./data/applicationDataFlow.pdf}}
-\caption{Diagram representing how data flows through the application.}
-\label{figure:applicationDataFlow}
+	\centering
+	\frame{\includegraphics[width=0.9\linewidth]{./data/applicationDataFlow.pdf}}
+	\caption{Diagram representing how data flows through the application.}
+	\label{figure:applicationDataFlow}
 \end{figure}
 
 The data flow in this graph follows the minimalist design of this application. Data moves along a path in one direction so there is no confusion. A user can go back to a previous activity by using the inbuilt back button in Android. By doing this, the information selected further up the graph (closer to the root node) is preserved, but the information gathered along the edge which the application is now travelling back from is lost. This allows a user to utilise the back button to change the difficulty of the questions that they are answering while keeping the module and submodule information preserved. This enables simple use, where a user does not need to reselect all information to change one specific piece of data. \par
@@ -249,7 +249,7 @@ The visual design of this application is minimalist, in keeping with the rest of
 \begin{figure}[H]
 	\centering
 	\frame{\includegraphics[width=0.5\linewidth]{./data/applicationStartPage.png}}
-	\caption{}
+	\caption{Start page of the application screenshot from the physical Pixel 2 testing device.}
 	\label{figure:applicationStartPage}
 \end{figure}
 
@@ -307,7 +307,7 @@ The third key decision regarding questions was how to hard-code them into the ap
 \begin{figure}[H]
 	\centering
 	\frame{\includegraphics[width=0.9\linewidth]{./data/questionClass.jpg}}
-	\caption{}
+	\caption{Source code for the question class.}
 	\label{figure:questionClass}
 \end{figure}
 
@@ -339,13 +339,13 @@ A decision was made when it came to the control flow of the application. As is s
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.45\textwidth}
-		\includegraphics[width=0.9\linewidth]{./data/applicationControlFlow.png}
+		\frame{\includegraphics[width=0.9\linewidth]{./data/applicationControlFlow.png}}
 		\caption{A diagram of the control flow of the final application.}
 		\label{subfigure:applicationControlFlow}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.45\textwidth}
-		\includegraphics[width=0.9\linewidth]{./data/adaptedControlFlow.png}
+		\frame{\includegraphics[width=0.9\linewidth]{./data/adaptedControlFlow.png}}
 		\caption{A diagram of the control flow for the hypothetical complex application.}
 		\label{subfigure:adaptedControlFlow}
 	\end{subfigure}
@@ -451,7 +451,7 @@ This relative difficulty in requirements was used to create a rough schedule for
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{./data/projectSpecGanttChart.png}
+	\frame{\includegraphics[width=\linewidth]{./data/projectSpecGanttChart.png}}
 	\caption{Gantt chart of the schedule produced for the project specification.}
 	\label{figure:projectSpecGanttChart}
 \end{figure}
@@ -472,7 +472,7 @@ A Gantt chart created for this updated schedule can be viewed below as figure \r
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{./data/progressReportGanttChart.png}
+	\frame{\includegraphics[width=\linewidth]{./data/progressReportGanttChart.png}}
 	\caption{Gantt chart of the updated schedule produced for the project specification.}
 	\label{figure:progressReportGanttChart}
 \end{figure}
@@ -485,8 +485,18 @@ A Gantt chart created for this updated schedule can be viewed below as figure \r
 
 \subsubsection{Schedule Evaluation}
 
-The image displayed below as figure [x] is an assessment of the completion of the final requirements in respect to the project specification schedule. 
+The image displayed below as figure \ref{figure:finalSchedule} shows the final schedule at the end of the project. 
 
+\begin{figure}[H]
+	\centering
+	\frame{\includegraphics[width=0.9\linewidth]{./data/finalScheduleColour.jpg}}
+	\caption{The final schedule created at the end of the project.}
+	\label{figure:finalSchedule}
+\end{figure} 
+
+This figure shows information about each requirement, as well as some key deliverables produced throughout the project. It shows the start and end dates of the requirements, as well as the duration of each requirement, in days. The requirements are colour coded. Requirements with a green background have been fully completed at the end of the project. A yellow background for the requirement represents a started but uncompleted requirement, and a red requirement was not started during the project. \par
+
+This final schedule was behind both the project specification schedule and the progress report schedule. 
 %
 %
 %
