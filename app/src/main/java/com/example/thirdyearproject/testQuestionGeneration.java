@@ -19,13 +19,13 @@ public class testQuestionGeneration {
 
     public static question calculationFoundationQuestion() {
         float randomNumber = (float) Math.random();
-        if (randomNumber < 0.3333) { return numberFoundationQuestionOne(); }
-        else if (randomNumber < 0.66667) { return numberFoundationQuestionFour(); }
-        else { return numberFoundationQuestionFive(); }
+        if (randomNumber < 0.3333) { return calculationFoundationQuestionOne(); }
+        else if (randomNumber < 0.66667) { return calculationFoundationQuestionTwo(); }
+        else { return calculationFoundationQuestionThree(); }
     }
 
     // Structure and Calculation (foundation)
-    private static question numberFoundationQuestionOne() {
+    private static question calculationFoundationQuestionOne() {
         ArrayList<String> questionText = new ArrayList<String>();
         questionText.add("Which one of these numbers is the smallest: ");
         int currentNumber;
@@ -40,7 +40,7 @@ public class testQuestionGeneration {
     }
 
     // Structure and Calculation (foundation)
-    private static question numberFoundationQuestionFour() {
+    private static question calculationFoundationQuestionTwo() {
         ArrayList<String> questionText = new ArrayList<String>();
         int randomNumberOne = (int) (Math.random() * 100);
         int randomNumberTwo = (int) (Math.random() * 100);
@@ -51,7 +51,7 @@ public class testQuestionGeneration {
     }
 
     // Structure and Calculation (foundation)
-    private static question numberFoundationQuestionFive() {
+    private static question calculationFoundationQuestionThree() {
         ArrayList<String> questionText = new ArrayList<String>();
         int pow = (int) Math.round(Math.random() * 5);
         questionText.add("What is 2");

@@ -22,6 +22,14 @@
 \section{Abstract}
 \label{section:abstract}
 
+%
+%
+%
+%
+%
+%
+%
+
 \section{Introduction}
 \label{section:introduction}
 
@@ -86,7 +94,6 @@ The target audience for the final product of this project is students sitting Ed
 
 These functional requirements enable anyone learning the content for the Edexcel GCSE Mathematics exams to be able to use the application and benefit from it.
 
-
 \subsection{Report Structure}
 
 This report will start by running through the background to this project. The background section will outline the current landscape of the problem, what has currently been achieved by other people. It will be followed by an explanation of the software development methodology which was used throughout the development of this application. This methodology section will explain how the work was completed from a project management point of view, for example it will outline a typical development session. \par
@@ -123,10 +130,10 @@ MyMaths, however, is intended to be used in a web browser, and so is designed to
 % find this figure somewhere
 
 
-
-
-
-
+%
+%
+%
+%
 
 MyMaths has an iOS and Android application for tablets, but not a specific application for smartphones[5]. This prevents students who own their own smartphones but do not have access to a tablet on a regular basis from revising using MyMaths. \par
 
@@ -273,31 +280,27 @@ This page consists of the question, an answer box for the user to input text, an
 \section{Implementation}
 \label{section:implementation}
 
-This section will discuss how the project was actually created, providing examples from code where appropriate. It will go into depth with some key features of Android development and how they have been applied to this project, and will also explain and justify key decisions made throughout the development process. 
+This section will discuss how the project was actually created, providing examples from code where appropriate. It will explain in depth some key features of Android development and how they have been applied to this project, and will also justify key decisions made throughout the development process. 
 
 \subsection{Fragments}
 
-Android activities were explained earlier in the design section of this report. A fragment is very similar to an activity, and has a very similar life cycle. Fragments can be viewed as a modular section of an activity. One activity can contain multiple fragments, and the same fragment can be used in many activities. A fragment is primarily used when a developer wishes to run the same code in multiple activities. As fragments can be added to activities in the same way a text box is, it is simple and quick to reuse code through fragments instead of writing the same code twice. \par
+Android activities were explained earlier in the design section of this report. A fragment is very similar to an activity, and has a very similar life cycle. Fragments can be viewed as a modular section of an activity. One activity can contain multiple fragments, and the same fragment can be used in many activities. A fragment is designed to be used when a developer wishes to run the same code in multiple activities, and is a way of preventing developers from rewriting code. As fragments can be added to activities in the same way a text box is, it is simple and quick to reuse code through fragments. \par
 
-Visual elements of the application are stored as XML data and then rendered on the device. Each activity has its own XML data to tell the device how it should be rendered. This allows each activity to have its own unique layout which is created to achieve the goal for that activity. Fragments also have their own XML data which enables a unique layout to suit their specific goals, and they can have their own code. Fragments, however, have to be attached to a parent activity.  \par
+Visual elements of the application are stored as XML data and then rendered on the device. Each activity has its own XML data to tell the device how it should be rendered. This allows each activity to have its own unique layout which is created to achieve the goal for that activity. Fragments also have their own XML data which enables a unique layout to suit their specific goals, and they can have their own code. Fragments, however, have to be attached to a parent activity. This allows fragments to act similarly to an activity would in a given situation. \par
 
-In this project fragments have been used in place of activities for lists. This allows for different layouts for different sizes of devices. Although changing the look of the application depending on the size of the device it is running on is currently unused as the application is simple, it could allow for different layouts between tablets and smartphones when the application gets more complicated. \par
+In this project fragments have been used in place of activities for lists. This allows for different layouts for different sizes of devices. Although changing the look of the application depending on the size of the device it is running on is currently unused as the application is simple, it could allow for different layouts between tablets and smartphones when the application gets more complicated. It could also allow lists to be displayed next to each other on larger devices. For example, the submodules list could appear next to the modules list when a module is selected. This only works if there is enough space available on the screen to display two lists next to each other. \par
 
-An example of where fragments have been used in place of activities are: using listFragment instead of listActivity to control the modules submodules, and difficulties lists. However, the questions page of the application is an activity where it could have been an activity composed of fragments. This was due to ease of creation as opposed to design choice. However, the displayQuestion activity could be modified to utilise several fragments instead of as an activity. For example, displaying an image could be implemented as a fragment which displays the image, and then the fragment could be included in the displayQuestion activity. \par
-
-%
-% In this project list fragments have been utilised, although fragments could have been used throughout the application. 
-%
+As already stated, this project has used listFragment instead of listActivity to control the modules, submodules, and difficulties lists. There are examples however of where activities have been used as opposed to fragments. The questions page of the application can be seen as an example of this as it is currently an activity where it could have been an activity composed of fragments. This was due to ease of creation as opposed to design choice. However, the displayQuestion activity could be modified to utilise several fragments instead of as an activity. For example, displaying an image could be implemented as a fragment which displays the image, and then the fragment could be included in the displayQuestion activity. It was also created as an activity as the code would not be reused in another place in the application. \par
 
 \subsection{Questions}
 
-Implementing the questions for the application, which were aimed as the main feature, consisted of several decisions which were made. Two main decisions were made in regards to how questions were handled by the application with varying consequences. \par
+Implementing the questions for the application, which were stated as the main feature of the application, consisted of several decisions which were made. Three key decisions were made in regards to how questions were handled by the application with varying consequences. \par
 
 The first key decision that was made regarding the questions in this application involved how the questions were added into the application. It was essential that the questions generated by this application were of GCSE standard so that students could effectively revise for their exams. The decision was made to pull the questions included within the application from past Edexcel GCSE Mathematics papers. Examination of the new Edexcel specification began in the summer of 2017 and was conducted twice an academic year in November and June. This project was conducted between the fall of 2019 and the summer of 2020. This allowed for six different sets of past papers for the current Edexcel GCSE Mathematics specification at the beginning of this project. Each of these sets included three foundation tier papers and three higher tier papers. Each question paper included between 20 and 30 questions, which provides a lower bound for 720 past paper questions provided by Edexcel. This allowed for a large pool of questions to add into the application, spread across all of the modules and submodules tested within the Edexcel GCSE Mathematics specification. \par
 
-The process of adding new questions into the application consisted of labelling each question in a specific past paper with the module and submodule that it belonged to. These questions, combined with the difficulty of the paper which it was included in, meant that the path that a user would have to take through the application to get to this question could be mapped. It also highlighted the amount of questions which were similar to the one in the exam paper which are already present within the application. This aided to prevent repeat questions, as there were similar questions for the same paper in different past paper sets. \par
+The process of adding new questions into the application consisted of labelling each question from a past paper with the module and submodule that it belonged to. These questions, combined with the difficulty of the paper that it was included in, meant that the path that a user would have to take through the application to get to this question could be mapped. It also highlighted the amount of questions which were similar to the one in the exam paper which are already present within the application. This aided to prevent repeat questions, as there were similar questions for the same paper in different past paper sets. It also gave the ability to balance the questions, ensuring that each module and submodule had the same amount, which meant that each topic could be revised thoroughly. \par
 
-The second key decision that was made regarding the questions in this application was their storage medium. There were three key methods of storing the questions for this application, and the two other storage methods are explained in section \ref{section:futureWork}. The three methods were: hard-coding the questions into the application, reading the questions from a JSON file on the user's device, or selecting specific questions from the SQLite database included in Android. For this project the questions were hard-coded into the application. This decision was made due to the methodology used to develop this software. As discussed in section \ref{section:methodology} when developing the application an MVP was achieved quickly, with that MVP then being built on top of to add more features. Because of this, when the question features were being implemented in the application only one question was implemented. Once that one question was successfully tested other questions were added into the application. The fastest way to implement the questions into the application were to hard-code them into a class. This is why this method was selected, and questions were then added in batches. \par
+The second key decision that was made regarding the questions in this application was their storage medium. There were three key methods of storing the questions for this application, and the two other storage methods are explained in section \ref{section:futureWork}. The three options were: hard-coding the questions into the application, reading the questions from a JSON file on the user's device, or selecting specific questions from the SQLite database included in Android. For this project the questions were hard-coded into the application. This decision was made due to the methodology used to develop this software. As discussed in section \ref{section:methodology} when developing the application an MVP was achieved quickly, with that MVP then being built on to add more features. Because of this, when the question features were being implemented into the application only one question was implemented. Once that one question was successfully tested other questions were added into the application. The fastest way to implement the questions into the application were to hard-code them into a class. Once the initial question was implemented questions were added in batches of four. \par
 
 The third key decision regarding questions was how to hard-code them into the application. A questions class was created which included all of the information that a question would require. A screenshot of the question class can be seen below as figure \ref{figure:questionClass}. 
 
@@ -314,9 +317,21 @@ The string pictureName included in the question class in figure \ref{figure:ques
 
 The question's answer is also stored in the question class. All question answers have been rounded to integer precision and all questions include information stating that the user's answer should be rounded to the closest whole number value. On top of the text being included in each question users are prevented from entering non-integer values into the text box as it will only accept whole number values. Currently, no questions which require text based answers are included in the application, although they could be implemented. These kinds of questions would be included in multiple choice format, with radio buttons displaying prospective answers, and users would select the answer that they thought was correct. The application would send the answer as a value between zero and the number of prospective answers displayed to be marked. The background of the correct answer could then be displayed as green to indicate that it is the correct answer. \par
 
-Where a numerical value is used in a question it has been produced in one of two ways. It has either been produced using the java random method, or it is calculable from other numerical values which have been randomly produced for the specific question. This ensures that numerical values for questions are values which have not been seen before, or are not repeated often. This aims to prevent answer memorisation. Answer memorisation is where a user enters an incorrect answer for specific question values, and then remembers the correct answer to the question which gets displayed, and so next time a student is presented with the same question with the same values, they input the remembered answer and the question is marked correctly. This makes it look like the student has learned the method for answering the question, when in reality they have just learned the answer for those specific values. This is why when a value is used in a question it is generated using the java random method over a specific range of values. This allows the student to see new values often whilst attempting a specific question, but it also allows the answers to be 
+Where a numerical value is used in a question it has been produced in one of two ways. It has either been produced using the java random method, or it is calculable from other numerical values which have been randomly produced for the specific question. This ensures that numerical values for questions are values which have not been seen before by a user, or are not repeated often. This aims to prevent answer memorisation. Answer memorisation is where a user enters an incorrect answer for specific question values, and then remembers the correct answer which gets displayed, and so next time a student is presented with the same question with the same values, they input the answer whihc they remember from the last time they attempted the question and it is marked as correct. This makes it look like the student has learned the method for answering the question, when in reality they have just memorised the answer for those specific values. This is why when a value is used in a question it is generated using the java random method over a specific range of values. This allows the student to see new values often whilst attempting a specific question, but it also allows the answers to be calculated without the use of a calculator. \par
 
-% Research into factory classes and if it was appropriate in this context
+For a specific submodule several questions are generated. When a user selects a specific submodule, one of the questions associated with that submodule is produced to be answered. These questions each have an equal probability currently of being selected, but the frequency could be adjusted to emulate the likelihood of those types of questions appearing in the exams. \par
+
+Figure \ref{figure:testQuestionGeneration} is an extract from the source code of the application. This section of source code generates the test questions and answers, and returns a question class with all of the relevant information in it. 
+
+\begin{figure}[H]
+	\centering
+	\frame{\includegraphics[width=0.9\linewidth]{./data/testQuestionGeneration.jpg}}
+	\caption{Source code for the random question generation}
+	\label{figure:testQuestionGeneration}
+\end{figure}
+
+This testQuestionGeneration class which is displayed above is a factory class which returns specific questions given the module and submodule details. The calculationFoundationQuestion() method is called when the user selects the number module and the structures and calculation submodule. It returns one of three questions written for the structures and calculation submodule, selected using Java's random number generator. The random question is generated by the appropriate private method in the factory class. For example, calculationFoundationQuestionOne() is a private method which generates a question object with the appropriate information to return. This method generates five random numbers between 0 and 500, and the user is asked to input the smallest number of the five. This question object is then returned to the calculationFoundationQuestion() method which then returns the question object to the displayQuestion activity which then displays the question for the user. \par
+
 \subsection{Control and Data Flow}
 
 A decision was made when it came to the control flow of the application. As is stated above, currently a list fragment is used to display both the modules and submodules lists, as well as the difficulty list. It was decided that the outcome of the modules list fragment was to feed into one submodules list fragment that would collect its list to display based on what module was selected. Instead six list fragments could have been created, one for each set of submodules for each module, or six list activities. This would have greatly increased the complexity of the application from a development perspective, although would not have changed the user experience whilst using the application. Figure \ref{figure:controlFlowComparisons} below shows the control flow diagram for this application, as well as the complex control flow diagram which splits the submodules activity into six individual submodule activities, each representing a separate module.
@@ -552,6 +567,14 @@ This project was worthwhile as it highlights that more work can be completed on 
 \section{Conclusion}
 \label{section:conclusion}
 
+To conclude, this project was a success. It is a proof of concept which highlights a gap in the GCSE Mathematics revisions market. The definition of project success laid out in the project specification document for this project. On top of that the final application produced by this project could be used by GCSE students to aid their revision of GCSE Mathematics. \par
+
+A GCSE Mathematics revision application endorsed by schools will most likely be produced in the future. Throughout the development of this project MyMaths have released an application which is accessible through tablets which currently has a small amount of content accessible, with more being added throughout the coming months[30]. MyMaths have created this tablet application as all of their content before November 2019 was written in the flash multimedia software platform. Adobe announced in July 2017 that it was going to "stop updating and distributing the Flash Player at the end of 2020 and encourages content creators to migrate any existing Flash content to new open formats"[31]. This means that MyMaths is migrating all of their content away from flash, and in doing such are producing an application available on tablets. \par
+
+This project produced software which could be released as an application onto the Google Play store and would be useful for students looking to sit their GCSE Mathematics examinations from November 2021 onwards. All of the questions in the application have currently been taken from non-calculator past papers and so no calculator is necessary. Although, the questions could be adapted to include more difficult numbers which would require a calculator. This application could also be updated with new questions after each exam cycle is complete. \par
+
+The development of this application could continue into a commercial product. If the improvements in the future work section of this report is completed then the application could be brought up to paid quality, and so could be released commercially. It could also be continuously updated with new features, and the scope of the project increased. \par
+
 \section{Future Work}
 \label{section:futureWork}
 
@@ -559,7 +582,7 @@ This project was intended as a proof of concept, trying to create an android app
 
 \subsection{Project Improvements}
 
-These improvements are the changes that would be made to the application if the project was started again from scratch. 
+These improvements are the changes that would be made to the application if the project was started again from scratch.
 
 \subsubsection{Question Storage}
 
@@ -724,6 +747,10 @@ This project only contains one key ethical issue, which is to do with the testin
 
 [28] - Head first android development pg 312. \par
 
-[29] - https://trello.com/ (Accessed 8\textsuperscript{th} March 2020)
+[29] - https://trello.com/ (Accessed 8\textsuperscript{th} March 2020) \par
+
+[30] - https://support.mymaths.co.uk/technical-support/what-mymaths-content-has-been-updated/ (Accessed 16\textsuperscript{th} April 2020) \par
+
+[31] - https://theblog.adobe.com/adobe-flash-update/ (Accessed 16\textsuperscript{th} April 2020)
 
 \end{document}
