@@ -432,17 +432,21 @@ Eliminating the two main causes of poor project management enabled the project t
 \section{Project Management}
 \label{section:projectManagement}
 
-This project was a large software engineering project, especially for a team size of one. This meant that effective project management was required to keep the project going and make it a success. 
+This section of the report will begin by discussing the various details surrounding the two different schedules produced for stakeholders throughout this project. This will be followed by a discussion of the various tools used to aid this project's development process. Finally, this section will run through various miscellaneous project management procedures which aided in the development of this project that are not visible from viewing this project's source code. \par
+
+This project was a large software engineering project, especially for a team size of one. This meant that effective project management was required to ensure the success of the project. \par
 
 \subsection{Schedule}
 
-A schedule was created early, and updated throughout the project to represent and handle the amount of work which had been completed. Two key versions of the schedule were displayed to various stakeholders throughout the project in key documents. These key documents were the project specification and the progress report. 
+Two schedules were developed for stakeholders throughout this project. They were created for and displayed in the two other major documents produced throughout this project. These two documents were the project specification, which was produced at the beginning of the project, and the progress report, which was produced at the end of the first academic term. \par
+
+This subsection will discuss both of the schedules in detail, and will then evaluate the final schedule of the project. \par
 
 \subsubsection{Project Specification Schedule}
 
-At the beginning of this project a schedule was created. This schedule aimed to complete all of the requirements stated in the project specification[x] by the end of the project. The schedule was created using a technique common in industry which involved some numbered cards. Each requirement was reviewed with each review consisting of analysing the relative difficulty of the requirement with respect to all the other requirements. The difficulty was quantified using the numbered cards, the cards would follow a logarithmic pattern, doubling with difficulty each time. The lowest valued card was \textsuperscript{1}/\textsubscript{4} and the largest value was 16. Any requirement with a relative difficulty value greater than 16 was then broken down into sub-requirements and these sub-requirements would then be reviewed, and broken down further if their relative value was also above 16. This is called planning poker in industry. \par
+A schedule was created at the beginning of this report. This schedule aimed to complete all requirements outlined in the project specification[x]. The schedule was created using a technique common in industry known as planning poker[33] which involves a set of numbered cards. The relative difficulty of each requirement was assessed compared to all of the other requirements. The difficulty was quantified using the numbered cards, the cards would follow a logarithmic pattern, doubling with difficulty each time. The lowest valued card was \textsuperscript{1}/\textsubscript{4} and the largest value was 16. Any requirement with a relative difficulty value greater than 16 was then broken down into sub-requirements and these sub-requirements would then be reviewed in the same manner. \par
 
-This relative difficulty in requirements was used to create a rough schedule for the project. The schedule created for the project specification can be seen as a Gantt chart in figure \ref{figure:projectSpecGanttChart}. \par
+The relative difficulties in requirements gained through playing planning poker were used to create a rough schedule for the project. The schedule created for the project specification can be seen as a Gantt chart in figure \ref{figure:projectSpecGanttChart}. \par
 
 \begin{figure}[H]
 	\centering
@@ -455,9 +459,9 @@ This schedule was an optimistic schedule. It assumed all of the requirements wou
 
 \subsubsection{Progress Report Schedule}
 
-The progress report submitted on 24\textsuperscript{th} November 2019 updated this schedule, once it was realised that development was slower than initially intended through term one of this academic year (October 2019 - December 2019) due to personal reasons. The new schedule, referred to from now on as the Christmas schedule, again made the assumption that every requirement would be completed before the deadline. To mitigate against the slow development conducted through term one, the Christmas schedule increased the workload of the project throughout the Christmas period (8\textsuperscript{th} December 2019 - 8\textsuperscript{th} January 2020) and throughout term two of the project. \par
+The progress report submitted on 24\textsuperscript{th} November 2019 updated the project specification's schedule. Development was slower than intended throughout the first term of this academic year (October 2019 - December 2019) due to personal reasons, as well as poor project management which has been discussed in detail in the risks section of this report. This updated schedule was created to account for this slow development. The new schedule, referred to from now on as the Christmas schedule, also made the assumption that every requirement would be completed before the final deadline for this project. To mitigate against the slow development conducted through term one of this academic year, the Christmas schedule increased the workload of the project throughout the Christmas period (8\textsuperscript{th} December 2019 - 8\textsuperscript{th} January 2020) and throughout the second academic term of this project. \par
 
-A Gantt chart created for this updated schedule can be viewed below as figure \ref{figure:progressReportGanttChart}
+A Gantt chart created for this updated schedule can be viewed below as figure \ref{figure:progressReportGanttChart}. \par
 
 \begin{figure}[H]
 	\centering
@@ -466,11 +470,11 @@ A Gantt chart created for this updated schedule can be viewed below as figure \r
 	\label{figure:progressReportGanttChart}
 \end{figure}
 
-This Gantt chart represents everything that was dated before 24\textsuperscript{th} November 2019 is correct as the work was already completed before the progress report was written. Anything after this date is an estimate, and comparisons for future work should be compared to this. This schedule is also, like the project specification schedule, optimistic. 
+Everything before the 24\textsuperscript{th} November 2019 in this Gantt chart is correct as it was completed before this schedule was created. Anything after this date is an estimate, and comparisons for future work should be compared to this. \par
 
 \subsubsection{Schedule Evaluation}
 
-The image displayed below as figure \ref{figure:finalSchedule} shows the final schedule at the end of the project. 
+The image displayed below as figure \ref{figure:finalSchedule} shows the final schedule at the end of the project. \par
 
 \begin{figure}[H]
 	\centering
@@ -479,89 +483,93 @@ The image displayed below as figure \ref{figure:finalSchedule} shows the final s
 	\label{figure:finalSchedule}
 \end{figure} 
 
-This figure shows information about each requirement, as well as some key deliverables produced throughout the project. It shows the start and end dates of the requirements, as well as the duration of each requirement, in days. The requirements are colour coded. Requirements with a green background have been fully completed at the end of the project. A yellow background for the requirement represents a started but uncompleted requirement, and a red requirement was not started during the project. \par
+This figure displays information about each requirement, as well as some key deliverables produced throughout the project. It shows the start and end dates of the requirements, as well as the duration of each requirement in days. The requirements are colour coded. Requirements with a green background have been fully completed at the end of the project. A yellow background for the requirement represents a started but uncompleted requirement, and a red requirement was not started during the project. \par
 
-This final schedule was behind both the project specification schedule and the progress report schedule. The reasons for this are discussed in the risks section of this report. All of the schedules are optimistic and assumed that all of the requirements would be met. This was different to how the definition of success for this project was defined. Even though the project was behind the optimistic schedules work was still completed at a satisfactory rate, and so even though the schedule was not followed to the letter it was used as guidance for how long each requirement should take. Although, if time was not lost during the first half of development due to the risks discussed earlier in this report then these optimistic schedules could have been met. \par
+This final schedule was behind both the project specification schedule and the progress report schedule. The reasons for this are discussed in the risks section of this report. All of the schedules were optimistic and assumed that all of the requirements would be met. This was different to how the definition of success for this project was defined. Even though the project was behind the optimistic schedules, work was still completed at a satisfactory rate, causing the project to be completed on time. Although, if time was not lost during the first half of development the optimistic schedules could have been met. \par
 
 \subsection{Tools}
 
-This project utilized several tools to aid in the development of this Android application. Two of the main tools used to add value to this project are outlined below, one from a development point of view and one from a project management standpoint. 
+This project utilized several tools to aid in the development of this Android application. Two of the main tools used to add value to this project are outlined below.
 
 \subsubsection{Android Studio}
 
-Android Studio[22] was used as an IDE (Integrated Development Environment) throughout development as it comes with many useful built in features. These features are specifically designed with android app development in mind. Examples of these features are: 
+Android Studio[22] was used as an IDE (Integrated Development Environment) throughout development as it comes with many useful features. These features are specifically designed to help with Android app development. Examples of these features are: 
 
 \begin{itemize}
-	\item Rendering engine which converts XML into how it will appear in the application itself
-	\item Android phone emulator
+	\item A rendering engine which converts XML into a virtual application display
+	\item An android device emulator
 \end{itemize}
 
-The rendering engine enables both the ability to edit the XML tags and see the effects in real time, as well as the ability to edit directly into the rendering engine with a drag and drop feature. This enables quick prototyping for new pages through the use of the drag and drop feature whilst also allowing a much larger degree of control through the ability to directly edit the XML. \par
+The rendering engine displays the layout of any XML written in Android Studio. It enables editing the XML directly with any changes made being viewable in the virtual layout in real time, and the ability to edit directly into the rendered layout with a drag and drop feature. This enables quick prototyping for new pages through the use of the drag and drop feature whilst also allowing for a much larger degree of control through the ability to directly edit XML. \par
 
-Use of the android phone emulator enabled quick and efficient testing cycles. When a feature was initially developed, it could be tested on a wide range of devices through the phone emulator. This add on enabled the emulation of any modern phone through the ability to download files specific to that device. The app could then be tested on an accurate test bed, seeing how the app would look and work on a mobile device. Tablets could also be emulated, which helped with ensuring the application worked on a wide variety of devices. \par
+The Android device emulator can simulate any Android device which it contains files for. Files for new devices can be downloaded through Android Studio, and new devices are being added regularly. This feature enabled quick and efficient testing throughout development. When a new feature was integrated into the application it could be tested on a wide range of devices, ensuring that the application behaved consistently on all Android smartphones and tablets. \par
 
-The Android Studio IDE greatly increased the efficiency of development. This was encouraged through the notion that it was only designed specifically for android development, and so could focus entirely on that. Being built upon the IntelliJ platform meant that code editing was smooth and intuitive. \par
+The Android Studio IDE greatly increased the efficiency of development due to the features stated above. Also, Android Studio being built upon the IntelliJ platform meant that code editing was smooth and intuitive. \par
 
 \subsubsection{Git}
 
-Git was used as version control for this project. This enabled access to the project from any device, anywhere, anytime. It also enabled the ability to revert back to an earlier version of the project if something went wrong. This meant that development could take place without fear of failure, as if anything went wrong the project could just be reverted to the last working state. \par
+Git was used as the version control software for this project. This enabled access to the project from any device, anywhere, anytime. It also enabled the ability to revert back to an earlier version of the project if something went wrong. This meant that development could take place without fear of failure, as if any changes made broke the project then it could be reverted to the last working state. \par
 
-The repository for this project can be found at the link in reference [23]. This repository is public and can be accessed by anyone. This enables anyone to see the code that would be running on their machines. \par
+The repository for this project is available at the link in reference [23]. This repository is public which enables anyone to see the code that would run on their machine. \par
 
-Git also logs the time when a change is made to the code. This enabled precise tracking of requirement completion and aided project management. Git commit messages for this project were all deliberately helpful. Git commit messages were written so that they would explain the changes made to the codebase, so they could be logs of when project requirements were completed. The git commit messages for this project can be viewed and give a detailed timeline of when requirements were completed and features were added. This was incredibly useful as it gave updates of any changes made to the codebase as soon as it was available to anyone who follows the repository, and also was used to create a timeline of when requirements were completed for this final report. \par
+Git automatically logs the time whenever a change is made to the repository. This enabled precise tracking of requirement completion and aided project management. Git commit messages for this project were deliberately helpful and explained changes made to the codebase, so they could be used as logs of when project requirements were completed. The git commit messages for this project can be viewed and give a detailed timeline of when requirements were completed and features were added. This was useful as it gave updates of any changes made to the codebase and is available to anyone who follows the repository as soon as the update is pushed. Git was used to create a timeline of requirement completion for the schedule included in this final report. \par
 
 \subsection{Miscellaneous Project Management}
 
-Weekly meetings were held with the project supervisor to keep key stakeholders in the project up to date with development. Alongside weekly meetings, access was given to the project supervisor to the  github repository early in development. This enabled the project supervisor to directly monitor completed work. \par
+Weekly meetings were held with the project supervisor to keep key stakeholders up to date with development. Alongside weekly meetings, access was given to the project supervisor and relevant stakeholders to the git repository for this project early in development. \par
 
-A document in the github repository called notes.txt is a file which was edited after every development session was completed. This file contained notes on what was intended to be completed during each development session, as well as what was actually completed. A substantial amount of time was spent at the beginning of early development sessions on remembering what had been completed throughout the previous development session, what state the code was in, and what needed to be completed in this development session. This file cut down the time spent at the beginning of development sessions looking through previous git commits, and so overall this file caused development to be more efficient. \par
-
-The first term of this project took a very relaxed stance on project development which meant that any free time within a working week was dedicated to this project. For the first five weeks of the first academic term this was fine, but it meant that as the academic year progressed, less time was spent on the project per week. This inconsistency in development time made it progressively more difficult to follow scrum sprint cycles. This inconsistency was incredibly unproductive and if development continued at this pace then the project would have been deemed a failure, as is discussed in section \ref{section:risks} about risks. \par
+A document in the git repository called notes.txt is a file which contains notes created throughout development, such as what was intended to be completed at the beginning of each development session, as well as what was actually completed by the end of the session. A substantial amount of time was spent at the beginning of early development sessions on remembering content added throughout the previous development session, the current state of the code, and what needed to be completed during this development session. Notes.txt cut down the time spent at the beginning of development sessions looking through previous git commits, and so overall this file caused development to be more efficient. \par
 
 \section{Results}
 \label{section:results}
 
-This section will evaluate the final application produced by this project and compare it against the requirements and definition of success set out at the beginning of this report. It will also contain the analysis of the project by the author. 
+This section of the report will evaluate the final application produced for this project and compare it against the requirements and definition of success set out at the beginning of this project. It will also contain the analysis of the project by the author. 
 
 \subsection{Requirements}
 
-The final application satisfies all of the must requirements. This means that the final application can display a question for users to answer, have an input field accepting numerical values, and when an answer is submitted, compare it to the pre-calculated answer and display whether the two answers match. If the two answers are different, then the correct answer is displayed for the user to see. \par
+The definition of success for this project was defined as such. To be deemed successful, the final product produced by this project will have completed: 
 
-One of the three should requirements for this project was completed outright. Requirement 7 was changed between the progress report and the project presentation. It was changed from "Have a variety of testing difficulties, ranging from easy to hard for each module" to "Have two separate testing difficulties, foundation and higher, for each module". This change was made as the Edexcel GCSE Mathematics exams are split into two categories, of foundation and higher. The foundation tier of exams range from grades 1-5 and the higher range from grades 4-9, with the higher tier covering all content in the foundation tier and build on it. As this tier system already existed, and changing to easy, medium, and hard would only confuse students, the decision to switch to Edexcel's system was made. \par
+\begin{itemize}
+	\item all of the must requirements defined above
+	\item at least one of the should requirements defined above
+	\item any value of could requirements defined above.
+\end{itemize}
 
-Requirements 8 and 9 were not completed but are in progress. These requirements have been started and prototypes for each requirements have been made. Model working out has been created for three different questions in the algebra topic. These model working out are displayed when the user submits an incorrect answer. \par
+The final application satisfies all of the must requirements. This means that the final application can display questions for users to answer, have an input field accepting numerical values, and when an answer is submitted, compare it to the pre-calculated answer and display whether the two answers match. If the two answers do not match, then the pre-calculated answer is displayed for the user to see. \par
 
-The could requirement has not been completed. This is because requirements 8 and 9 have not been completed so work for requirement 10 has not been started. \par
+One of the three should requirements for this project was completed outright. Requirement 7, which was defined as "having a variety of testing difficulties, ranging from easy to hard for each module" was changed between the progress report and the project presentation. It was changed to "having two separate testing difficulties of foundation and higher for each module". This change was made as the Edexcel GCSE Mathematics specification is split into two difficulty tiers of foundation and higher. The foundation tier of exams range from grades 1-5 and the higher tier exams range from grades 4-9, with the higher tier covering all content in the foundation tier with more complicated content also included to make the higher tier exams more difficult. As the Edexcel tier system already existed using easy, medium, and hard as testing difficulties would only confuse students. Because of this, the decision to switch to Edexcel's difficulty tiers was made. \par
 
-As non-functional requirements are difficult to test, it is difficult to determine in absolutes whether these requirements have been met. Any tests conducted with 12 year olds to determine their comprehension of the questions in the application would not have been representative of the population as a whole, this method was not used to attempt to assess the completion of the non-functional requirements. Instead, user testing was conducted with colleagues who work with students of GCSE age range. Their feedback was incorporated into the development process as explained in the testing section of this report. Their feedback on the final application was that the functional requirements have been completed for almost all students who are in the English year 11, and the majority of students in the English year 9. Because of this, these functional requirements have been deemed completed for this project. \par
+Requirements 8 and 9 were not completed by the end of this project but were in progress. Requirement 8 was defined as "having a way of tracking user progress over a number of days or tests per module", and requirement 9 as "displaying model methods for working out the correct answer for a question where the user inputted an incorrect answer". These requirements have been started and prototypes for each have been created. Model working out has been made for three different questions in the algebra topic. These model working out are displayed when the user submits an incorrect answer. A database was created to store the user's progress, although was never implemented. \par
+
+The could requirement has not been completed. This is because requirements 8 and 9 had to be completed before requirement 10, the could requirement, could have been worked on. As requirements 8 and 9 were incomplete at the end of the project, development for requirement 10 never began. \par
+
+As non-functional requirements are difficult to evaluate, it is a challenging task to determine in absolutes whether these requirements have been met. Any tests conducted with 11 year olds to determine their comprehension of the questions in this application would not have been representative of the population as a whole. Because of this, the method was not used to attempt to assess the completion of the non-functional requirements. Instead, user testing was conducted with colleagues who work with students within the GCSE age range. Their feedback was incorporated into the development process as explained in the testing section of this report. Their feedback on the final application was that the functional requirements have been completed for almost all students who are in the English year 11, and the majority of students in the English year 9. Because of this, these functional requirements have been deemed completed to a satisfactory level for this project. \par
 
 \subsection{Results Overview}
 
-By the definition of success laid out in the project specification, as well as discussed in the introduction to this report, this project was successful. All of the must requirements were completed, as well as one of the three should requirements, although the could requirement was incomplete. \par
+By the definition of success laid out in the project specification this project was successful. All of the must requirements were completed, as well as one of the three should requirements, although the could requirement was left incomplete. \par
 
-Overall, the project produced a proof of concept that the MyMaths homework functionality could be turned into an application, as was the end goal. This project could be released on the Google play store as it is, although if this project were to continue the application would not be uploaded to the Google play store for another two to three months of full time work. This extra time would be spent completing the should requirements, and working on the could requirement for content which is examined on the foundational exams. \par
+Overall, the project produced a proof of concept that the MyMaths homework functionality could be turned into a mobile application which was this project's end goal. The final product from this project could be released on the Google Play store in its current state. Although, if this project were to be extended then the application would not be uploaded to the Google Play store for another two to three months. This extra time would be spent completing the should requirements, and working on the could requirement for content which is examined on the foundational exams. \par
 
-This project could have been improved with better project management throughout the first term of development. The project fell behind early in development due to personal issues on behalf of the author. Alongside said personal issues, time management was poor throughout the early stages of this project, and project management techniques which were key in improving the project in term two were not used. Improvement was shown in project management the further into the project development got. Improvements were made to the authors time management skills, such as dedicating specific time each week to work on the project. These improvements had a large impact on the final product, and counteracted the previous loss of development time from the first term. \par
+This project could have been improved with better project management throughout the first term of this academic year. The project fell behind early in development as was discussed in the risks section of this report. Improvement was shown in project management as more time progressed. Improvements were made to the authors time management skills, such as dedicating specific time each week to work on the project, as well as calculating the critical path for the features being implemented in this application. These improvements had a large impact on the final product, and counteracted the previous loss of development time from the first academic term. \par
 
-Advanced software engineering techniques have been included in this project, for example the use of a factory class for generating test questions. These were included where appropriate. \par
-
-This project was worthwhile as it highlights that more work can be completed on mobile GCSE revision applications, whilst also displaying the amount of work required to build an app of this kind. Students would benefit from an application, endorsed by teachers, which aided in a student's education in GCSE mathematics, whether that application is similar to one built by this project, or another application with slightly different goals like Khan Academy. Reducing the barrier of entry for students to be able to improve their education only requiring access to a smartphone could increase GCSE grades, as most students have regular access to a smartphone, as referenced in the introduction of this report. \par
+This project was a worthwhile endeavour as it highlights that more work can be completed on mobile GCSE revision applications. Students would benefit from an application endorsed by teachers, which aids in a student's education in GCSE mathematics. This could reducing the barrier of entry for students improving their education to only requiring access to a smartphone, and could increase GCSE grades as most students have regular access to a smartphone, as explained in the introduction of this report. \par
 
 \section{Conclusion}
 \label{section:conclusion}
 
-To conclude, this project was a success. It is a proof of concept which highlights a gap in the GCSE Mathematics revisions market. The definition of project success laid out in the project specification document for this project. On top of that the final application produced by this project could be used by GCSE students to aid their revision of GCSE Mathematics. \par
+In conclusion, this project was a success. It has produced a proof of concept application which highlights a gap in the GCSE Mathematics revision market. On top of this, the final application produced by this project could be used by GCSE students to aid their revision of GCSE Mathematics, which was the problem that this project aimed to solve. \par
 
 A GCSE Mathematics revision application endorsed by schools will most likely be produced in the future. Throughout the development of this project MyMaths have released an application which is accessible through tablets which currently has a small amount of content accessible, with more being added throughout the coming months[30]. MyMaths have created this tablet application as all of their content before November 2019 was written in the flash multimedia software platform. Adobe announced in July 2017 that it was going to "stop updating and distributing the Flash Player at the end of 2020 and encourages content creators to migrate any existing Flash content to new open formats"[31]. This means that MyMaths is migrating all of their content away from flash, and in doing such are producing an application available on tablets. \par
 
-This project produced software which could be released as an application onto the Google Play store and would be useful for students looking to sit their GCSE Mathematics examinations from November 2021 onwards. All of the questions in the application have currently been taken from non-calculator past papers and so no calculator is necessary. Although, the questions could be adapted to include more difficult numbers which would require a calculator. This application could also be updated with new questions after each exam cycle is complete. \par
+This project produced software which could be released as an application onto the Google Play store and would be useful for students sitting their GCSE Mathematics examinations from November 2021 onwards. All of the questions in the application have been taken from non-calculator past papers and so no calculator is necessary. Although, the questions could be adapted to include more difficult numbers which would require a calculator. This application could also be updated with new questions after each exam cycle is complete. \par
 
-The development of this application could continue into a commercial product. If the improvements in the future work section of this report is completed then the application could be brought up to paid quality, and so could be released commercially. It could also be continuously updated with new features, and the scope of the project increased. \par
+The development of this application could continue into a commercial product. If the improvements in the future work section of this report are completed then the application would be brought up to paid quality, and so could be released for a small price on the Google Play store. It could also be continuously updated with new features, and the scope of the project increased. \par
 
 \section{Future Work}
 \label{section:futureWork}
 
-This project was intended as a proof of concept, trying to create an android application which mimics the homework feature from MyMaths. The final product from this project is not perfect, and could be extended and released to the Google play store. This section of the report will outline key changes which would be made to the project if restarted. After, it will explain extensions which would be made to this project if it were to be continued. \par
+The final product from this project is not perfect, and could be extended to be released onto the Google play store. This section of the report will outline key changes which would be made to the project if restarted. After, it will explain extensions which would be made to this project if it were to be continued from its current state. \par
 
 \subsection{Project Improvements}
 
@@ -737,5 +745,7 @@ This project only contains one key ethical issue, which is to do with the testin
 [31] - https://theblog.adobe.com/adobe-flash-update/ (Accessed 16\textsuperscript{th} April 2020) \par
 
 [32] - Head first android development pg 312
+
+[33] - https://www.agilealliance.org/glossary/poker/ (Accessed 20\textsuperscript{th} April 2020)
 
 \end{document}
