@@ -3,6 +3,9 @@
 \usepackage{graphicx,color,tabularx,amsmath,amssymb,fancyvrb,soul}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+%\usepackage{autostyle, english = american}{csquotes}
 
 \setlength{\parskip}{1em}
 
@@ -33,15 +36,15 @@ The introduction of this report aims to complete three tasks. The first task is 
 
 \subsection{Problem Outline}
 
-The difficulty of GCSE Mathematics recently increased due to a change in specification by Edexcel. This increase in difficulty was due to the UK Government's reform of the English and Mathematics GCSEs in November 2013[1]. The relevant section from the Department of Education's written statement to parliament is as such: "The new mathematics GCSE will demand deeper and broader mathematical understanding ...  The new mathematics GCSE will be more demanding". This demand for a deeper and broader mathematical understanding enforced a syllabus change for Edexcel's GCSE Mathematics qualification. This syllabus change started teaching in 2015, and examining in 2017[2]. \par
+The difficulty of GCSE Mathematics recently increased due to a change in specification by Edexcel. This increase in difficulty was due to the UK Government's reform of the English and Mathematics GCSEs in November 2013[1]. The relevant section from the Department of Education's written statement to parliament is as such: ``The new mathematics GCSE will demand deeper and broader mathematical understanding ...  The new mathematics GCSE will be more demanding''. This demand for a deeper and broader mathematical understanding enforced a syllabus change for Edexcel's GCSE Mathematics qualification. This syllabus change started teaching in 2015, and examining in 2017[2]. \par
 
 This increase in difficulty for GCSE mathematics is achieved through the introduction of more content into the specification. Because of this increase in content, a higher proportion of the academic year is dedicated to teaching, and students are left with less time to revise content for their exams in the classroom. This leaves students in the position of having to revise topics for their final examinations at home, typically without the support of a teacher or tutor. \par
 
-95\% of American teenagers have access to a smartphone[3] a study from 2018 demonstrated. Also, a study conducted in 2017 stated "Recent statistics show that around 69\% of the total digital media time spent by Americans was taken up by mobile devices and 87\% of the total mobile time was spent in apps in December 2016"[4]. More students than ever before have access to smartphones, and they are spending the majority of their time on these smartphones in apps. More students have access to a smartphone than have access to a desktop or laptop computer as of 2017[3]. \par
+95\% of American teenagers have access to a smartphone[3] a study from 2018 demonstrated. Also, a study conducted in 2017 stated ``Recent statistics show that around 69\% of the total digital media time spent by Americans was taken up by mobile devices and 87\% of the total mobile time was spent in apps in December 2016''[4]. More students than ever before have access to smartphones, and they are spending the majority of their time on these smartphones in apps. More students have access to a smartphone than have access to a desktop or laptop computer as of 2017[3]. \par
 
 Because of this increase in the availability of smartphones, students are now turning towards technology to aid with their learning and revision for their GCSE exams. This project aims to build a mobile application which can be used on the Android mobile operating system, which is the majority operating system (OS) for smartphone devices with a market share of 73\% between February 2019 and February 2020[5]. This allows the application to be available to the majority of students studying for GCSE mathematics. \par
 
-This project aims to create an application which focusses on testing a student's current knowledge instead of teaching them new information. It is designed to be used alongside classroom teaching, or other less conventional teaching methods which aim to replace a classroom environment, such as Khan Academy. This application aims to focus on testing skills already gained by the user from a classroom like environment, and will emulate final year GCSE Mathematics questions to suitably prepare students for their end of year exams. \par
+This project aims to create an application which focusses on testing a student's current knowledge instead of teaching them new information. It is designed to be used alongside classroom teaching, or other less conventional teaching methods which aim to replace a classroom-like environment, such as Khan Academy. This application aims to focus on testing skills already gained by the user from a classroom-like environment, and will emulate final year GCSE Mathematics questions to suitably prepare students for their end of year exams. \par
 
 This application will have to provide users with the ability to practice skills gained from classroom learning. It must contain questions of GCSE exam standard so that students can effectively prepare for their exams using the application. It must also have the ability for users to input answers, and it must mark the answers and provide visual feedback to the user. A set of requirements created to complete these tasks is available below in the project specification subsection of this introduction. \par
 
@@ -49,27 +52,27 @@ This application will have to provide users with the ability to practice skills 
 
 This project aims to create an android application similar to the MyMaths homework functionality discussed in the background section of this report. This will enable student's to attempt exam questions in a specific topic in Edexcel GCSE Mathematics by inputting an answer. This answer will then be compared to the pre-calculated answer, and the student will get a visual response as to whether they have answered the question correctly or incorrectly. Where the student answered the question incorrectly, the correct answer will be displayed to the student so they can compare their answer with the correct one. \par
 
-To achieve this task a set of requirements were detailed in this project's specification[x]. These requirements follow the MoSCoW method for specifying requirements. The MoSCoW method groups requirements into four classes, must, should, could, and won't. All of the must requirements are vital to the success of the project and so need to be completed by the end of the project. At the completion of all of the must requirements, a minimum viable product (MVP) is created and the product could be shipped. Should requirements are features which are not essential to the creation of a MVP but are features which are expected in the final product. Could requirements are features which are not expected in the final product, but if all other requirements are completed before the deadline, the could requirements will be implemented. Won't requirements are features which will not, under any circumstances, be present in the final product. \par
+To achieve this task a set of requirements were detailed in this project's specification[x]. These requirements follow the MoSCoW method for specifying requirements. The MoSCoW method groups requirements into four categories: must, should, could, and won't. All of the 'must' requirements are vital to the success of the project and so need to be completed by the end of the project. At the completion of all of the 'must' requirements, a Minimum Viable Product (MVP) is created and the product could be shipped. 'Should' requirements are features which are not essential to the creation of an MVP but are features which are expected in the final product. 'Could' requirements are features which are not expected in the final product, but if all other requirements are completed before the deadline, the 'could' requirements will be implemented. 'Won't' requirements are features which will not, under any circumstances, be present in the final product. \par
 
-The requirements present in the project specification are as follows: \par
+The requirements present in the project specification are as follows. \par
 
 The Android application which will be created for this project must: 
 
 \begin{enumerate}
-	\item Have a start page with several clickable buttons
-	\item Be able to run on Android devices with OS versions between Android 6 (Android Marshmallow) and Android 10
-	\item Have a list of each module found in Edexcel's GCSE Mathematics Specification[6], with each module being a selectable button
-	\item Generate revision questions where numerical values are generated by Java's inbuilt random number generator and are appropriate for the difficulty of the question
+	\item Have a start page with several clickable buttons.
+	\item Be able to run on Android devices with OS versions between Android 6 (Android Marshmallow) and Android 10.
+	\item Have a list of each module found in Edexcel's GCSE Mathematics Specification[6], with each module being a selectable button.
+	\item Generate revision questions where numerical values are generated by Java's inbuilt random number generator and are appropriate for the difficulty of the question.
 	\item Give the user the ability to input numerical answers to the revision questions generated (requires 4)
 	\item Provide the user with feedback relating to whether their answer matches the correct answer for the question, and where the user’s answer is incorrect, display the correct answer. \par
 	
 	The Android application which will be created for this project should:
-	\item Have a variety of testing difficulties, ranging from easy to hard for each module
-	\item Have a way of tracking user progress over a number of days or tests per module (requires 5)
-	\item Display model methods for working out the correct answer for a question where the user inputted an incorrect answer (requires 6) \\
+	\item Have a variety of testing difficulties, ranging from easy to hard for each module.
+	\item Have a way of tracking user progress over a number of days or tests per module (requires 5).
+	\item Display model methods for working out the correct answer for a question where the user inputted an incorrect answer (requires 6). \par
 	
 	The Android application which will be created for this project could:
-	\item Include resources similar to those which would be used in a classroom environment to teach the user about a topic
+	\item Include resources similar to those which would be used in a classroom environment to teach the user about a topic. \par
 \end{enumerate}
 
 Project success was also defined in the project specification. To be deemed successful, the final product produced by this project will have completed: 
@@ -77,10 +80,10 @@ Project success was also defined in the project specification. To be deemed succ
 \begin{itemize}
 	\item all of the must requirements defined above
 	\item at least one of the should requirements defined above
-	\item any value of could requirements defined above
+	\item the could requirement does not have to be completed
 \end{itemize}
 
-The target audience for the final product of this project is students sitting Edexcel GCSE Mathematics examinations. The average age of students sitting these exams are between 15 and 16 years old. Although, students as early as year 7 (age 11 - 12) begin learning content which is examinable in the GCSE Mathematics exam. The app will be primarily designed for 15-16 year olds, but needs to be accessible to students as young as 11. This means there are a group of non-functional requirements which were not outlined in the project specification but were created during development to ensure the target audience were taken into account. These non-functional requirements are shown below:
+The target audience for the final product of produced by this project is students sitting Edexcel GCSE Mathematics examinations. The average age of students sitting these exams are between 15 and 16 years old. Although, students as early as year 7 (age 11 - 12) begin learning content which is examinable in the GCSE Mathematics exam. The app will be primarily designed for 15-16 year olds, but needs to be accessible to students as young as 11. This means there are a group of non-functional requirements which were not outlined in the project specification, but were created during development to ensure the target audience was taken into account. These non-functional requirements are shown below:
 
 \begin{itemize}
 	\item The language used in the application should be of a year 7 reading level
@@ -92,13 +95,13 @@ These functional requirements enable anyone learning the content for the Edexcel
 
 \subsection{Report Structure}
 
-This report will start by running through the background to this project. The background section will outline the current landscape of the problem by exploring what has currently been achieved by other people in the field. It will be followed by an explanation of the software development methodology which was used throughout the development of this application. This methodology section will explain how the work was completed from a project management point of view, for example it will outline a typical development session. It will also explain any changes made to this methodology throughout this project. \par
+This report will start by running through the background to this project. The background section will outline the current landscape of the problem by exploring what has currently been achieved by other people in the field. It will be followed by an explanation of the software development methodology which was used throughout the development of this application. The methodology section will explain how the work was completed from a project management point of view, for example, it will outline a typical development session. It will also explain any changes made to this methodology throughout this project. \par
 
-Section \ref{section:design} outlines the design of the final product which will provide a high level overview of this application. This high level view will explain the control and data flows of the program, and any specific design choices which were made throughout the development of this project. Section \ref{section:implementation} discusses the specific implementation details of the project. For example, how the questions were created in the application. Testing will be discussed in section \ref{section:testing}. This will consist of outlining how testing was conducted, and the results of user testing. \par
+Section \ref{section:design} outlines the design of the final product. It will provide a high level overview of this application. This high level view will explain the control and data flows of the program, and any specific design choices which were made throughout the development of this project. Section \ref{section:implementation} discusses the specific implementation details of the project. For example, how the questions were created in the application. Testing will be discussed in section \ref{section:testing}. This will consist of outlining how testing was conducted, and the results of user testing. \par
 
 The risk analysis conducted throughout this project will be explored in the risks section, which is section \ref{section:risks}. An outline of risks will be produced, followed by how each risk was handled, which will then be followed by the effect each risk had on the final application. Project management will be discussed in section \ref{section:projectManagement}. This section will explain several details of the project that cannot be understood by only viewing the source code for example the development schedule, or weekly meetings with key stakeholders. These details do not appear in the source code but have a great impact on the success of the project. The results section follows the project management section, where the requirements will be evaluated and the success of the project will be determined. \par
 
-The conclusion will be section \ref{section:conclusion} which will summarise key findings in the report. This will be followed by the future work section which is extra work which could be conducted to improve this project, and turn it from a proof of concept into an application which would be able to be released onto the Google Play store. Section \ref{section:issues} will discuss the legal, social, ethical, and environmental issues associated with this project. \par
+The conclusion is section \ref{section:conclusion} which will summarise key findings in the report. This will be followed by the future work section which is extra work that could be conducted to improve this project, and turn it from a proof of concept into an application which could be released onto the Google Play store. Section \ref{section:issues} will discuss the legal, social, ethical, and environmental issues associated with this project. \par
 
 The final section in this report will be the references section, with a section number of \ref{section:references}. Harvard referencing style is adhered to throughout this report.\par
 
@@ -109,7 +112,7 @@ There are three main GCSE Mathematics revision tools in use today that are recom
 
 \subsection{MyMaths}
 
-The first tool is MyMaths[7] which is a website which aims to enrich a student's classroom learning experience by supplementing material covered in the classroom. The main feature of MyMaths is the online homework feature. This feature enables teachers to set homework to their students. This homework covers a specific topic, for example Venn diagrams, and the students have to answer questions on this topic. Example homework questions on the topic of Venn diagrams can be viewed as figure \ref{figure:mymathsHomeworkQuestion1}.
+The first tool is MyMaths[7], which is a website that aims to enrich a student's classroom learning experience by supplementing material covered in the classroom. The main feature of MyMaths is the online homework feature. This feature enables teachers to set homework to their students. This homework covers a specific topic, for example Venn diagrams, and the students have to answer questions on this topic. Example homework questions on the topic of Venn diagrams can be viewed as figure \ref{figure:mymathsHomeworkQuestion1}.
 \begin{figure}[H]
 	\centering
 	\frame{\includegraphics[width=0.9\linewidth]{./data/mymathsQuestion1.jpg}}
@@ -118,25 +121,25 @@ The first tool is MyMaths[7] which is a website which aims to enrich a student's
 \end{figure}
 The student's scores are then calculated as a percentage and sent back to the teacher. \par
 
-The values generated for every homework are unique each time a student attempts a homework. This prevents a student from memorizing a specific answer to pass the homework, also known as answer memorisation and is discussed in detail in the implementation section of the report. A teacher can also see the number of attempts that a student required to complete the homework, and their highest score. Providing teachers with the ability to see the number of attempts that a student needed to complete the homework for a particular topic highlights where a student is struggling and can enable one to one teaching to boost the student's knowledge in that particular topic. A student can also attempt a homework which has not been set by their teacher which allows any student to revise any topic in GCSE Mathematics on their own. \par
+The values generated for every homework are unique each time a student attempts a homework. This prevents a student from memorizing a specific answer to pass the homework, also known as answer memorisation and is discussed in detail in the implementation section of the report. A teacher can also see the number of attempts that a student required to complete the homework, and their highest score. Providing teachers with the ability to see the number of attempts that a student needed to complete the homework for a particular topic highlights where a student is struggling and can enable one to one teaching to boost the student's knowledge in that particular topic. A student can also attempt a homework which has not been set by their teacher. This allows any student to revise any topic in GCSE Mathematics on their own. \par
 
 MyMaths also gives students the ability to take a lesson in any topic in GCSE Mathematics. These lessons walk through an example question in the topic, and then provide practice questions which are of a similar style to the homework questions. These questions are then marked, and where the student answers the question incorrectly, the correct answer is displayed next to the answer box. \par
 
-MyMaths has an iOS and Android application for tablets, but not a specific application for smartphones[8]. This prevents students who own their own smartphones but do not have access to a tablet on a regular basis from utilising MyMaths as a revision tool. \par
+MyMaths has an iOS and Android application for tablets, but not a specific application for smartphones[8]. This prevents students from utilising MyMaths as a revision tool, due to no regular access to a tablet. \par
 
 \subsection{Khan Academy}
 
-The second main GCSE Mathematics revision tool recommended by schools is Khan Academy[6] which is a non-profit organization which aims to "provide a free, world-class education for anyone, anywhere"[9]. Khan Academy's main function is to teach new information to people. It does this through the use of short, lecture like videos covering particular concepts. For example, there is a six minute video covering how to find a side of a triangle using the sine rule given two angles and another side[10]. These videos aim to replace classroom teaching for those who are unable to attend school. There is a video for every topic in GCSE Mathematics and so a student could exclusively use Khan Academy to learn the content for their exams. Khan Academy also has a testing feature, where for a certain topic four questions come up which the user has to answer one by one. This is, however, not available for all topics, and the user is limited to answering four questions at a time. \par
+The second main GCSE Mathematics revision tool recommended by schools is Khan Academy[6], which is a non-profit organization which aims to ``provide a free, world-class education for anyone, anywhere''[9]. Khan Academy's main function is to teach new information to people. It does this through the use of short, lecture-like videos covering particular concepts. For example, there is a six minute video covering how to find a side of a triangle using the sine rule given two angles and another side[10]. These videos aim to replace classroom teaching for those who are unable to attend school. There is a video for every topic in GCSE Mathematics and so a student could exclusively use Khan Academy to learn the content for their exams. Khan Academy also has a testing feature, where for a certain topic four questions come up which the user has to answer one by one. This is, however, not available for all topics, and the user is limited to answering four questions at a time. \par
 
-Khan Academy has mobile applications in both major app stores, the Apple app store[11] and the Google play store[12]. Their app runs on all major devices and has the same functionality as the website version of Khan Academy. Users can create an account for free which keeps track of their progress, although anyone can access videos for all topics available on their website and apps without one. This gives everyone with access to an internet connection the ability to watch any of the Khan Academy videos. \par
+Khan Academy has mobile applications in both major app stores, the Apple app store[11] and the Google Play store[12]. Their app runs on all major devices and has the same functionality as the website version of Khan Academy. Users can create an account for free which keeps track of their progress, although anyone can access videos for all topics available on their website and apps without one. This gives everyone with access to an internet connection the ability to watch any of the Khan Academy videos. \par
 
 \subsection{Maths Watch}
 
 Maths Watch[13] is an older tool which was used for teaching purposes in schools. It provides educational videos for students to learn from, as well as providing walk-throughs of past exam paper questions. It is designed to replace both classroom teaching, and as a homework tool. Maths Watch is a subscription service, which only schools can subscribe to. If a student's school is not subscribed to Maths Watch then a student cannot get access to it. \par
 
-Maths Watch has two main methods for distributing their video content. The first method is through DVDs which are posted to the schools which buy them, and the students can then get these discs from the schools with all of the videos on them. The second method is through their online portal which provides the ability for paid users to stream video lessons. The Maths Watch service also states on the subscription page of their website[14] that they provide "A bank of 1000s of interactive exam-style questions for students' independent work with instant feedback". This is similar to MyMaths where a user can submit their answers and get feedback on whether they were correct, and if they were incorrect have the correct answer displayed. \par
+Maths Watch has two main methods for distributing their video content. The first method is through DVDs posted to schools who buy them, and the students can then get these discs from the schools with all of the videos on them. The second method is through their online portal which provides the ability for paid users to stream video lessons. The Maths Watch service also states on the subscription page of their website[14] that they provide ``A bank of 1000s of interactive exam-style questions for students' independent work with instant feedback''. This is similar to MyMaths where a user can submit their answers and get feedback on whether they were correct, and if they were incorrect have the correct answer displayed. \par
 
-The Maths Watch service is used by students all throughout the UK and is an incredibly valuable tool to aid their learning. Unfortunately, Maths Watch does not provide a mobile application on either of the major app stores (Apple iOS app store, or the Google Play store). As well as this, only schools can purchase Maths Watch, so if a students' school is not a Maths Watch partner, then the student cannot get access to Maths Watch. \par
+The Maths Watch service is used by students across the UK and is an incredibly valuable tool to aid their learning. Unfortunately, Maths Watch does not provide a mobile application on either of the major app stores (Apple iOS app store, or the Google Play store). As well as this, only schools can purchase Maths Watch, so if a students' school is not a Maths Watch partner, then the student cannot get access to Maths Watch. \par
 
 \subsection{Independent Revision Tools}
 
@@ -153,7 +156,7 @@ There are several other mathematics revision applications on both major app stor
 		\frame{\includegraphics[width=0.9\linewidth]{./data/googlePlayStoreApps.png}}
 		\caption{Revision applications on the Google Play store}
 	\end{subfigure}
-	\caption{Revision applications on both the Apple app store and the Google play store}
+	\caption{Revision applications on both the Apple app store and the Google Play store}
 	\label{figure:appStoreApps}
 \end{figure}
 
@@ -164,7 +167,7 @@ Research into Android application development consisted of:
 \begin{itemize}
 	\item Working through Head First Android Development[15]
 	\item Reading through the Android Documentation [16]
-	\item Creating small Android apps available on github [17]
+	\item Creating small Android apps available on GitHub [17]
 \end{itemize}
 
 These tools were utilised in learning the basics of Android application development before any code was written for this project. The Android documentation helped with any programming issues within the code during the development of this application. 
@@ -174,7 +177,7 @@ These tools were utilised in learning the basics of Android application developm
 
 This section will explain how the work necessary for this project was completed. It will describe the process with which the final application was developed at a high level, and section \ref{section:implementation} will explain the lower level ideas with examples from the final application's source code. \par
 
-The process with which work was completed within this project, often referred to as the methodology, changed throughout the duration of the project. The project specification stated that "This project will make use of the scrum software engineering methodology". The scrum methodology was not followed throughout the early stages of this project. Instead, a non-specific agile methodology was utilised, as each development cycle planned only the next requirement to be added as a feature. Each development cycle did not create user stories, or have a pre-defined length of between one and four weeks for development, which are both key features of the scrum methodology. \par
+The process with which work was completed within this project, often referred to as the methodology, changed throughout the duration of the project. The project specification stated that ``This project will make use of the scrum software engineering methodology''. The scrum methodology was not followed throughout the early stages of this project. Instead, a non-specific agile methodology was utilised, as each development cycle planned only the next requirement to be added as a feature. Each development cycle did not create user stories, or have a pre-defined length of between one and four weeks for development, which are both key features of the scrum methodology. \par
 
 The non-specific agile methodology utilised for the early stages of this project consisted of four main steps. The first step was selecting the next requirement to be implemented into the program. Then any decisions that needed to be made concerning implementation details would be made and a small plan would also be created detailing these decisions. Finally, the code would be written for the requirement to the specification of the plan. Once the requirement was completed, there would be no review, and so development would move onto the next requirement. \par
 
@@ -182,7 +185,7 @@ Monitoring and controlling for all aspects of development was continuously condu
 
 The final methodology change for this project was implemented during the last month of development. It aimed to help with writing this report and continuing development in parallel as focussing on both was inefficient. Initially, all sections of the report were aimed to be written in parallel to decrease the amount of idle time in the writing process due to bottlenecks. For example, sections such as design required figures to be created which could not be worked on whilst also writing the report. Figures and images were created and added in at a later stage. This meant that if sections were worked on individually then there would be idle time whilst waiting for images to be created. To fix this issue multiple sections were worked on simultaneously when writing the report. This caused its own issues by increasing time spent context switching, which can be viewed as wasted time. Once the context switching increased above a specific boundary the decision was taken to switch the methodology for report writing from scrum to the Kanban development methodology. \par
 
-This change in methodology manifested itself in two key ways. The first was using Trello[18] as a way of visualising workflow, which is a key principal in the Kanban software development methodology. A Kanban board was set up for writing the report, and can be seen as figure \ref{figure:trelloBoardOG}. 
+This change in methodology manifested itself in two key ways. The first was using Trello[18] as a way of visualising workflow, which is a key principal in the Kanban software development methodology. A Kanban board was set up for writing the report, and can be seen as figure \ref{figure:trelloBoardOG}. \par
 
 \begin{figure}[H]
 	\centering
@@ -216,7 +219,7 @@ The visual design of this application is minimalist. Each activity only has the 
 	\label{figure:applicationStartPage}
 \end{figure}
 
-This screen is made up of the least amount of distinct elements that is possible. As it is the start screen of the application, and is the first thing a new user will see when using the application for the first time, it has to have the application name displayed which is the "Maths Help" text at the top of the screen. The bottom of the screen is dominated by two buttons, one which starts the modules activity (the modules button), and one which starts the information activity (the app information button). There is nothing else visible on the page, and this is the least amount of elements with which to follow the control and data flow graphs displayed below. \par
+This screen is made up of the least amount of distinct elements that is possible. As it is the start screen of the application, and is the first thing a new user will see when using the application for the first time, it has to have the application name displayed which is the ``Maths Help'' text at the top of the screen. The bottom of the screen is dominated by two buttons, one which starts the modules activity (the modules button), and one which starts the information activity (the app information button). There is nothing else visible on the page, and this is the least amount of elements with which to follow the control and data flow graphs displayed below. \par
 
 An example of the activities displaying list fragments is the modules activity screen. This is displayed below as figure \ref{figure:applicationModulesPage}, also taken from the physical Pixel 2 testing device. 
 
@@ -251,7 +254,7 @@ Figure \ref{figure:applicationControlFlow} is a graph for the control flow of th
 	\label{figure:applicationControlFlow}
 \end{figure}
 
-The only choice in direction in this application is at the start page where a user could select between the information page for the application and the modules list. Each node in this graph represents an Android activity. An Android activity is the application equivalent to a webpage on a website. Activities are viewed as one screen in an application[19] and are intended to complete one specific task. If another task needs completing then the application should call another activity. Activities can contain fragments which can be thought of as "a modular section of an activity ... (sort of like a 'sub activity' that you can reuse in different activities)"[20]. The modules, submodules, and difficulty nodes in the control flow graph displayed above are activities which only contain list fragments. The list fragment class is a subclass of the fragment class but is adapted to display a list of items, and implement a listener which will act when the user clicks on an element in the list. In the example of the modules node in the control flow graph, the list fragment displays all six modules which are examined in Edexcel GCSE mathematics. When the user clicks a specific module, the modules activity collects the information of the module selected from the list fragment, and starts the submodules activity with the information of the selected module passed to it as an input. The submodules activity then displays a list fragment containing the submodules for the module selected by the user. \par
+The only choice in direction in this application is at the start page where a user could select between the information page for the application and the modules list. Each node in this graph represents an Android activity. An Android activity is the application equivalent to a webpage on a website. Activities are viewed as one screen in an application[19] and are intended to complete one specific task. If another task needs completing then the application should call another activity. Activities can contain fragments which can be thought of as ``a modular section of an activity ... (sort of like a 'sub activity' that you can reuse in different activities)''[20]. The modules, submodules, and difficulty nodes in the control flow graph displayed above are activities which only contain list fragments. The list fragment class is a subclass of the fragment class but is adapted to display a list of items, and implement a listener which will act when the user clicks on an element in the list. In the example of the modules node in the control flow graph, the list fragment displays all six modules which are examined in Edexcel GCSE mathematics. When the user clicks a specific module, the modules activity collects the information of the module selected from the list fragment, and starts the submodules activity with the information of the selected module passed to it as an input. The submodules activity then displays a list fragment containing the submodules for the module selected by the user. \par
 
 The control flow for this application is minimalist. It only includes pages which are absolutely necessary. The graph for the control flow of the application is intentionally acyclic. Without any loops there is only two ways in which a user can end up at a certain page, they can go forward from the root node, or they can go backwards from a leaf node. This is simple, and should not confuse users, as they can only follow linear paths within the application. If a user ends up at a page that they have encountered before then they must have pressed the Android back button. \par
 
@@ -304,9 +307,9 @@ The third key decision regarding question implementation was how to hard-code th
 	\label{figure:questionClass}
 \end{figure}
 
-This class stores both the moduleID and submoduleID for a question. It also includes an array list which stores data in a Java string class. This array list contains the question text data, which is then showed to the user by the displayQuestion activity. The getQuestionText() method iterates through the array list accessing each individual element and concatenating it into a string to return to the displayQuestion activity. This data is stored in an array list instead of as a string for convenience. It is convenient because it enables the question text to be split on the numerical values which are used within the questions. The final array list will be in the form "text, (number, text)*" where this form is viewed as a regular expression and a "," indicates a new element is to be created within the array list. This enables the ability to put numerical values into the question text but also provides access these values if needed. \par
+This class stores both the moduleID and submoduleID for a question. It also includes an array list which stores data in a Java string class. This array list contains the question text data, which is then showed to the user by the displayQuestion activity. The getQuestionText() method iterates through the array list accessing each individual element and concatenating it into a string to return to the displayQuestion activity. This data is stored in an array list instead of as a string for convenience. It is convenient because it enables the question text to be split on the numerical values which are used within the questions. The final array list will be in the form ``text, (number, text)*'' where this form is viewed as a regular expression and a ``,'' indicates a new element is to be created within the array list. This enables the ability to put numerical values into the question text but also provides access these values if needed. \par
 
-The string pictureName included in the question class in figure \ref{figure:questionClass} is the file name of the image which will be displayed along with the question text. Currently, only one image can be displayed, although this could be extended to multiple images by storing the file path of the images in an array list which would then be iterated through. If this variable is set to the string "None" then the image view is hidden from the screen, and no image is displayed. The question difficulty is also stored in this class as a numerical value being either zero or one. A zero stored in this field indicates that the question is a foundation tier question, whereas a one value being stored indicates that the question is from a higher tier paper. \par
+The string pictureName included in the question class in figure \ref{figure:questionClass} is the file name of the image which will be displayed along with the question text. Currently, only one image can be displayed, although this could be extended to multiple images by storing the file path of the images in an array list which would then be iterated through. If this variable is set to the string ``None'' then the image view is hidden from the screen, and no image is displayed. The question difficulty is also stored in this class as a numerical value being either zero or one. A zero stored in this field indicates that the question is a foundation tier question, whereas a one value being stored indicates that the question is from a higher tier paper. \par
 
 The question's answer is also stored in the question class. All question answers have been rounded to integer precision and all questions include information stating that the user's answer should be rounded to the closest whole number value. On top of the text being included in each question users are prevented from entering non-integer values into the text box as they will be marked as incorrect. Currently, no questions which require text based answers are included in the application, although they could be implemented. These kinds of questions would be included in multiple choice format, with radio buttons displaying prospective answers, and users would select the answer that they thought was correct. The application would then send the answer as a value between zero and n, where n is the number of prospective answers being displayed, to be marked. The background of the correct answer could then be displayed as green to indicate that it is the correct answer, and the background of the incorrect answers can be changed to red. \par
 
@@ -346,19 +349,19 @@ A decision was made when it came to the control flow of the application. As is s
 	\label{figure:controlFlowComparisons}
 \end{figure}
 
-The second image, sub-figure \ref{subfigure:adaptedControlFlow}, has almost twice as many activities as sub-figure \ref{subfigure:applicationControlFlow}, and as such would have increased the time spent developing the application without providing benefit to users. This is why the decision was made to have only one activity which would fetch the appropriate list of submodules depending on the module selected by the user. This would also make adding a module or submodule simple, as it would just require adding the name of the new module or submodule to the appropriate array. If the other method of fetching a list of submodules was implemented, as sub-figure \ref{subfigure:adaptedControlFlow} displays, then adding another module or submodule would involve changing the control flow of the application by adding extra activities. This would have increased the complexity of the control flow of the application without adding benefit to the user, and goes directly against the minimalist design principle used for this application. 
+The second image, sub-figure \ref{subfigure:adaptedControlFlow}, has almost twice as many activities as sub-figure \ref{subfigure:applicationControlFlow}, and as such would have increased the time spent developing the application without providing benefit to users. This is why the decision was made to have only one activity which would fetch the appropriate list of submodules depending on the module selected by the user. This would also make adding a module or submodule simple, as it would just require adding the name of the new module or submodule to the appropriate array. If the other method of fetching a list of submodules was implemented, as sub-figure \ref{subfigure:adaptedControlFlow} displays, then adding another module or submodule would involve changing the control flow of the application by adding extra activities. This would have increased the complexity of the control flow of the application without adding benefit to the user, and goes directly against the minimalist design principle used for this application. \par
 
 
 \section{Testing}
 \label{section:testing}
 
-This section of the report will describe the general testing methodology conducted throughout this project after explaining why the testing methodology was changed. It will then explain the two kinds of user testing conducted for this application. 
+This section of the report will describe the general testing methodology conducted throughout this project after explaining why the testing methodology was changed. It will then explain the two kinds of user testing conducted for this application. \par 
 
 The project specification[x] stated that this project would implement test driven development. The progress report[x] described that test driven development would not be used as the testing methodology for this project, and that user testing would be used throughout the project in its place. \par
 
-The decision to change from test driven development to user testing was made because this project creates a tangible final product in the form of an Android application. An android application is judged by users for unquantifiable reasons, such as the "feel", or "ease of use" of the application. This can only be tested by a person using the application, and since this determines how satisfied a user is with the product, testing for the unquantifiable qualities of the application was prioritised over writing testing code. Writing unit tests for an android application was deemed to be an inefficient use of time, as this time could be spent improving the user experience of the application. \par
+The decision to change from test driven development to user testing was made because this project creates a tangible final product in the form of an Android application. An android application is judged by users for unquantifiable reasons, such as the ``feel'', or ``ease of use'' of the application. This can only be tested by a person using the application, and since this determines how satisfied a user is with the product, testing for the unquantifiable qualities of the application was prioritised over writing testing code. Writing unit tests for an android application was deemed to be an inefficient use of time, as this time could be spent improving the user experience of the application. \par
 
-All application testing was conducted on a physical Google Pixel 2 smartphone, as well as at least one emulated virtual device. The emulation software used is built into the Android Studio IDE. It is called Android Virtual Device and [21]"... provides almost all of the capabilities of a real Android device". The emulator provides an environment to test the application on a variety of smartphones and tablets with different capabilities to ensure that the application works on a wide range of systems running the Android OS. The application was tested on three virtual devices: 
+All application testing was conducted on a physical Google Pixel 2 smartphone, as well as at least one emulated virtual device. The emulation software used is built into the Android Studio IDE. It is called Android Virtual Device and ``... provides almost all of the capabilities of a real Android device''[21]. The emulator provides an environment to test the application on a variety of smartphones and tablets with different capabilities to ensure that the application works on a wide range of systems running the Android OS. The application was tested on three virtual devices: 
 
 \begin{itemize}
 	\item HTC Nexus One (Smartphone)
@@ -516,7 +519,7 @@ Weekly meetings were held with the project supervisor to keep key stakeholders u
 
 A document in the git repository called notes.txt is a file which contains notes created throughout development, such as what was intended to be completed at the beginning of each development session, as well as what was actually completed by the end of the session. A substantial amount of time was spent at the beginning of early development sessions on remembering content added throughout the previous development session, the current state of the code, and what needed to be completed during this development session. Notes.txt cut down the time spent at the beginning of development sessions looking through previous git commits, and so overall this file caused development to be more efficient. \par
 
-\section{Results}
+\section{Results and Discussion}
 \label{section:results}
 
 This section of the report will evaluate the final application produced for this project and compare it against the requirements and definition of success set out at the beginning of this project. It will also contain the analysis of the project by the author. 
@@ -533,15 +536,15 @@ The definition of success for this project was defined as such. To be deemed suc
 
 The final application satisfies all of the must requirements. This means that the final application can display questions for users to answer, have an input field accepting numerical values, and when an answer is submitted, compare it to the pre-calculated answer and display whether the two answers match. If the two answers do not match, then the pre-calculated answer is displayed for the user to see. \par
 
-One of the three should requirements for this project was completed outright. Requirement 7, which was defined as "having a variety of testing difficulties, ranging from easy to hard for each module" was changed between the progress report and the project presentation. It was changed to "having two separate testing difficulties of foundation and higher for each module". This change was made as the Edexcel GCSE Mathematics specification is split into two difficulty tiers of foundation and higher. The foundation tier of exams range from grades 1-5 and the higher tier exams range from grades 4-9, with the higher tier covering all content in the foundation tier with more complicated content also included to make the higher tier exams more difficult. As the Edexcel tier system already existed using easy, medium, and hard as testing difficulties would only confuse students. Because of this, the decision to switch to Edexcel's difficulty tiers was made. \par
+One of the three should requirements for this project was completed outright. Requirement 7, which was defined as ``having a variety of testing difficulties, ranging from easy to hard for each module'' was changed between the progress report and the project presentation. It was changed to ``having two separate testing difficulties of foundation and higher for each module''. This change was made as the Edexcel GCSE Mathematics specification is split into two difficulty tiers of foundation and higher. The foundation tier of exams range from grades 1-5 and the higher tier exams range from grades 4-9, with the higher tier covering all content in the foundation tier with more complicated content also included to make the higher tier exams more difficult. As the Edexcel tier system already existed using easy, medium, and hard as testing difficulties would only confuse students. Because of this, the decision to switch to Edexcel's difficulty tiers was made. \par
 
-Requirements 8 and 9 were not completed by the end of this project but were in progress. Requirement 8 was defined as "having a way of tracking user progress over a number of days or tests per module", and requirement 9 as "displaying model methods for working out the correct answer for a question where the user inputted an incorrect answer". These requirements have been started and prototypes for each have been created. Model working out has been made for three different questions in the algebra topic. These model working out are displayed when the user submits an incorrect answer. A database was created to store the user's progress, although was never implemented. \par
+Requirements 8 and 9 were not completed by the end of this project but were in progress. Requirement 8 was defined as ``having a way of tracking user progress over a number of days or tests per module'', and requirement 9 as ``displaying model methods for working out the correct answer for a question where the user inputted an incorrect answer''. These requirements have been started and prototypes for each have been created. Model working out has been made for three different questions in the algebra topic. These model working out are displayed when the user submits an incorrect answer. A database was created to store the user's progress, although was never implemented. \par
 
 The could requirement has not been completed. This is because requirements 8 and 9 had to be completed before requirement 10, the could requirement, could have been worked on. As requirements 8 and 9 were incomplete at the end of the project, development for requirement 10 never began. \par
 
 As non-functional requirements are difficult to evaluate, it is a challenging task to determine in absolutes whether these requirements have been met. Any tests conducted with 11 year olds to determine their comprehension of the questions in this application would not have been representative of the population as a whole. Because of this, the method was not used to attempt to assess the completion of the non-functional requirements. Instead, user testing was conducted with colleagues who work with students within the GCSE age range. Their feedback was incorporated into the development process as explained in the testing section of this report. Their feedback on the final application was that the functional requirements have been completed for almost all students who are in the English year 11, and the majority of students in the English year 9. Because of this, these functional requirements have been deemed completed to a satisfactory level for this project. \par
 
-\subsection{Results Overview}
+\subsection{Discussion}
 
 By the definition of success laid out in the project specification this project was successful. All of the must requirements were completed, as well as one of the three should requirements, although the could requirement was left incomplete. \par
 
@@ -556,7 +559,7 @@ This project was a worthwhile endeavour as it highlights that more work can be c
 
 In conclusion, this project was a success. It has produced a proof of concept application which highlights a gap in the GCSE Mathematics revision market. On top of this, the final application produced by this project could be used by GCSE students to aid their revision of GCSE Mathematics, which was the problem that this project aimed to solve. \par
 
-A GCSE Mathematics revision application endorsed by schools will most likely be produced in the future. Throughout the development of this project MyMaths have released an application which is accessible through tablets which currently has a small amount of content accessible, with more being added throughout the coming months[30]. MyMaths have created this tablet application as all of their content before November 2019 was written in the flash multimedia software platform. Adobe announced in July 2017 that it was going to "stop updating and distributing the Flash Player at the end of 2020 and encourages content creators to migrate any existing Flash content to new open formats"[31]. This means that MyMaths is migrating all of their content away from flash, and in doing such are producing an application available on tablets. \par
+A GCSE Mathematics revision application endorsed by schools will most likely be produced in the future. Throughout the development of this project MyMaths have released an application which is accessible through tablets which currently has a small amount of content accessible, with more being added throughout the coming months[30]. MyMaths have created this tablet application as all of their content before November 2019 was written in the flash multimedia software platform. Adobe announced in July 2017 that it was going to ``stop updating and distributing the Flash Player at the end of 2020 and encourages content creators to migrate any existing Flash content to new open formats''[31]. This means that MyMaths is migrating all of their content away from flash, and in doing such are producing an application available on tablets. \par
 
 This project produced software which could be released as an application onto the Google Play store and would be useful for students sitting their GCSE Mathematics examinations from November 2021 onwards. All of the questions in the application have been taken from non-calculator past papers and so no calculator is necessary. Although, the questions could be adapted to include more difficult numbers which would require a calculator. This application could also be updated with new questions after each exam cycle is complete. \par
 
@@ -659,19 +662,19 @@ This is why the licensing for all of the tools used is linked below as a referen
 
 \subsubsection{Android Studio}
 
-Android Studio is built on top of the IntelliJ platform. It shares the same license as IntelliJ, as is shown in this comment on a blog post by the creator of IntelliJ Dmitry Jemerov (Yole in the blog post) [24]. The IntelliJ IDEA[25] (the IntelliJ IDE) is licensed under two licenses, but as is explained in the blog post, the licensed version of IntelliJ IDEA that is used as the basis of Android Studio has the Apache 2 license. The relevant sections of the Apache 2 license are as follows: "You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form"[26]. This allows for the use of the IntelliJ and Android Studio IDEs for commercial and independent development which this project falls under, and so there are no legal issues with using Android Studio as the IDE for this project. \par
+Android Studio is built on top of the IntelliJ platform. It shares the same license as IntelliJ, as is shown in this comment on a blog post by the creator of IntelliJ Dmitry Jemerov (Yole in the blog post) [24]. The IntelliJ IDEA[25] (the IntelliJ IDE) is licensed under two licenses, but as is explained in the blog post, the licensed version of IntelliJ IDEA that is used as the basis of Android Studio has the Apache 2 license. The relevant sections of the Apache 2 license are as follows: ``You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form''[26]. This allows for the use of the IntelliJ and Android Studio IDEs for commercial and independent development which this project falls under, and so there are no legal issues with using Android Studio as the IDE for this project. \par
 
 \subsubsection{Git}
 
-The majority of git is released under the GNU public license [27] which enables copying, modifying, or distributing git under any circumstances. The relevant sections of the GNU licence (from the preamble): "By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users.". This enables free use of git for this project. \par
+The majority of git is released under the GNU public license [27] which enables copying, modifying, or distributing git under any circumstances. The relevant sections of the GNU licence (from the preamble): ``By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users''. This enables free use of git for this project. \par
 
-Small sections of git are not licensed under the GNU public license, but under the GPL (GNU Lesser Public License) [28]. Relevant sections from the GPL preamble: "By contrast, the GNU General Public Licenses are intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users". This section of the license refers to the GNU General Public Licenses, which the GPL is included as a part of. This enables the free use of git for this project. \par
+Small sections of git are not licensed under the GNU public license, but under the GPL (GNU Lesser Public License) [28]. Relevant sections from the GPL preamble: ``By contrast, the GNU General Public Licenses are intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users''. This section of the license refers to the GNU General Public Licenses, which the GPL is included as a part of. This enables the free use of git for this project. \par
 
 As these are the only two external tools used throughout this project, and the only tools which could have impact on the source code of this project, then there are no legal issues caused by this project. Any other materials were produced by the author specifically for this project, and so there are no legal problems with using these materials. \par
 
 \subsection{Ethical Issues}
 
-This project contains one ethical issue, which is to do with the testing of the final product. Testing was conducted on colleagues who gave verbal consent to participate in the testing of the application. This testing method makes this project one which does not require ethical review under the departmental guidelines found here [29]. "Student projects with primarily an educational purpose, for example asking peers or family members to test software as part of your course. Such projects should not include any form of deception or coercion or involve vulnerable groups (e.g. schoolchildren)." As testing was not conducted on vulnerable groups for this project, as user testing was conducted on colleagues over the age of 18, this project has no ethical issues. 
+This project contains one ethical issue, which is to do with the testing of the final product. Testing was conducted on colleagues who gave verbal consent to participate in the testing of the application. This testing method makes this project one which does not require ethical review under the departmental guidelines found here [29]. ``Student projects with primarily an educational purpose, for example asking peers or family members to test software as part of your course. Such projects should not include any form of deception or coercion or involve vulnerable groups (e.g. schoolchildren).'' As testing was not conducted on vulnerable groups for this project, as user testing was conducted on colleagues over the age of 18, this project has no ethical issues. 
 
 \section{References}
 \label{section:references}
@@ -686,29 +689,29 @@ This project contains one ethical issue, which is to do with the testing of the 
 
 [5] - https://gs.statcounter.com/os-market-share/mobile/worldwide (Accessed 30\textsuperscript{th} March 2020) \par
 
-[6] - https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/specification-and-sample-assesment/gcse-maths-2015-specification.pdf (Accessed: 6 October 2019) \par
+[6] - https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/specification-and-sample-assesment/gcse-maths-2015-specification.pdf (Accessed: 6\textsuperscript{th} October 2019) \par
 
-[7] - https://www.mymaths.co.uk/ (Accessed 22\textsuperscript{th} March 2020) \par
+[7] - https://www.mymaths.co.uk/ (Accessed 22\textsuperscript{nd} March 2020) \par
 
-[8] - https://www.mymaths.co.uk/help.html (Accessed 22\textsuperscript{th} March 2020) \par
+[8] - https://www.mymaths.co.uk/help.html (Accessed 22\textsuperscript{nd} March 2020) \par
 
-[9] - https://www.khanacademy.org/ (Accessed 22\textsuperscript{th} March 2020) \par
+[9] - https://www.khanacademy.org/ (Accessed 22\textsuperscript{nd} March 2020) \par
 
-[10] - https://www.khanacademy.org/math/trigonometry/trig-with-general-triangles/law-of-sines/v/law-of-sines (Accessed 22\textsuperscript{th} March 2020) \par
+[10] - https://www.khanacademy.org/math/trigonometry/trig-with-general-triangles/law-of-sines/v/law-of-sines (Accessed 22\textsuperscript{nd} March 2020) \par
 
-[11] - https://apps.apple.com/gb/app/khan-academy/id469863705 (Accessed 22\textsuperscript{th} March 2020) \par
+[11] - https://apps.apple.com/gb/app/khan-academy/id469863705 (Accessed 22\textsuperscript{nd} March 2020) \par
 
-[12] - https://play.google.com/store/apps/details?id=org.khanacademy.android (Accessed 22\textsuperscript{th} March 2020) \par
+[12] - https://play.google.com/store/apps/details?id=org.khanacademy.android (Accessed 22\textsuperscript{nd} March 2020) \par
 
 [13] - https://mathswatch.co.uk/ (Accessed 25\textsuperscript{th} March 2020) \par
 
 [14] - http://www.mathswatch.co.uk/subscription/4594745491 (Accessed 25\textsuperscript{th} March 2020) \par
 
-[15] - http://coolt.ch/notizen/wp-content/uploads/2016/02/Head-First-Android-Development-2015.pdf (Accessed 31\textsuperscript{th} March 2020) \par
+[15] - http://coolt.ch/notizen/wp-content/uploads/2016/02/Head-First-Android-Development-2015.pdf (Accessed 31\textsuperscript{st} March 2020) \par
 
-[16] - https://developer.android.com/docs (Accessed 31\textsuperscript{th} March 2020) \par
+[16] - https://developer.android.com/docs (Accessed 31\textsuperscript{st} March 2020) \par
 
-[17] - https://github.com/AlphaMustang (Accessed 31\textsuperscript{th} March 2020) \par
+[17] - https://github.com/AlphaMustang (Accessed 31\textsuperscript{st} March 2020) \par
 
 [18] - https://trello.com/ (Accessed 8\textsuperscript{th} March 2020) \par
 
@@ -728,11 +731,11 @@ This project contains one ethical issue, which is to do with the testing of the 
 
 [26] - https://www.apache.org/licenses/LICENSE-2.0 (Accessed 29\textsuperscript{th} March 2020) \par
 
-[27] - https://github.com/git/git/blob/master/COPYING (Accessed 22\textsuperscript{th} March 2020) \par
+[27] - https://github.com/git/git/blob/master/COPYING (Accessed 22\textsuperscript{nd} March 2020) \par
 
-[28] - https://github.com/git/git/blob/master/LGPL-2.1 (Accessed 22\textsuperscript{th} March 2020) 2020) \par
+[28] - https://github.com/git/git/blob/master/LGPL-2.1 (Accessed 22\textsuperscript{nd} March 2020) 2020) \par
 
-[29] - https://warwick.ac.uk/fac/sci/dcs/teaching/ethics (Accessed 22\textsuperscript{th} March 2020) \par
+[29] - https://warwick.ac.uk/fac/sci/dcs/teaching/ethics (Accessed 22\textsuperscript{nd} March 2020) \par
 
 [30] - https://support.mymaths.co.uk/technical-support/what-mymaths-content-has-been-updated/ (Accessed 16\textsuperscript{th} April 2020) \par
 
